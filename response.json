@@ -1,28 +1,35 @@
 {
   "output": {
+    "input": "Describe ODF",
     "intermediate_steps": [
       [
         {
-          "lc": 1,
-          "id": [
-            "langchain",
-            "schema",
-            "agent",
-            "ToolAgentAction"
-          ],
           "type": "constructor",
           "kwargs": {
-            "type": "AgentActionMessageLog",
+            "tool_call_id": "ff4595d2-561b-47a8-a7b1-422c21273439",
             "message_log": [
               {
+                "type": "constructor",
                 "kwargs": {
-                  "content": "",
+                  "additional_kwargs": {
+                    "function_call": {
+                      "arguments": "{\"query_str\": \"Describe ODF\"}",
+                      "name": "search_web_and_pdf"
+                    }
+                  },
                   "response_metadata": {
+                    "citation_metadata": null,
+                    "is_blocked": false,
+                    "usage_metadata": {
+                      "prompt_token_count": 86,
+                      "total_token_count": 99,
+                      "candidates_token_count": 13
+                    },
                     "safety_ratings": [
                       {
-                        "blocked": false,
                         "probability_label": "NEGLIGIBLE",
-                        "category": "HARM_CATEGORY_HATE_SPEECH"
+                        "category": "HARM_CATEGORY_HATE_SPEECH",
+                        "blocked": false
                       },
                       {
                         "blocked": false,
@@ -30,48 +37,36 @@
                         "category": "HARM_CATEGORY_DANGEROUS_CONTENT"
                       },
                       {
-                        "category": "HARM_CATEGORY_HARASSMENT",
                         "probability_label": "NEGLIGIBLE",
-                        "blocked": false
+                        "blocked": false,
+                        "category": "HARM_CATEGORY_HARASSMENT"
                       },
                       {
                         "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-                        "probability_label": "NEGLIGIBLE",
-                        "blocked": false
+                        "blocked": false,
+                        "probability_label": "NEGLIGIBLE"
                       }
-                    ],
-                    "is_blocked": false,
-                    "citation_metadata": null,
-                    "usage_metadata": {
-                      "candidates_token_count": 13,
-                      "total_token_count": 99,
-                      "prompt_token_count": 86
-                    }
+                    ]
                   },
-                  "type": "AIMessageChunk",
-                  "id": "run-c070f3dc-39d4-4654-896b-8ea0e09fd248",
-                  "additional_kwargs": {
-                    "function_call": {
-                      "arguments": "{\"query_str\": \"Describe ODF\"}",
-                      "name": "search_web_and_pdf"
-                    }
-                  },
+                  "content": "",
                   "invalid_tool_calls": [],
+                  "id": "run-00e9a0fe-73a3-448a-9e09-ca8724262ec5",
+                  "tool_call_chunks": [
+                    {
+                      "id": "ff4595d2-561b-47a8-a7b1-422c21273439",
+                      "index": null,
+                      "name": "search_web_and_pdf",
+                      "args": "{\"query_str\": \"Describe ODF\"}"
+                    }
+                  ],
+                  "type": "AIMessageChunk",
                   "tool_calls": [
                     {
                       "name": "search_web_and_pdf",
                       "args": {
                         "query_str": "Describe ODF"
                       },
-                      "id": "54b7e445-b2c7-4a62-8c80-bda4f322bd87"
-                    }
-                  ],
-                  "tool_call_chunks": [
-                    {
-                      "index": null,
-                      "name": "search_web_and_pdf",
-                      "args": "{\"query_str\": \"Describe ODF\"}",
-                      "id": "54b7e445-b2c7-4a62-8c80-bda4f322bd87"
+                      "id": "ff4595d2-561b-47a8-a7b1-422c21273439"
                     }
                   ]
                 },
@@ -81,147 +76,146 @@
                   "messages",
                   "AIMessageChunk"
                 ],
-                "lc": 1,
-                "type": "constructor"
+                "lc": 1
               }
             ],
+            "tool": "search_web_and_pdf",
+            "log": "\nInvoking: `search_web_and_pdf` with `{'query_str': 'Describe ODF'}`\n\n\n",
+            "type": "AgentActionMessageLog",
             "tool_input": {
               "query_str": "Describe ODF"
-            },
-            "log": "\nInvoking: `search_web_and_pdf` with `{'query_str': 'Describe ODF'}`\n\n\n",
-            "tool": "search_web_and_pdf",
-            "tool_call_id": "54b7e445-b2c7-4a62-8c80-bda4f322bd87"
-          }
+            }
+          },
+          "id": [
+            "langchain",
+            "schema",
+            "agent",
+            "ToolAgentAction"
+          ],
+          "lc": 1
         },
         [
           {
             "answer": {
-              "relatedQuestions": [
-                "What are ODA's key principles?",
-                "How are ODA components composed?",
-                "What makes ODA components interoperable?",
-                "What ODA groupings support agility?",
-                "What is MODA's function in ODA?"
-              ],
+              "state": "SUCCEEDED",
               "references": [
                 {
                   "chunkInfo": {
-                    "content": "# tmforum\n\n## Introduction\n\nThe key concepts described in this document provide a common language and understanding for the architect, other associates and business stakeholders. The foundational CONTEXTS are used to establish the enterprise's building blocks. These building blocks are fundamental to the Open Digital Framework (ODF) as they define key concepts that are used throughout ODF. The core frameworks that make up the TM Forum ODF, include the Business Process Framework (aka eTOM), the Information Framework (aka as SID), and the Functional Framework (derived from the previous TAM). The key principles provide the rules and guidelines that govern the application of key concepts in the Open Digital Framework. The rules are designed to reflect the values and goals of a digital organization, while providing direction and guidance for decision- making. These principles help to ensure consistency, alignment, and coherence across any architecture that aspires to align with the Open Digital Architecture (ODA). The section on method or methodology establish the processes and techniques that help an enterprise architect leverage the Open Digital Framework. They provide a structured and systematic approach to identify, analyze, design, and communicate the architecture. These methods or methodologies are here to help ensure quality, efficiency, and effectiveness of the target architecture of the organization. Models are the representations and artifacts that help the enterprise architect, design, document and communicate the architecture. In TM Forum, the Master Open Digital Architecture (MODA) is the definitive reference for ODA which provides the context and visualization of the structure, behavior, and relationships of the ODA business objects (architectural elements). Models help to ensure clarity, purpose, completeness and consistency of the architecture as they evolve through a maturation process which improves its reliability for TM Forum members. The adoption of the TM Forum core frameworks has the benefit of providing alignment with key industry standards and common ontology, in support of the enterprise's strategic and business goals. This can help boost both business and technical capabilities. All principles described in this document provide a foundational ground for the development of the enterprise's governance, rules and policies. TM Forum 2024. All Rights Reserved. Page 8 of 45 tmforum.org\n\n# GB991 TM Forum Core Frameworks Concepts and Principles v24.5\n\n## 1. Concepts and Definitions",
                     "relevanceScore": 0.5,
+                    "content": "# tmforum\n\n## Introduction\n\nThe key concepts described in this document provide a common language and understanding for the architect, other associates and business stakeholders. The foundational CONTEXTS are used to establish the enterprise's building blocks. These building blocks are fundamental to the Open Digital Framework (ODF) as they define key concepts that are used throughout ODF. The core frameworks that make up the TM Forum ODF, include the Business Process Framework (aka eTOM), the Information Framework (aka as SID), and the Functional Framework (derived from the previous TAM). The key principles provide the rules and guidelines that govern the application of key concepts in the Open Digital Framework. The rules are designed to reflect the values and goals of a digital organization, while providing direction and guidance for decision- making. These principles help to ensure consistency, alignment, and coherence across any architecture that aspires to align with the Open Digital Architecture (ODA). The section on method or methodology establish the processes and techniques that help an enterprise architect leverage the Open Digital Framework. They provide a structured and systematic approach to identify, analyze, design, and communicate the architecture. These methods or methodologies are here to help ensure quality, efficiency, and effectiveness of the target architecture of the organization. Models are the representations and artifacts that help the enterprise architect, design, document and communicate the architecture. In TM Forum, the Master Open Digital Architecture (MODA) is the definitive reference for ODA which provides the context and visualization of the structure, behavior, and relationships of the ODA business objects (architectural elements). Models help to ensure clarity, purpose, completeness and consistency of the architecture as they evolve through a maturation process which improves its reliability for TM Forum members. The adoption of the TM Forum core frameworks has the benefit of providing alignment with key industry standards and common ontology, in support of the enterprise's strategic and business goals. This can help boost both business and technical capabilities. All principles described in this document provide a foundational ground for the development of the enterprise's governance, rules and policies. TM Forum 2024. All Rights Reserved. Page 8 of 45 tmforum.org\n\n# GB991 TM Forum Core Frameworks Concepts and Principles v24.5\n\n## 1. Concepts and Definitions",
                     "documentMetadata": {
                       "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1481908",
-                      "pageIdentifier": "8",
                       "title": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5",
-                      "uri": "gs://tmf-documents/GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
                       "structData": {
+                        "Categories": "Standard > Reference > Guidebook",
+                        "Release": "24.5",
+                        "Permalink": "https://www.tmforum.org/resources/guidebook/gb991-tm-forums-core-frameworks-concepts-and-principles-v24-5-0/",
+                        "Project": "Information Systems Architecture",
+                        "Asset_file_name": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
+                        "IPR_mode": "RAND",
+                        "Date_Modified": "29-Aug-2024",
+                        "Short_description": "",
                         "Document_Series": "GB991",
+                        "Description": "<p>TM Forum's Core Frameworks is a suite of best practices and standards that provides the blueprint for effective, efficient business operations and enable a service-oriented, highly automated and efficient approach to business operations and application integration.</p>\n<p>This Concepts and Principles document strives to enable the reader to get a complete point of view of the compilation and creation of the core Frameworks; (business process, Information and functional frameworks), explaining the reasoning to its construction.</p>\n",
+                        "Document_Version": "24.5.0",
+                        "Status": "Team Approved",
+                        "Release_Status": "status-pre-production",
+                        "File_format": "PDF",
+                        "Published": "1",
+                        "Document_type": "Guidebook",
+                        "DocId": "1481908",
+                        "Maturity_level": "General availability (GA)",
                         "Security": "Member",
                         "Standard": [
                           "Application Framework (TAM)"
-                        ],
-                        "Permalink": "https://www.tmforum.org/resources/guidebook/gb991-tm-forums-core-frameworks-concepts-and-principles-v24-5-0/",
-                        "File_format": "PDF",
-                        "Release_Status": "status-pre-production",
-                        "Release": "24.5",
-                        "Description": "<p>TM Forum's Core Frameworks is a suite of best practices and standards that provides the blueprint for effective, efficient business operations and enable a service-oriented, highly automated and efficient approach to business operations and application integration.</p>\n<p>This Concepts and Principles document strives to enable the reader to get a complete point of view of the compilation and creation of the core Frameworks; (business process, Information and functional frameworks), explaining the reasoning to its construction.</p>\n",
-                        "Document_Version": "24.5.0",
-                        "Document_type": "Guidebook",
-                        "Project": "Information Systems Architecture",
-                        "IPR_mode": "RAND",
-                        "Categories": "Standard > Reference > Guidebook",
-                        "Date_Modified": "29-Aug-2024",
-                        "Status": "Team Approved",
-                        "Maturity_level": "General availability (GA)",
-                        "Short_description": "",
-                        "Published": "1",
-                        "Asset_file_name": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
-                        "DocId": "1481908"
-                      }
-                    }
-                  }
-                },
-                {
-                  "chunkInfo": {
-                    "documentMetadata": {
-                      "structData": {
-                        "Maturity_level": "Level 3 - Team Approved",
-                        "IPR_mode": "RAND",
-                        "Security": "non-member",
-                        "Release_Status": "status-production",
-                        "File_format": "PDF",
-                        "Permalink": "https://www.tmforum.org/resources/exploratory-report/ig1166-oda-architecture-vision-r18-0-0/",
-                        "Short_description": "",
-                        "Published": "1",
-                        "Date_Modified": "18-Jul-18",
-                        "Release": "18.0",
-                        "Categories": "Standard > Exploratory Report",
-                        "Document_Version": "1.0.1",
-                        "Standard": [
-                          "Best Practices"
-                        ],
-                        "Status": "Member Evaluated",
-                        "Document_Series": "IG1166",
-                        "DocId": "462342",
-                        "Asset_file_name": "IG1166_ODA_Architecture_Vision_R18.0.0.pdf",
-                        "Project": "Open Digitial Architecture (ODA)",
-                        "Description": "<p>The Open Digital Architecture (ODA) offers an industry-agreed blueprint, language and set of key design principles to follow. It will provide pragmatic pathways for the journey from maintaining monolithic, legacy software solutions, towards managing nimble, cloud-based capabilities that can be orchestrated using AI. It is a reference architecture that maps TM Forum's Open APIs and assets against technical and business platform functions.</p>\n<p>The ODA Architecture Vision defines, using an analysis of the ODA business drivers:</p>\n<ul>\n<li>The background to why a transformation is needed to the way OSS and BSS are imagined, to address significant and concurrent business, industry, and technology changes.</li>\n<li>Eight key Architecture Framework artefact groupings that are needed to achieve business agility and zero touch automated operations which is based on TOGAF(TM) concepts.</li>\n<li>Concepts and Principles and Vision that capture requirements, principles and an evolution path for the ODA Architecture.</li>\n<li>Methods for Agile Model Driven Management to achieve agile service lifecycle management.</li>\n<li>ODA Architecture Framework artefacts:\n<ul>\n<li>Standards specifications, capabilities based on standards, best practices, methodologies and tooling that provide the management support needed for a model driven agile service lifecycle; covering\u00a0Business, Information Systems Architecture, Technical Architecture, Implementation and Deployment Architectures.</li>\n<li>How to leverage and integrate, existing TM Forum artefacts to provide ODA artefacts and capabilities for each of the eight ODA Architecture Frameworks.</li>\n</ul>\n</li>\n</ul>\n",
-                        "Document_type": "Exploratory Report"
+                        ]
                       },
-                      "title": "IG1166_ODA_Architecture_Vision_R18.0.0",
-                      "uri": "gs://tmf-documents/IG1166_ODA_Architecture_Vision_R18.0.0.pdf",
-                      "pageIdentifier": "14",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/462342"
-                    },
-                    "content": "# tmforum\n\n## 2.2. Architectural approach and design principles\n\nThe ODA Framework defines an approach to decoupling and separation of concerns which is essential to facilitate rapid independent evolution of solutions, whilst retaining Architectural cohesion, minimizing the complexity and cost of integration, and achieving implementation interoperability for e2e services. The ODA Architecture is captured in eight main artefact groupings which are inspired by TOGAF Enterprise Architecture best practice. Together these groupings provide a comprehensive Architecture for complete service lifecycle automation within an enterprise - such as a Communications Service Provider.TM Forum 2018. All Rights Reserved.Page 14 of 51\n\n# ODA Architecture Vision R18.0.0\n\ntmforum 8 Artefact Groupings that define ODA Framework (A) ODA Concepts & Principles (including GB998 Open Digital Architecture (ODA) Concepts & Principles, etc.) (B) ODA Architecture Vision (including IG1166 Open Digital Architecture Vision R18.0.0, etc.) tmforum (D) ODA Business Architecture Including TMF071 ODA Terminology, etc) (E) ODA Information Systems Architecture ODA-ISA Including IG1167 ODA Functional Architecture (F) ODA Technical Architecture ODA-TA Including IG1171 ODA Component Definition (G) ODA Solutions Implementation Including ODA Component Library tbd (H) ODA Deployment & Runtime Including Virtualization, cloud, PaaS, laaS, tbd (C) ODA Agile & Model Driven Management (Requirements, Life-cycle Model & Tools including Curate Fx) Figure 3: TM Forum Open Digital Architecture Artefact Groupings 017 TM Forum | 1 Each of the core ODA Framework artefact groupings provide capabilities to support the responsibilities of different ODA Architecture users/stakeholders. These capabilities cover key aspects of the TOGAF Architecture Development Methodology (ADM) described in Appendix B. Together the ODA Framework artefact groupings deliver agility in managing the zero-touch automation of a service lifecycle - which is a key ODA requirement. The architectural approach to realizing the ODA is achieved through ODA requirements management creating the following ODA Architecture artefact groupings: \u2022 (A) ODA Concepts and Principles - documents the architecture principles, concepts and the requirements that each Architecture Framework grouping must fulfill. \u2022 (B) ODA Architecture Vision Document \u2013 this document - defines the 8 ODA Architecture Framework groupings, provides a definition of the artefacts required in each, such as: specifications, capabilities, best practices including architecture methods/methodologies and metrics, code and tooling. The ODA capabilities to achieve service lifecycle agility are captured in the following artefact groupings: \u2022 \u2022 \u2022 (C) Agile and model driven Management defines the requirements, modelling and tooling approach for ODA lifecycle which is the key to accomplishing business agility. The methods/methodologies, metrics and tooling described here will be used to manage requirements across all these artefacts to address different stakeholders' needs. (D) ODA Business Architecture, that will describe product and/or service strategy, the organizational, functional, process, information, and geographic aspects of the business environment, based on the business principles, business goals, and strategic drivers (Including common vocabulary, ODA Terminology etc. - Including TMF071 ODA Terminology R18.0.0, etc.) (E) ODA Information Systems Architecture (ISA), which must provide the Functional Architecture (IG1167 ODA Functional Architecture R18.0.0) and concepts of Data and Applications Architecture.",
-                    "relevanceScore": 0.3
+                      "uri": "gs://tmf-documents/GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
+                      "pageIdentifier": "8"
+                    }
                   }
                 },
                 {
                   "chunkInfo": {
                     "relevanceScore": 0.3,
                     "documentMetadata": {
-                      "pageIdentifier": "5",
-                      "uri": "gs://tmf-documents/IG1171_ODA_Component_Definition_v5.0.0.pdf",
-                      "title": "IG1171_ODA_Component_Definition_v5.0.0",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1252275",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/462342",
+                      "pageIdentifier": "14",
+                      "title": "IG1166_ODA_Architecture_Vision_R18.0.0",
                       "structData": {
-                        "Project": "Technical Architecture &amp; Components Project",
-                        "Status": "TM Forum Approved",
-                        "Security": "non-member",
-                        "Release": "23.0",
-                        "Document_Series": "IG1171",
-                        "Document_type": "Best Practice",
-                        "Categories": "Standard > Exploratory Report > Best Practice",
-                        "Description": "<p>This document defines the ODA Component with its anatomy.\u00a0 \u00a0</p>\n<p>Please refer to it to understand the concept of ODA Component, what the Core Function and Support Functions area and how to define an ODA Component to be relevant to the ODA Functional Architecture.</p>\n",
-                        "Asset_file_name": "IG1171_ODA_Component_Definition_v5.0.0.pdf",
-                        "Short_description": "",
-                        "DocId": "1252275",
-                        "Permalink": "https://www.tmforum.org/resources/best-practice/ig1171-oda-component-definition-v5-0-0/",
-                        "Maturity_level": "General availability (GA)",
-                        "Release_Status": "status-production",
-                        "IPR_mode": "RAND",
-                        "Document_Version": "5.0.0",
+                        "Document_Series": "IG1166",
+                        "Description": "<p>The Open Digital Architecture (ODA) offers an industry-agreed blueprint, language and set of key design principles to follow. It will provide pragmatic pathways for the journey from maintaining monolithic, legacy software solutions, towards managing nimble, cloud-based capabilities that can be orchestrated using AI. It is a reference architecture that maps TM Forum's Open APIs and assets against technical and business platform functions.</p>\n<p>The ODA Architecture Vision defines, using an analysis of the ODA business drivers:</p>\n<ul>\n<li>The background to why a transformation is needed to the way OSS and BSS are imagined, to address significant and concurrent business, industry, and technology changes.</li>\n<li>Eight key Architecture Framework artefact groupings that are needed to achieve business agility and zero touch automated operations which is based on TOGAF(TM) concepts.</li>\n<li>Concepts and Principles and Vision that capture requirements, principles and an evolution path for the ODA Architecture.</li>\n<li>Methods for Agile Model Driven Management to achieve agile service lifecycle management.</li>\n<li>ODA Architecture Framework artefacts:\n<ul>\n<li>Standards specifications, capabilities based on standards, best practices, methodologies and tooling that provide the management support needed for a model driven agile service lifecycle; covering\u00a0Business, Information Systems Architecture, Technical Architecture, Implementation and Deployment Architectures.</li>\n<li>How to leverage and integrate, existing TM Forum artefacts to provide ODA artefacts and capabilities for each of the eight ODA Architecture Frameworks.</li>\n</ul>\n</li>\n</ul>\n",
+                        "Document_Version": "1.0.1",
                         "Published": "1",
-                        "File_format": "PDF",
+                        "Release": "18.0",
                         "Standard": [
                           "Best Practices"
                         ],
-                        "Date_Modified": "04-Aug-2023"
-                      }
+                        "File_format": "PDF",
+                        "Permalink": "https://www.tmforum.org/resources/exploratory-report/ig1166-oda-architecture-vision-r18-0-0/",
+                        "Asset_file_name": "IG1166_ODA_Architecture_Vision_R18.0.0.pdf",
+                        "IPR_mode": "RAND",
+                        "Categories": "Standard > Exploratory Report",
+                        "Document_type": "Exploratory Report",
+                        "Short_description": "",
+                        "Release_Status": "status-production",
+                        "Project": "Open Digitial Architecture (ODA)",
+                        "Status": "Member Evaluated",
+                        "Maturity_level": "Level 3 - Team Approved",
+                        "DocId": "462342",
+                        "Date_Modified": "18-Jul-18",
+                        "Security": "non-member"
+                      },
+                      "uri": "gs://tmf-documents/IG1166_ODA_Architecture_Vision_R18.0.0.pdf"
                     },
-                    "content": "# tmforum\n\n## ODA Component Definition\n\n### tmforum\n\nExecutive SummaryThis document describes reasons for defining an ODA Component (detailed in Open Digital Architecture Whitepaper), stemming from the need for an agile approach that encompasses business needs, network structure, and operational challenges. The document then describes the structure of a component, its sub-parts and their functionalities, as well as suggesting ways of exposing the functionalities. The document also addresses the lifecycle of the component and its composability aspects. Another section is devoted to the relation of ODA Components to the existing Frameworx assets, including to the Open APIs. Subsequent releases are expected to materially enhance the connection to digital business, the use of a component on existing industry platforms, composition scenarios, and examples. TM Forum 2023. All Rights Reserved. Page 5 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0\n\n# tmforum\n\n## Introduction\n\nBuilding on TM Forum's rich history in leading IT and operational transformation, and on the success of a widely-used suite of standardized REST based Open APIs, this guide explains how we define ODA Components as software units that can be composed into systems or solutions. The Open Digital Architecture Whitepaper established the need for an \"industry-agreed\" digital architecture prescribing a set of industry agreed actions that enable, simplify and automate software systems based on standards. One of the key standards is the ODA Component. This document and the supplementary artifacts define the ODA Component and use. To fully realize the business requirement of multivendor solutions, ODA Components must support interoperability in much the same way that reusable components are offered in cloud marketplaces such as Microsoft Azure, IBM Cloud and Amazon Web Services etc. The definition of ODA Components follows the ODA Component principles to draw on best practices and modern concepts to effectively encapsulate the concept of componentization into ODA. TM Forum 2023. All Rights Reserved. Page 6 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0"
+                    "content": "# tmforum\n\n## 2.2. Architectural approach and design principles\n\nThe ODA Framework defines an approach to decoupling and separation of concerns which is essential to facilitate rapid independent evolution of solutions, whilst retaining Architectural cohesion, minimizing the complexity and cost of integration, and achieving implementation interoperability for e2e services. The ODA Architecture is captured in eight main artefact groupings which are inspired by TOGAF Enterprise Architecture best practice. Together these groupings provide a comprehensive Architecture for complete service lifecycle automation within an enterprise - such as a Communications Service Provider.TM Forum 2018. All Rights Reserved.Page 14 of 51\n\n# ODA Architecture Vision R18.0.0\n\ntmforum 8 Artefact Groupings that define ODA Framework (A) ODA Concepts & Principles (including GB998 Open Digital Architecture (ODA) Concepts & Principles, etc.) (B) ODA Architecture Vision (including IG1166 Open Digital Architecture Vision R18.0.0, etc.) tmforum (D) ODA Business Architecture Including TMF071 ODA Terminology, etc) (E) ODA Information Systems Architecture ODA-ISA Including IG1167 ODA Functional Architecture (F) ODA Technical Architecture ODA-TA Including IG1171 ODA Component Definition (G) ODA Solutions Implementation Including ODA Component Library tbd (H) ODA Deployment & Runtime Including Virtualization, cloud, PaaS, laaS, tbd (C) ODA Agile & Model Driven Management (Requirements, Life-cycle Model & Tools including Curate Fx) Figure 3: TM Forum Open Digital Architecture Artefact Groupings 017 TM Forum | 1 Each of the core ODA Framework artefact groupings provide capabilities to support the responsibilities of different ODA Architecture users/stakeholders. These capabilities cover key aspects of the TOGAF Architecture Development Methodology (ADM) described in Appendix B. Together the ODA Framework artefact groupings deliver agility in managing the zero-touch automation of a service lifecycle - which is a key ODA requirement. The architectural approach to realizing the ODA is achieved through ODA requirements management creating the following ODA Architecture artefact groupings: \u2022 (A) ODA Concepts and Principles - documents the architecture principles, concepts and the requirements that each Architecture Framework grouping must fulfill. \u2022 (B) ODA Architecture Vision Document \u2013 this document - defines the 8 ODA Architecture Framework groupings, provides a definition of the artefacts required in each, such as: specifications, capabilities, best practices including architecture methods/methodologies and metrics, code and tooling. The ODA capabilities to achieve service lifecycle agility are captured in the following artefact groupings: \u2022 \u2022 \u2022 (C) Agile and model driven Management defines the requirements, modelling and tooling approach for ODA lifecycle which is the key to accomplishing business agility. The methods/methodologies, metrics and tooling described here will be used to manage requirements across all these artefacts to address different stakeholders' needs. (D) ODA Business Architecture, that will describe product and/or service strategy, the organizational, functional, process, information, and geographic aspects of the business environment, based on the business principles, business goals, and strategic drivers (Including common vocabulary, ODA Terminology etc. - Including TMF071 ODA Terminology R18.0.0, etc.) (E) ODA Information Systems Architecture (ISA), which must provide the Functional Architecture (IG1167 ODA Functional Architecture R18.0.0) and concepts of Data and Applications Architecture."
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.3,
+                    "content": "# tmforum\n\n## ODA Component Definition\n\n### tmforum\n\nExecutive SummaryThis document describes reasons for defining an ODA Component (detailed in Open Digital Architecture Whitepaper), stemming from the need for an agile approach that encompasses business needs, network structure, and operational challenges. The document then describes the structure of a component, its sub-parts and their functionalities, as well as suggesting ways of exposing the functionalities. The document also addresses the lifecycle of the component and its composability aspects. Another section is devoted to the relation of ODA Components to the existing Frameworx assets, including to the Open APIs. Subsequent releases are expected to materially enhance the connection to digital business, the use of a component on existing industry platforms, composition scenarios, and examples. TM Forum 2023. All Rights Reserved. Page 5 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0\n\n# tmforum\n\n## Introduction\n\nBuilding on TM Forum's rich history in leading IT and operational transformation, and on the success of a widely-used suite of standardized REST based Open APIs, this guide explains how we define ODA Components as software units that can be composed into systems or solutions. The Open Digital Architecture Whitepaper established the need for an \"industry-agreed\" digital architecture prescribing a set of industry agreed actions that enable, simplify and automate software systems based on standards. One of the key standards is the ODA Component. This document and the supplementary artifacts define the ODA Component and use. To fully realize the business requirement of multivendor solutions, ODA Components must support interoperability in much the same way that reusable components are offered in cloud marketplaces such as Microsoft Azure, IBM Cloud and Amazon Web Services etc. The definition of ODA Components follows the ODA Component principles to draw on best practices and modern concepts to effectively encapsulate the concept of componentization into ODA. TM Forum 2023. All Rights Reserved. Page 6 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0",
+                    "documentMetadata": {
+                      "uri": "gs://tmf-documents/IG1171_ODA_Component_Definition_v5.0.0.pdf",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1252275",
+                      "pageIdentifier": "5",
+                      "title": "IG1171_ODA_Component_Definition_v5.0.0",
+                      "structData": {
+                        "Release_Status": "status-production",
+                        "Release": "23.0",
+                        "Published": "1",
+                        "Short_description": "",
+                        "Document_Version": "5.0.0",
+                        "File_format": "PDF",
+                        "Status": "TM Forum Approved",
+                        "DocId": "1252275",
+                        "IPR_mode": "RAND",
+                        "Standard": [
+                          "Best Practices"
+                        ],
+                        "Document_type": "Best Practice",
+                        "Asset_file_name": "IG1171_ODA_Component_Definition_v5.0.0.pdf",
+                        "Date_Modified": "04-Aug-2023",
+                        "Project": "Technical Architecture &amp; Components Project",
+                        "Document_Series": "IG1171",
+                        "Permalink": "https://www.tmforum.org/resources/best-practice/ig1171-oda-component-definition-v5-0-0/",
+                        "Categories": "Standard > Exploratory Report > Best Practice",
+                        "Maturity_level": "General availability (GA)",
+                        "Description": "<p>This document defines the ODA Component with its anatomy.\u00a0 \u00a0</p>\n<p>Please refer to it to understand the concept of ODA Component, what the Core Function and Support Functions area and how to define an ODA Component to be relevant to the ODA Functional Architecture.</p>\n",
+                        "Security": "non-member"
+                      }
+                    }
                   }
                 }
               ],
               "steps": [
                 {
-                  "description": "Rephrase the query and search.",
-                  "state": "SUCCEEDED",
                   "actions": [
                     {
                       "observation": {
                         "searchResults": [
                           {
+                            "title": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5",
                             "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1481908",
                             "chunkInfo": [
                               {
@@ -229,102 +223,101 @@
                                 "relevanceScore": 0.5
                               }
                             ],
-                            "title": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5",
                             "structData": {
+                              "Published": "1",
+                              "Document_Version": "24.5.0",
+                              "Short_description": "",
+                              "Document_Series": "GB991",
+                              "Release_Status": "status-pre-production",
+                              "File_format": "PDF",
+                              "DocId": "1481908",
+                              "Asset_file_name": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
+                              "Maturity_level": "General availability (GA)",
+                              "Permalink": "https://www.tmforum.org/resources/guidebook/gb991-tm-forums-core-frameworks-concepts-and-principles-v24-5-0/",
                               "Standard": [
                                 "Application Framework (TAM)"
                               ],
-                              "Asset_file_name": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
-                              "Status": "Team Approved",
-                              "Maturity_level": "General availability (GA)",
                               "IPR_mode": "RAND",
-                              "Document_Series": "GB991",
-                              "Project": "Information Systems Architecture",
-                              "Release": "24.5",
-                              "Published": "1",
                               "Categories": "Standard > Reference > Guidebook",
-                              "Security": "Member",
                               "Date_Modified": "29-Aug-2024",
+                              "Project": "Information Systems Architecture",
+                              "Security": "Member",
+                              "Status": "Team Approved",
                               "Document_type": "Guidebook",
-                              "Document_Version": "24.5.0",
-                              "Release_Status": "status-pre-production",
-                              "Short_description": "",
-                              "DocId": "1481908",
-                              "File_format": "PDF",
-                              "Permalink": "https://www.tmforum.org/resources/guidebook/gb991-tm-forums-core-frameworks-concepts-and-principles-v24-5-0/",
+                              "Release": "24.5",
                               "Description": "<p>TM Forum's Core Frameworks is a suite of best practices and standards that provides the blueprint for effective, efficient business operations and enable a service-oriented, highly automated and efficient approach to business operations and application integration.</p>\n<p>This Concepts and Principles document strives to enable the reader to get a complete point of view of the compilation and creation of the core Frameworks; (business process, Information and functional frameworks), explaining the reasoning to its construction.</p>\n"
                             },
                             "uri": "gs://tmf-documents/GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf"
                           },
                           {
+                            "uri": "gs://tmf-documents/IG1166_ODA_Architecture_Vision_R18.0.0.pdf",
+                            "title": "IG1166_ODA_Architecture_Vision_R18.0.0",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/462342",
                             "chunkInfo": [
                               {
                                 "relevanceScore": 0.3,
                                 "content": "# tmforum\n\n## 2.2. Architectural approach and design principles\n\nThe ODA Framework defines an approach to decoupling and separation of concerns which is essential to facilitate rapid independent evolution of solutions, whilst retaining Architectural cohesion, minimizing the complexity and cost of integration, and achieving implementation interoperability for e2e services. The ODA Architecture is captured in eight main artefact groupings which are inspired by TOGAF Enterprise Architecture best practice. Together these groupings provide a comprehensive Architecture for complete service lifecycle automation within an enterprise - such as a Communications Service Provider.TM Forum 2018. All Rights Reserved.Page 14 of 51\n\n# ODA Architecture Vision R18.0.0\n\ntmforum 8 Artefact Groupings that define ODA Framework (A) ODA Concepts & Principles (including GB998 Open Digital Architecture (ODA) Concepts & Principles, etc.) (B) ODA Architecture Vision (including IG1166 Open Digital Architecture Vision R18.0.0, etc.) tmforum (D) ODA Business Architecture Including TMF071 ODA Terminology, etc) (E) ODA Information Systems Architecture ODA-ISA Including IG1167 ODA Functional Architecture (F) ODA Technical Architecture ODA-TA Including IG1171 ODA Component Definition (G) ODA Solutions Implementation Including ODA Component Library tbd (H) ODA Deployment & Runtime Including Virtualization, cloud, PaaS, laaS, tbd (C) ODA Agile & Model Driven Management (Requirements, Life-cycle Model & Tools including Curate Fx) Figure 3: TM Forum Open Digital Architecture Artefact Groupings 017 TM Forum | 1 Each of the core ODA Framework artefact groupings provide capabilities to support the responsibilities of different ODA Architecture users/stakeholders. These capabilities cover key aspects of the TOGAF Architecture Development Methodology (ADM) described in Appendix B. Together the ODA Framework artefact groupings deliver agility in managing the zero-touch automation of a service lifecycle - which is a key ODA requirement. The architectural approach to realizing the ODA is achieved through ODA requirements management creating the following ODA Architecture artefact groupings: \u2022 (A) ODA Concepts and Principles - documents the architecture principles, concepts and the requirements that each Architecture Framework grouping must fulfill. \u2022 (B) ODA Architecture Vision Document \u2013 this document - defines the 8 ODA Architecture Framework groupings, provides a definition of the artefacts required in each, such as: specifications, capabilities, best practices including architecture methods/methodologies and metrics, code and tooling. The ODA capabilities to achieve service lifecycle agility are captured in the following artefact groupings: \u2022 \u2022 \u2022 (C) Agile and model driven Management defines the requirements, modelling and tooling approach for ODA lifecycle which is the key to accomplishing business agility. The methods/methodologies, metrics and tooling described here will be used to manage requirements across all these artefacts to address different stakeholders' needs. (D) ODA Business Architecture, that will describe product and/or service strategy, the organizational, functional, process, information, and geographic aspects of the business environment, based on the business principles, business goals, and strategic drivers (Including common vocabulary, ODA Terminology etc. - Including TMF071 ODA Terminology R18.0.0, etc.) (E) ODA Information Systems Architecture (ISA), which must provide the Functional Architecture (IG1167 ODA Functional Architecture R18.0.0) and concepts of Data and Applications Architecture."
                               }
                             ],
-                            "title": "IG1166_ODA_Architecture_Vision_R18.0.0",
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/462342",
-                            "uri": "gs://tmf-documents/IG1166_ODA_Architecture_Vision_R18.0.0.pdf",
                             "structData": {
-                              "Asset_file_name": "IG1166_ODA_Architecture_Vision_R18.0.0.pdf",
-                              "Release_Status": "status-production",
-                              "Document_type": "Exploratory Report",
-                              "DocId": "462342",
+                              "Release": "18.0",
                               "Date_Modified": "18-Jul-18",
-                              "Document_Series": "IG1166",
+                              "Document_type": "Exploratory Report",
                               "Categories": "Standard > Exploratory Report",
-                              "Short_description": "",
-                              "Document_Version": "1.0.1",
-                              "Published": "1",
-                              "Status": "Member Evaluated",
-                              "Project": "Open Digitial Architecture (ODA)",
+                              "Document_Series": "IG1166",
                               "Standard": [
                                 "Best Practices"
                               ],
-                              "File_format": "PDF",
-                              "Description": "<p>The Open Digital Architecture (ODA) offers an industry-agreed blueprint, language and set of key design principles to follow. It will provide pragmatic pathways for the journey from maintaining monolithic, legacy software solutions, towards managing nimble, cloud-based capabilities that can be orchestrated using AI. It is a reference architecture that maps TM Forum's Open APIs and assets against technical and business platform functions.</p>\n<p>The ODA Architecture Vision defines, using an analysis of the ODA business drivers:</p>\n<ul>\n<li>The background to why a transformation is needed to the way OSS and BSS are imagined, to address significant and concurrent business, industry, and technology changes.</li>\n<li>Eight key Architecture Framework artefact groupings that are needed to achieve business agility and zero touch automated operations which is based on TOGAF(TM) concepts.</li>\n<li>Concepts and Principles and Vision that capture requirements, principles and an evolution path for the ODA Architecture.</li>\n<li>Methods for Agile Model Driven Management to achieve agile service lifecycle management.</li>\n<li>ODA Architecture Framework artefacts:\n<ul>\n<li>Standards specifications, capabilities based on standards, best practices, methodologies and tooling that provide the management support needed for a model driven agile service lifecycle; covering\u00a0Business, Information Systems Architecture, Technical Architecture, Implementation and Deployment Architectures.</li>\n<li>How to leverage and integrate, existing TM Forum artefacts to provide ODA artefacts and capabilities for each of the eight ODA Architecture Frameworks.</li>\n</ul>\n</li>\n</ul>\n",
                               "IPR_mode": "RAND",
-                              "Permalink": "https://www.tmforum.org/resources/exploratory-report/ig1166-oda-architecture-vision-r18-0-0/",
-                              "Release": "18.0",
+                              "Description": "<p>The Open Digital Architecture (ODA) offers an industry-agreed blueprint, language and set of key design principles to follow. It will provide pragmatic pathways for the journey from maintaining monolithic, legacy software solutions, towards managing nimble, cloud-based capabilities that can be orchestrated using AI. It is a reference architecture that maps TM Forum's Open APIs and assets against technical and business platform functions.</p>\n<p>The ODA Architecture Vision defines, using an analysis of the ODA business drivers:</p>\n<ul>\n<li>The background to why a transformation is needed to the way OSS and BSS are imagined, to address significant and concurrent business, industry, and technology changes.</li>\n<li>Eight key Architecture Framework artefact groupings that are needed to achieve business agility and zero touch automated operations which is based on TOGAF(TM) concepts.</li>\n<li>Concepts and Principles and Vision that capture requirements, principles and an evolution path for the ODA Architecture.</li>\n<li>Methods for Agile Model Driven Management to achieve agile service lifecycle management.</li>\n<li>ODA Architecture Framework artefacts:\n<ul>\n<li>Standards specifications, capabilities based on standards, best practices, methodologies and tooling that provide the management support needed for a model driven agile service lifecycle; covering\u00a0Business, Information Systems Architecture, Technical Architecture, Implementation and Deployment Architectures.</li>\n<li>How to leverage and integrate, existing TM Forum artefacts to provide ODA artefacts and capabilities for each of the eight ODA Architecture Frameworks.</li>\n</ul>\n</li>\n</ul>\n",
+                              "Project": "Open Digitial Architecture (ODA)",
+                              "Maturity_level": "Level 3 - Team Approved",
+                              "Status": "Member Evaluated",
+                              "Document_Version": "1.0.1",
+                              "Published": "1",
+                              "Release_Status": "status-production",
+                              "DocId": "462342",
                               "Security": "non-member",
-                              "Maturity_level": "Level 3 - Team Approved"
+                              "File_format": "PDF",
+                              "Short_description": "",
+                              "Asset_file_name": "IG1166_ODA_Architecture_Vision_R18.0.0.pdf",
+                              "Permalink": "https://www.tmforum.org/resources/exploratory-report/ig1166-oda-architecture-vision-r18-0-0/"
                             }
                           },
                           {
+                            "title": "IG1171_ODA_Component_Definition_v5.0.0",
                             "chunkInfo": [
                               {
                                 "content": "# tmforum\n\n## ODA Component Definition\n\n### tmforum\n\nExecutive SummaryThis document describes reasons for defining an ODA Component (detailed in Open Digital Architecture Whitepaper), stemming from the need for an agile approach that encompasses business needs, network structure, and operational challenges. The document then describes the structure of a component, its sub-parts and their functionalities, as well as suggesting ways of exposing the functionalities. The document also addresses the lifecycle of the component and its composability aspects. Another section is devoted to the relation of ODA Components to the existing Frameworx assets, including to the Open APIs. Subsequent releases are expected to materially enhance the connection to digital business, the use of a component on existing industry platforms, composition scenarios, and examples. TM Forum 2023. All Rights Reserved. Page 5 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0\n\n# tmforum\n\n## Introduction\n\nBuilding on TM Forum's rich history in leading IT and operational transformation, and on the success of a widely-used suite of standardized REST based Open APIs, this guide explains how we define ODA Components as software units that can be composed into systems or solutions. The Open Digital Architecture Whitepaper established the need for an \"industry-agreed\" digital architecture prescribing a set of industry agreed actions that enable, simplify and automate software systems based on standards. One of the key standards is the ODA Component. This document and the supplementary artifacts define the ODA Component and use. To fully realize the business requirement of multivendor solutions, ODA Components must support interoperability in much the same way that reusable components are offered in cloud marketplaces such as Microsoft Azure, IBM Cloud and Amazon Web Services etc. The definition of ODA Components follows the ODA Component principles to draw on best practices and modern concepts to effectively encapsulate the concept of componentization into ODA. TM Forum 2023. All Rights Reserved. Page 6 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0",
                                 "relevanceScore": 0.3
                               }
                             ],
+                            "uri": "gs://tmf-documents/IG1171_ODA_Component_Definition_v5.0.0.pdf",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1252275",
                             "structData": {
-                              "Maturity_level": "General availability (GA)",
-                              "Security": "non-member",
-                              "IPR_mode": "RAND",
-                              "Document_type": "Best Practice",
-                              "Release": "23.0",
-                              "Description": "<p>This document defines the ODA Component with its anatomy.\u00a0 \u00a0</p>\n<p>Please refer to it to understand the concept of ODA Component, what the Core Function and Support Functions area and how to define an ODA Component to be relevant to the ODA Functional Architecture.</p>\n",
-                              "Short_description": "",
-                              "Date_Modified": "04-Aug-2023",
+                              "File_format": "PDF",
                               "Permalink": "https://www.tmforum.org/resources/best-practice/ig1171-oda-component-definition-v5-0-0/",
-                              "Published": "1",
                               "Document_Series": "IG1171",
+                              "Document_type": "Best Practice",
+                              "Categories": "Standard > Exploratory Report > Best Practice",
                               "Asset_file_name": "IG1171_ODA_Component_Definition_v5.0.0.pdf",
+                              "Document_Version": "5.0.0",
+                              "Release": "23.0",
+                              "Published": "1",
+                              "IPR_mode": "RAND",
+                              "Project": "Technical Architecture &amp; Components Project",
                               "Standard": [
                                 "Best Practices"
                               ],
-                              "File_format": "PDF",
-                              "DocId": "1252275",
+                              "Status": "TM Forum Approved",
                               "Release_Status": "status-production",
-                              "Project": "Technical Architecture &amp; Components Project",
-                              "Categories": "Standard > Exploratory Report > Best Practice",
-                              "Document_Version": "5.0.0",
-                              "Status": "TM Forum Approved"
-                            },
-                            "uri": "gs://tmf-documents/IG1171_ODA_Component_Definition_v5.0.0.pdf",
-                            "title": "IG1171_ODA_Component_Definition_v5.0.0",
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1252275"
+                              "DocId": "1252275",
+                              "Short_description": "",
+                              "Date_Modified": "04-Aug-2023",
+                              "Maturity_level": "General availability (GA)",
+                              "Description": "<p>This document defines the ODA Component with its anatomy.\u00a0 \u00a0</p>\n<p>Please refer to it to understand the concept of ODA Component, what the Core Function and Support Functions area and how to define an ODA Component to be relevant to the ODA Functional Architecture.</p>\n",
+                              "Security": "non-member"
+                            }
                           }
                         ]
                       },
@@ -332,17 +325,27 @@
                         "query": "Describe ODF"
                       }
                     }
-                  ]
+                  ],
+                  "description": "Rephrase the query and search.",
+                  "state": "SUCCEEDED"
                 }
               ],
+              "relatedQuestions": [
+                "How does ODA improve service lifecycle automation?",
+                "How are ODA components used in systems?",
+                "What are the benefits of TM Forum core frameworks?",
+                "What is an ODA component's sub-part functionality?",
+                "How does ODA promote solution agility?"
+              ],
+              "answerText": "## ODF: A Comprehensive Overview\n\nThe Open Digital Framework (ODF) is a comprehensive architecture framework developed by TM Forum to provide a common language and understanding for architects, stakeholders, and business associates. ODF's core frameworks include:\n\n* **Business Process Framework (eTOM):** Defines the standard business processes for communications service providers (CSPs).\n* **Information Framework (SID):** Provides a standardized information model for CSPs, ensuring consistent data representation across systems.\n* **Functional Framework:** Derived from the previous TAM (Telecommunications Application Map), it outlines the functional components and their relationships within a CSP's IT landscape.\n\nODF also establishes key principles that guide the application of these concepts. These principles ensure consistency, alignment, and coherence across architectures that aim to align with the Open Digital Architecture (ODA). Additionally, ODF provides methods and methodologies to help enterprise architects leverage the framework effectively. These methods offer a structured approach to identify, analyze, design, and communicate the architecture.\n\nModels, such as the Master Open Digital Architecture (MODA), serve as representations and artifacts to support the design, documentation, and communication of the architecture. MODA provides a definitive reference for ODA, visualizing the structure, behavior, and relationships of ODA business objects. \n\n**Benefits of Adopting ODF:**\n\n* **Alignment with Industry Standards:** ODF aligns with key industry standards and common ontology, supporting an organization's strategic and business goals.\n* **Enhanced Business and Technical Capabilities:** Adoption of ODF can boost both business and technical capabilities by providing a standardized framework for architecture development.\n* **Governance, Rules, and Policies:** The principles outlined in ODF provide a foundation for developing the organization's governance, rules, and policies.\n\n**ODA Architecture Vision:**\n\nThe ODA Architecture Vision defines eight main artefact groupings that provide a comprehensive architecture for complete service lifecycle automation within an enterprise. These groupings include:\n\n* **ODA Concepts & Principles:** Documents the architectural principles, concepts, and requirements for each ODA Framework grouping.\n* **ODA Architecture Vision:** Defines the eight ODA Architecture Framework groupings and provides a definition of the required artefacts, including specifications, capabilities, best practices, methods/methodologies, metrics, code, and tooling.\n* **Agile and Model Driven Management:** Defines the requirements, modelling, and tooling approach for ODA lifecycle management, enabling business agility.\n* **ODA Business Architecture:** Describes product and/or service strategy, organizational, functional, process, information, and geographic aspects of the business environment.\n* **ODA Information Systems Architecture (ISA):** Provides the Functional Architecture and concepts of Data and Applications Architecture. \n",
               "citations": [
                 {
-                  "startIndex": "34",
                   "sources": [
                     {
                       "referenceId": "0"
                     }
                   ],
+                  "startIndex": "34",
                   "endIndex": "232"
                 },
                 {
@@ -364,13 +367,13 @@
                   ]
                 },
                 {
-                  "endIndex": "1349",
+                  "startIndex": "1173",
                   "sources": [
                     {
                       "referenceId": "0"
                     }
                   ],
-                  "startIndex": "1173"
+                  "endIndex": "1349"
                 },
                 {
                   "endIndex": "1475",
@@ -382,31 +385,31 @@
                   ]
                 },
                 {
-                  "startIndex": "1509",
                   "sources": [
                     {
                       "referenceId": "0"
                     }
                   ],
+                  "startIndex": "1509",
                   "endIndex": "1668"
                 },
                 {
-                  "endIndex": "1855",
                   "sources": [
                     {
                       "referenceId": "0"
                     }
                   ],
+                  "endIndex": "1855",
                   "startIndex": "1669"
                 },
                 {
-                  "endIndex": "2013",
-                  "startIndex": "1856",
                   "sources": [
                     {
                       "referenceId": "0"
                     }
-                  ]
+                  ],
+                  "startIndex": "1856",
+                  "endIndex": "2013"
                 },
                 {
                   "sources": [
@@ -418,17 +421,26 @@
                   "startIndex": "2045"
                 },
                 {
+                  "endIndex": "2375",
                   "sources": [
                     {
                       "referenceId": "1"
                     }
                   ],
-                  "endIndex": "2375",
                   "startIndex": "2243"
                 },
                 {
                   "endIndex": "2621",
-                  "startIndex": "2376",
+                  "sources": [
+                    {
+                      "referenceId": "1"
+                    }
+                  ],
+                  "startIndex": "2376"
+                },
+                {
+                  "startIndex": "2622",
+                  "endIndex": "2777",
                   "sources": [
                     {
                       "referenceId": "1"
@@ -436,118 +448,58 @@
                   ]
                 },
                 {
-                  "endIndex": "2777",
+                  "endIndex": "2955",
                   "sources": [
                     {
                       "referenceId": "1"
                     }
                   ],
-                  "startIndex": "2622"
-                },
-                {
-                  "startIndex": "2778",
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    }
-                  ],
-                  "endIndex": "2955"
+                  "startIndex": "2778"
                 },
                 {
                   "endIndex": "3094",
+                  "startIndex": "2956",
                   "sources": [
                     {
                       "referenceId": "1"
                     }
-                  ],
-                  "startIndex": "2956"
+                  ]
                 }
-              ],
-              "answerText": "## ODF: A Comprehensive Overview\n\nThe Open Digital Framework (ODF) is a comprehensive architecture framework developed by TM Forum to provide a common language and understanding for architects, stakeholders, and business associates. ODF's core frameworks include:\n\n* **Business Process Framework (eTOM):** Defines the standard business processes for communications service providers (CSPs).\n* **Information Framework (SID):** Provides a standardized information model for CSPs, ensuring consistent data representation across systems.\n* **Functional Framework:** Derived from the previous TAM (Telecommunications Application Map), it outlines the functional components and their relationships within a CSP's IT landscape.\n\nODF also establishes key principles that guide the application of these concepts. These principles ensure consistency, alignment, and coherence across architectures that aim to align with the Open Digital Architecture (ODA). Additionally, ODF provides methods and methodologies to help enterprise architects leverage the framework effectively. These methods offer a structured approach to identify, analyze, design, and communicate the architecture.\n\nModels, such as the Master Open Digital Architecture (MODA), serve as representations and artifacts to support the design, documentation, and communication of the architecture. MODA provides a definitive reference for ODA, visualizing the structure, behavior, and relationships of ODA business objects. \n\n**Benefits of Adopting ODF:**\n\n* **Alignment with Industry Standards:** ODF aligns with key industry standards and common ontology, supporting an organization's strategic and business goals.\n* **Enhanced Business and Technical Capabilities:** Adoption of ODF can boost both business and technical capabilities by providing a standardized framework for architecture development.\n* **Governance, Rules, and Policies:** The principles outlined in ODF provide a foundation for developing the organization's governance, rules, and policies.\n\n**ODA Architecture Vision:**\n\nThe ODA Architecture Vision defines eight main artefact groupings that provide a comprehensive architecture for complete service lifecycle automation within an enterprise. These groupings include:\n\n* **ODA Concepts & Principles:** Documents the architectural principles, concepts, and requirements for each ODA Framework grouping.\n* **ODA Architecture Vision:** Defines the eight ODA Architecture Framework groupings and provides a definition of the required artefacts, including specifications, capabilities, best practices, methods/methodologies, metrics, code, and tooling.\n* **Agile and Model Driven Management:** Defines the requirements, modelling, and tooling approach for ODA lifecycle management, enabling business agility.\n* **ODA Business Architecture:** Describes product and/or service strategy, organizational, functional, process, information, and geographic aspects of the business environment.\n* **ODA Information Systems Architecture (ISA):** Provides the Functional Architecture and concepts of Data and Applications Architecture. \n",
-              "state": "SUCCEEDED"
+              ]
             },
-            "answerQueryToken": "NMwKDAjPxp7ABhCCqeuxARIkNjgwNGY5MjQtMDAwMC0yYjAzLWIwNGYtZDQzYTJjY2FmMmY3"
+            "answerQueryToken": "NMwKDAiHm5_ABhCT2LrRAxIkNjgwNTI1MzctMDAwMC0yYjAzLWIwNGYtZDQzYTJjY2FmMmY3"
           },
           {
+            "answerQueryToken": "NMwKDAiPm5_ABhCGl-jsARIkNjgwNDE0ZjMtMDAwMC0yZDBhLTk4ODUtNzQ3NDQ2M2M5Njc1",
             "answer": {
-              "steps": [
-                {
-                  "description": "Rephrase the query and search.",
-                  "actions": [
-                    {
-                      "searchAction": {
-                        "query": "Describe ODF"
-                      },
-                      "observation": {
-                        "searchResults": [
-                          {
-                            "uri": "https://tmforum-oda.github.io/oda-ca-docs/canvas/feature-definition-and-test-kit/README.html",
-                            "title": "ODA Canvas Features and Test Kit",
-                            "snippetInfo": [
-                              {
-                                "snippetStatus": "SUCCESS",
-                                "snippet": "... <b>describe</b> test scenarios. Given: This part <b>of</b> the syntax sets the scene for the scenario. It <b>describes</b> the initial context or the pre-conditions <b>of</b> the&nbsp;..."
-                              }
-                            ],
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/8b780e7e57a9447dbdcf43c2f27677b6"
-                          },
-                          {
-                            "snippetInfo": [
-                              {
-                                "snippetStatus": "SUCCESS",
-                                "snippet": "Don&#39;t just take our word for the benefits <b>of</b> ODA. Discover how our members <b>describe</b> some <b>of</b> their real-world use cases, or learn more by reading our blogs and&nbsp;..."
-                              }
-                            ],
-                            "title": "Open Digital Architecture (ODA)",
-                            "uri": "https://www.tmforum.org/oda/",
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f"
-                          },
-                          {
-                            "title": "Design Guidelines to create a new ODA Component",
-                            "snippetInfo": [
-                              {
-                                "snippet": "The business drivers and conceptual model for ODA Components is <b>described</b> in IG1171 ODA Component Definition. The ODA Component concept builds on top <b>of</b> open&nbsp;...",
-                                "snippetStatus": "SUCCESS"
-                              }
-                            ],
-                            "uri": "https://tmforum-oda.github.io/oda-ca-docs/docs/ODAComponentDesignGuidelines.html",
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/677f94dd17da4a0b70571cba0152abba"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "state": "SUCCEEDED"
-                }
-              ],
               "answerText": "## ODA: A Blueprint for Modernizing Telecom IT and Networks\n\nOpen Digital Architecture (ODA) is a standardized cloud-native enterprise architecture blueprint designed to help Communication Service Providers (CSPs), suppliers, and system integrators (SIs) modernize their IT and network systems. By adopting ODA, CSPs can create new and differentiated services that improve productivity, reduce maintenance and integration costs, and enhance customer experience. \n\nODA replaces traditional Operations and Business Support Systems (OSS/BSS) with a new approach that simplifies design, modernizes build, and automates operation. This approach enables CSPs to become more agile, efficient, and customer-centric. \n\n**Key Components of ODA:**\n\n* **Open APIs:** ODA provides a set of standardized Open APIs that enable interoperability and collaboration between CSPs, suppliers, and SIs. These APIs define how different components interact and exchange data, making it easier to build and integrate new services. \n* **ODA Components:** ODA Components are self-describing, deployable software modules that encapsulate specific functionalities. They are built on open standards like Docker and Kubernetes and include Telco-domain knowledge and metadata. This metadata describes the component's core function, notification/reporting, security, and management functions. \n* **ODA Canvas:** The ODA Canvas is a platform that provides a testing environment for ODA Components. It allows developers to test and validate the deployment of components before deploying them in production environments. \n* **Governance:** ODA Governance ensures that solutions adhere to ODA principles throughout the project lifecycle. This includes activities like conformance testing, security assessments, and data governance. \n\n**Benefits of ODA:**\n\n* **Improved Agility:** ODA enables CSPs to respond quickly to market changes and customer demands. \n* **Enhanced Customer Experience:** ODA facilitates the development of innovative services that improve customer satisfaction. \n* **Reduced Costs:** ODA simplifies design, build, and operation, leading to lower maintenance and integration costs. \n* **Increased Efficiency:** ODA automates operations, making CSPs more efficient and productive. \n* **Collaboration and Innovation:** ODA promotes collaboration between CSPs, suppliers, and SIs, fostering innovation and accelerating concept-to-cash. \n\n**Getting Started with ODA:**\n\nTM Forum provides a comprehensive set of resources to help organizations adopt ODA. This includes training and certification programs, interactive learning modules, and support services. Additionally, the ODA interactive map provides access to a vast library of industry-created assets, including the business process framework, design principles, and specifications for standardized components and Open APIs. \n",
               "citations": [
                 {
-                  "sources": [
-                    {
-                      "referenceId": "2"
-                    }
-                  ],
+                  "startIndex": "295",
                   "endIndex": "461",
-                  "startIndex": "295"
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ]
                 },
                 {
-                  "startIndex": "464",
                   "sources": [
                     {
                       "referenceId": "2"
                     }
                   ],
-                  "endIndex": "625"
+                  "endIndex": "625",
+                  "startIndex": "464"
                 },
                 {
+                  "endIndex": "707",
                   "startIndex": "626",
                   "sources": [
                     {
                       "referenceId": "4"
                     }
-                  ],
-                  "endIndex": "707"
+                  ]
                 },
                 {
                   "endIndex": "1005",
@@ -568,7 +520,6 @@
                   "endIndex": "1359"
                 },
                 {
-                  "endIndex": "1794",
                   "startIndex": "1586",
                   "sources": [
                     {
@@ -577,33 +528,34 @@
                     {
                       "referenceId": "3"
                     }
+                  ],
+                  "endIndex": "1794"
+                },
+                {
+                  "endIndex": "2046",
+                  "startIndex": "1920",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
                   ]
                 },
                 {
+                  "endIndex": "2165",
                   "sources": [
                     {
                       "referenceId": "2"
                     }
                   ],
-                  "startIndex": "1920",
-                  "endIndex": "2046"
+                  "startIndex": "2048"
                 },
                 {
-                  "sources": [
-                    {
-                      "referenceId": "2"
-                    }
-                  ],
-                  "startIndex": "2048",
-                  "endIndex": "2165"
-                },
-                {
+                  "endIndex": "2416",
                   "sources": [
                     {
                       "referenceId": "8"
                     }
                   ],
-                  "endIndex": "2416",
                   "startIndex": "2265"
                 },
                 {
@@ -616,53 +568,93 @@
                   "endIndex": "2636"
                 },
                 {
-                  "endIndex": "2859",
-                  "startIndex": "2637",
                   "sources": [
                     {
                       "referenceId": "2"
                     }
-                  ]
+                  ],
+                  "endIndex": "2859",
+                  "startIndex": "2637"
+                }
+              ],
+              "steps": [
+                {
+                  "description": "Rephrase the query and search.",
+                  "actions": [
+                    {
+                      "observation": {
+                        "searchResults": [
+                          {
+                            "uri": "https://tmforum-oda.github.io/oda-ca-docs/canvas/feature-definition-and-test-kit/README.html",
+                            "title": "ODA Canvas Features and Test Kit",
+                            "snippetInfo": [
+                              {
+                                "snippetStatus": "SUCCESS",
+                                "snippet": "... <b>describe</b> test scenarios. Given: This part <b>of</b> the syntax sets the scene for the scenario. It <b>describes</b> the initial context or the pre-conditions <b>of</b> the&nbsp;..."
+                              }
+                            ],
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/8b780e7e57a9447dbdcf43c2f27677b6"
+                          },
+                          {
+                            "snippetInfo": [
+                              {
+                                "snippetStatus": "SUCCESS",
+                                "snippet": "Don&#39;t just take our word for the benefits <b>of</b> ODA. Discover how our members <b>describe</b> some <b>of</b> their real-world use cases, or learn more by reading our blogs and&nbsp;..."
+                              }
+                            ],
+                            "uri": "https://www.tmforum.org/oda/",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
+                            "title": "Open Digital Architecture (ODA)"
+                          },
+                          {
+                            "snippetInfo": [
+                              {
+                                "snippetStatus": "SUCCESS",
+                                "snippet": "The business drivers and conceptual model for ODA Components is <b>described</b> in IG1171 ODA Component Definition. The ODA Component concept builds on top <b>of</b> open&nbsp;..."
+                              }
+                            ],
+                            "uri": "https://tmforum-oda.github.io/oda-ca-docs/docs/ODAComponentDesignGuidelines.html",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/677f94dd17da4a0b70571cba0152abba",
+                            "title": "Design Guidelines to create a new ODA Component"
+                          }
+                        ]
+                      },
+                      "searchAction": {
+                        "query": "Describe ODF"
+                      }
+                    }
+                  ],
+                  "state": "SUCCEEDED"
                 }
               ],
               "relatedQuestions": [
-                "What are ODA's benefits?",
+                "What role does Vodafone play in ODA?",
                 "How does ODA improve customer experience?",
-                "What are the benefits of ODA for CSPs?",
-                "How does ODA leverage open standards?"
+                "What is the purpose of ODA governance?",
+                "What are ODA's key business benefits?"
               ],
+              "state": "SUCCEEDED",
               "references": [
                 {
                   "chunkInfo": {
-                    "content": "The business drivers and conceptual model for ODA Components is described in IG1171 ODA Component Definition. The ODA Component concept builds on top of open standards like Docker and Kubernetes, and adds Telco-domain knowledge and meta-data. The starting point for building an ODA component is containerized, micro-service software described in a kubernetes manifest YAML file. To turn this into an ODA Component we will: Add meta-data to the Kubernetes manifest describing the Core Function, Notification/Reporting, Security Function and Management Function of the software component. Add labels to all the standard Kubernetes resources to label them as belonging to the component. Test the deployment of the Component in an operating platform that has the ODA Canvas installed (for example the TM FOrum Open-Digital Lab). See the Getting Started section to see how to install the ODA Canvas onto a kubernetes cluster environmnet. Step 1: ODA-Component Metadata\uf0c1 This guide has been updated to conform to the v1beta2 component specification. The ODA-Component metadata contains all the Telco-domain knowledge that makes the component a self-describing deployable software module. From IG1171 ODA Component Definition, this meta-data describes the Open-APIs, event data schemas as well as security and management & operations for the component. The meta-data is defined using a Kubernetes CustomResourceDefinition. ",
+                    "relevanceScore": 0.4,
                     "documentMetadata": {
                       "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/677f94dd17da4a0b70571cba0152abba",
                       "uri": "https://tmforum-oda.github.io/oda-ca-docs/docs/ODAComponentDesignGuidelines.html",
                       "title": "Design Guidelines to create a new ODA Component"
                     },
-                    "relevanceScore": 0.4
+                    "content": "The business drivers and conceptual model for ODA Components is described in IG1171 ODA Component Definition. The ODA Component concept builds on top of open standards like Docker and Kubernetes, and adds Telco-domain knowledge and meta-data. The starting point for building an ODA component is containerized, micro-service software described in a kubernetes manifest YAML file. To turn this into an ODA Component we will: Add meta-data to the Kubernetes manifest describing the Core Function, Notification/Reporting, Security Function and Management Function of the software component. Add labels to all the standard Kubernetes resources to label them as belonging to the component. Test the deployment of the Component in an operating platform that has the ODA Canvas installed (for example the TM FOrum Open-Digital Lab). See the Getting Started section to see how to install the ODA Canvas onto a kubernetes cluster environmnet. Step 1: ODA-Component Metadata\uf0c1 This guide has been updated to conform to the v1beta2 component specification. The ODA-Component metadata contains all the Telco-domain knowledge that makes the component a self-describing deployable software module. From IG1171 ODA Component Definition, this meta-data describes the Open-APIs, event data schemas as well as security and management & operations for the component. The meta-data is defined using a Kubernetes CustomResourceDefinition. "
                   }
                 },
                 {
                   "chunkInfo": {
-                    "content": "picture ODA heroes: ODA adoption is critical TM Forum members explain why they support the Open Digital Architecture (ODA), the innovation it enables and their vision of how the industry can collaborate for the benefit of operators, vendors and customers. picture Telefonica on ODA and the importance of collaboration Telefonica explains why they support ODA, and the importance of collaboration in building momentum and delighting customers. \u201cOpen APIs are a key aspect of our strategy.\u201d Patricia Ventura, Head of Customer Engagement Architecture, Telefonica picture TM Forum's CTO introduction to ODA George Glass TM Forum's CTO introduces ODA and the reasons why it is critical for the industry going forwards picture Vodafone ODA case study linked their DTS Lester Thomas, Head of New Technologies and Innovation, explains Vodafone's role as a founder of TM Forum's Open Digital Architecture (ODA). 1 2 3 4 5 Improve your skills through Training and Accreditation Further your knowledge-base or certify your current Open API implementations. TM Forum is here to support our members to become more efficient and productive. Open API / ODA training ODF / ODA training TM Forum provides a full set of interactive learning, skill certifications, and support services to build essential team expertise for maximum impact for your business and employees. ",
+                    "relevanceScore": 0.4,
                     "documentMetadata": {
                       "uri": "https://www.tmforum.org/oda/",
                       "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
                       "title": "Open Digital Architecture (ODA)"
                     },
-                    "relevanceScore": 0.4
-                  }
-                },
-                {
-                  "chunkInfo": {
-                    "documentMetadata": {
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
-                      "uri": "https://www.tmforum.org/oda/",
-                      "title": "Open Digital Architecture (ODA)"
-                    },
-                    "content": "Image Click to expand Open Digital Architecture (ODA) provides the blueprint that CSPs and suppliers/SIs need to change their IT and network systems to create new and differentiated services that improves productivity, reduces maintenance and integration costs whilst enhancing customer experience. It replaces traditional operations and business support systems (OSS/BSS) with a new approach that will simplify your design, modernize your build and automate your operation. How to Apply ODA Download the ODA brochure Image Business Architecture Image Information Systems Image Deployment & Runtime Image Implementation Image Governance Interactive ODA Map Using this ODA interactive map you can discover the vast amount of industry created assets ranging from the business process framework, through the framework and design principles of the architecture, to the specifications for standardized plug and play software of components, canvas and Open APIs. Click on the interactive map to explore ODA assets or see how to 'Get started with ODA' through our playbooks and toolkits. Governance ODA Governance describes the activities applied throughout the project lifecycle that ensure under-construction solutions adhere to ODA principles. Governance Overview Concepts & Principles Transformation Guides Design Guides\u200b Security AI Governance Data Governance API Governance Metrics Maturity Models Business Architecture Business Architecture represents the suite of building blocks that provide context for how the organization delivers value to its stakeholders. Business Architecture Capability Framework Process Framework. ",
-                    "relevanceScore": 0.3
+                    "content": "picture ODA heroes: ODA adoption is critical TM Forum members explain why they support the Open Digital Architecture (ODA), the innovation it enables and their vision of how the industry can collaborate for the benefit of operators, vendors and customers. picture Telefonica on ODA and the importance of collaboration Telefonica explains why they support ODA, and the importance of collaboration in building momentum and delighting customers. \u201cOpen APIs are a key aspect of our strategy.\u201d Patricia Ventura, Head of Customer Engagement Architecture, Telefonica picture TM Forum's CTO introduction to ODA George Glass TM Forum's CTO introduces ODA and the reasons why it is critical for the industry going forwards picture Vodafone ODA case study linked their DTS Lester Thomas, Head of New Technologies and Innovation, explains Vodafone's role as a founder of TM Forum's Open Digital Architecture (ODA). 1 2 3 4 5 Improve your skills through Training and Accreditation Further your knowledge-base or certify your current Open API implementations. TM Forum is here to support our members to become more efficient and productive. Open API / ODA training ODF / ODA training TM Forum provides a full set of interactive learning, skill certifications, and support services to build essential team expertise for maximum impact for your business and employees. "
                   }
                 },
                 {
@@ -672,52 +664,63 @@
                       "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
                       "title": "Open Digital Architecture (ODA)"
                     },
-                    "content": "across multiple domains Jul 24 Ryan Andrew Digital Transformation Tracker 8: cloud adoption accelerates Research Report Digital transformation Cloud Migration + 2 More Digital Transformation Tracker 8: cloud adoption accelerates Jul 24 Dawn Bushaus 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 TMF427 Open Digital Architecture (ODA) Marketecture Diagrams v3.0.4 product Open Digital Architecture (ODA) Open Digital Framework (ODF) + 3 More TMF427 Open Digital Architecture (ODA) Marketecture Diagrams v3.0.4 Sep 24 Adrienne Walcott 1 TM Forum Explore TMForum About the Forum Careers with TM Forum News & Insights Privacy Policy Website T&Cs and Cookies Help & FAQ Contact Contact us General Inquiries: info@tmforum.org Member Services: memberservices@tmforum.org Interested in Joining? newmembers@tmforum.org Press Inquiries: tmforum@ccgrouppr.com Stay Connected \u00a92024 TM Forum ODA map Image Business Architecture Image Information Systems Image Deployment & Runtime Image Implementation Image Governance Interactive ODA Map Click on the interactive map to explore ODA. Governance ODA Governance describes the activities applied throughout the project lifecycle that ensure under-construction solutions adhere to ODA principles. ",
-                    "relevanceScore": 0.3
+                    "relevanceScore": 0.3,
+                    "content": "Image Click to expand Open Digital Architecture (ODA) provides the blueprint that CSPs and suppliers/SIs need to change their IT and network systems to create new and differentiated services that improves productivity, reduces maintenance and integration costs whilst enhancing customer experience. It replaces traditional operations and business support systems (OSS/BSS) with a new approach that will simplify your design, modernize your build and automate your operation. How to Apply ODA Download the ODA brochure Image Business Architecture Image Information Systems Image Deployment & Runtime Image Implementation Image Governance Interactive ODA Map Using this ODA interactive map you can discover the vast amount of industry created assets ranging from the business process framework, through the framework and design principles of the architecture, to the specifications for standardized plug and play software of components, canvas and Open APIs. Click on the interactive map to explore ODA assets or see how to 'Get started with ODA' through our playbooks and toolkits. Governance ODA Governance describes the activities applied throughout the project lifecycle that ensure under-construction solutions adhere to ODA principles. Governance Overview Concepts & Principles Transformation Guides Design Guides\u200b Security AI Governance Data Governance API Governance Metrics Maturity Models Business Architecture Business Architecture represents the suite of building blocks that provide context for how the organization delivers value to its stakeholders. Business Architecture Capability Framework Process Framework. "
                   }
                 },
                 {
                   "chunkInfo": {
                     "documentMetadata": {
                       "title": "Open Digital Architecture (ODA)",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
-                      "uri": "https://www.tmforum.org/oda/"
+                      "uri": "https://www.tmforum.org/oda/",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f"
                     },
-                    "content": "TM Forum Skill Paths Certification Leaderboard Conformance Overview Certifications Awarded Business Process Framework Conformance Information Framework Conformance Open API Conformance Services Events Upcoming events + webinars Sponsorship opportunities Membership About Membership Benefits Current members Become a member 2024 Annual Meeting of Members Open Sessions Log in Register Search: Search Back to top Open Digital Architecture Open Digital Architecture Quick links Open APIs eTOM SID ODA Manifesto Open API Manifesto ODA Training Open API conformance certification How to apply ODA Resources How to use ODA ODA white paper Open API table Resource library eTOM poster SID poster ODA components poster ODA Component Directory (prototype) Projects ODA projects Open API project ODA Component Accelerator Communities Global Architecture Forum Open API support community ODA community Home> Open Digital Architecture Open Digital Architecture (ODA) ODA transforms business agility, customer experience and operational efficiency by creating simpler IT solutions that are easier and cheaper to deploy, integrate & upgrade. ODA: Telecom industry's single source of truth The CEO playbook explains why communication service providers (CSPs) need to transition from a traditional telco to being a platform-ready 'digital' telco providing network and/or connectivity as a service. But as these CSPs evolve and their services, IT and networks become ever more complex they need a migration path to introduce intelligent operations across all areas of their business so they can become an AI-driven telco. ",
-                    "relevanceScore": 0.3
+                    "relevanceScore": 0.3,
+                    "content": "across multiple domains Jul 24 Ryan Andrew Digital Transformation Tracker 8: cloud adoption accelerates Research Report Digital transformation Cloud Migration + 2 More Digital Transformation Tracker 8: cloud adoption accelerates Jul 24 Dawn Bushaus 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 TMF427 Open Digital Architecture (ODA) Marketecture Diagrams v3.0.4 product Open Digital Architecture (ODA) Open Digital Framework (ODF) + 3 More TMF427 Open Digital Architecture (ODA) Marketecture Diagrams v3.0.4 Sep 24 Adrienne Walcott 1 TM Forum Explore TMForum About the Forum Careers with TM Forum News & Insights Privacy Policy Website T&Cs and Cookies Help & FAQ Contact Contact us General Inquiries: info@tmforum.org Member Services: memberservices@tmforum.org Interested in Joining? newmembers@tmforum.org Press Inquiries: tmforum@ccgrouppr.com Stay Connected \u00a92024 TM Forum ODA map Image Business Architecture Image Information Systems Image Deployment & Runtime Image Implementation Image Governance Interactive ODA Map Click on the interactive map to explore ODA. Governance ODA Governance describes the activities applied throughout the project lifecycle that ensure under-construction solutions adhere to ODA principles. "
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "title": "Open Digital Architecture (ODA)",
+                      "uri": "https://www.tmforum.org/oda/",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f"
+                    },
+                    "relevanceScore": 0.3,
+                    "content": "TM Forum Skill Paths Certification Leaderboard Conformance Overview Certifications Awarded Business Process Framework Conformance Information Framework Conformance Open API Conformance Services Events Upcoming events + webinars Sponsorship opportunities Membership About Membership Benefits Current members Become a member 2024 Annual Meeting of Members Open Sessions Log in Register Search: Search Back to top Open Digital Architecture Open Digital Architecture Quick links Open APIs eTOM SID ODA Manifesto Open API Manifesto ODA Training Open API conformance certification How to apply ODA Resources How to use ODA ODA white paper Open API table Resource library eTOM poster SID poster ODA components poster ODA Component Directory (prototype) Projects ODA projects Open API project ODA Component Accelerator Communities Global Architecture Forum Open API support community ODA community Home> Open Digital Architecture Open Digital Architecture (ODA) ODA transforms business agility, customer experience and operational efficiency by creating simpler IT solutions that are easier and cheaper to deploy, integrate & upgrade. ODA: Telecom industry's single source of truth The CEO playbook explains why communication service providers (CSPs) need to transition from a traditional telco to being a platform-ready 'digital' telco providing network and/or connectivity as a service. But as these CSPs evolve and their services, IT and networks become ever more complex they need a migration path to introduce intelligent operations across all areas of their business so they can become an AI-driven telco. "
                   }
                 },
                 {
                   "chunkInfo": {
                     "content": "Governance Overview Concepts & Principles Transformation Guides Design Guides\u200b Security AI Governance Data Governance API Governance Metrics Maturity Models Business Architecture Business Architecture represents the suite of building blocks that provide context for how the organization delivers value to its stakeholders. Business Architecture Capability Framework Process Framework. (eTOM) Value Stream Framework People and Culture Information Systems Information Systems Architecture provides the systems and data view within ODA. It contains the Functional Architecture, the Functional Framework and the Information Framework. Information Systems Overview Functional Framework Functional Architecture Information Framework (SID) Data Architecture Implementation Here we define the Open APIs and reusable Components needed to evolve BSS and OSS systems into agile, cloud native solutions. Implementation Overview Technical Architecture & Components Open APIs Data Models Deployment & Runtime The Deployment & Runtime area of ODA provides guidance on how to turn a well-documented enterprise architecture into a real-world solution. Deployment & Runtime Overview Operations Frameworks Reference Implementation ODA Canvas Notifications Cookiebot session tracker icon loaded ",
-                    "relevanceScore": 0.3,
                     "documentMetadata": {
-                      "uri": "https://www.tmforum.org/oda/",
                       "title": "Open Digital Architecture (ODA)",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f"
-                    }
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
+                      "uri": "https://www.tmforum.org/oda/"
+                    },
+                    "relevanceScore": 0.3
                   }
                 },
                 {
                   "chunkInfo": {
-                    "content": "It describes the list of APIs and/or events that the component exposes as well as the APIs and/or events that it is dependant on. The definitions within the publishedEvents and subscribedEvents are experimental at this point, and we will modify and enhance them as we build-out the ODA Canvas and assemble a representative set of ODA Components. The current definition has: an implementation which links to the Kubernetes service that implements the API or event, including the port where the http service is exposed. The path shows the API resource end-point, and can be used, for example, to automatically configure any API Gateway that is included as part of the Canvas. Note that the path points to the root of the API (and you need to append the relevant path from the swagger document to get to an implemented API resource). The specification points to the swagger documentation for the API. The Component CTK (Compliance Test Kit) will look inside this swagger for the basePath determine which Open-API CTK to execute for that API. The basePath is of format \"/tmf-api/productCatalogManagement/v4/\" which shows it is a tmf-api for productCatalogManagement with major version 4 . ",
-                    "relevanceScore": 0.3,
                     "documentMetadata": {
-                      "uri": "https://tmforum-oda.github.io/oda-ca-docs/docs/ODAComponentDesignGuidelines.html",
                       "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/677f94dd17da4a0b70571cba0152abba",
-                      "title": "Design Guidelines to create a new ODA Component"
-                    }
-                  }
-                },
-                {
-                  "chunkInfo": {
-                    "documentMetadata": {
-                      "uri": "https://tmforum-oda.github.io/oda-ca-docs/canvas/feature-definition-and-test-kit/README.html",
-                      "title": "ODA Canvas Features and Test Kit",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/8b780e7e57a9447dbdcf43c2f27677b6"
+                      "title": "Design Guidelines to create a new ODA Component",
+                      "uri": "https://tmforum-oda.github.io/oda-ca-docs/docs/ODAComponentDesignGuidelines.html"
                     },
                     "relevanceScore": 0.3,
-                    "content": "BDD allows you to specify the desired behavior of software through examples in plain language that both business stakeholders and technical teams can understand. These examples are written in a format known as Gherkin, which uses Given-When-Then syntax to describe test scenarios. Given: This part of the syntax sets the scene for the scenario. It describes the initial context or the pre-conditions of the system before the key action is performed. Example: \u201cGiven the user is logged into their account\u201d When: This section describes the event or the action that triggers the scenario. It is the key action that the user performs or the event that occurs within the system. Example: \u201cWhen the user clicks on the delete account button\u201d Then: This final part specifies the expected outcome or the post-conditions following the action described in the When section. It clearly defines what success (or sometimes failure) looks like. Example: \u201cThen the user's account is deactivated and the user is redirected to the homepage\u201d By defining the desired behavior of the software through examples, you can then implement automated tests to verify that the software behaves as expected. This approach helps to ensure that the software meets the requirements of the business and that it continues to do so as it evolves over time. "
+                    "content": "It describes the list of APIs and/or events that the component exposes as well as the APIs and/or events that it is dependant on. The definitions within the publishedEvents and subscribedEvents are experimental at this point, and we will modify and enhance them as we build-out the ODA Canvas and assemble a representative set of ODA Components. The current definition has: an implementation which links to the Kubernetes service that implements the API or event, including the port where the http service is exposed. The path shows the API resource end-point, and can be used, for example, to automatically configure any API Gateway that is included as part of the Canvas. Note that the path points to the root of the API (and you need to append the relevant path from the swagger document to get to an implemented API resource). The specification points to the swagger documentation for the API. The Component CTK (Compliance Test Kit) will look inside this swagger for the basePath determine which Open-API CTK to execute for that API. The basePath is of format \"/tmf-api/productCatalogManagement/v4/\" which shows it is a tmf-api for productCatalogManagement with major version 4 . "
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "BDD allows you to specify the desired behavior of software through examples in plain language that both business stakeholders and technical teams can understand. These examples are written in a format known as Gherkin, which uses Given-When-Then syntax to describe test scenarios. Given: This part of the syntax sets the scene for the scenario. It describes the initial context or the pre-conditions of the system before the key action is performed. Example: \u201cGiven the user is logged into their account\u201d When: This section describes the event or the action that triggers the scenario. It is the key action that the user performs or the event that occurs within the system. Example: \u201cWhen the user clicks on the delete account button\u201d Then: This final part specifies the expected outcome or the post-conditions following the action described in the When section. It clearly defines what success (or sometimes failure) looks like. Example: \u201cThen the user's account is deactivated and the user is redirected to the homepage\u201d By defining the desired behavior of the software through examples, you can then implement automated tests to verify that the software behaves as expected. This approach helps to ensure that the software meets the requirements of the business and that it continues to do so as it evolves over time. ",
+                    "relevanceScore": 0.3,
+                    "documentMetadata": {
+                      "title": "ODA Canvas Features and Test Kit",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/8b780e7e57a9447dbdcf43c2f27677b6",
+                      "uri": "https://tmforum-oda.github.io/oda-ca-docs/canvas/feature-definition-and-test-kit/README.html"
+                    }
                   }
                 },
                 {
@@ -735,27 +738,24 @@
                   "chunkInfo": {
                     "relevanceScore": 0.3,
                     "documentMetadata": {
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/8b780e7e57a9447dbdcf43c2f27677b6",
                       "uri": "https://tmforum-oda.github.io/oda-ca-docs/canvas/feature-definition-and-test-kit/README.html",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/8b780e7e57a9447dbdcf43c2f27677b6",
                       "title": "ODA Canvas Features and Test Kit"
                     },
                     "content": "ODA Canvas Features and Test Kit \u2014 ODA-Component Accelerator v1beta3 documentation ODA-Component Accelerator About the project: Introduction to the ODA Component Accelerator Project (ODA-CA) Getting started checklist for new members of ODA-CA Tutorials: Tutorial to deploy and observe a running component Tutorial to build ODA-Component from Open-API Reference Implementation Component: Design Guidelines to create a new ODA Component ODA Component - CTK Canvas: Open Digital Architecture Canvas ODA Canvas installation Canvas Design: ODA Canvas Design Design Epics ODA Canvas - use-case library Usecase List Use case naming conventions ODA Canvas source code Open Digital Architecture - Controllers/Operators Webuooks and Utilities Feature Tests: ODA Canvas Features and Test Kit Linkage to use-cases Work breakdown List of BDD Features Executing the BDD tests Installing and executing the BDD tests Contributions and Troubleshooting: Contribution guidance Troubleshooting Guide Developer How-Tos: Work with Dockerimages Summary How-To add a new Dockerimage How-To define unit tests ODA Canvas Development Environment Installing KOPF (tested in GKE) Documentation Process ODA-Component Accelerator ODA Canvas Features and Test Kit View page source ODA Canvas Features and Test Kit\uf0c1 The ODA Canvas takes a Behaviour Driven Design (BDD) approch to define the features of the canvas. "
                   }
                 }
-              ],
-              "state": "SUCCEEDED"
-            },
-            "answerQueryToken": "NMwKDAjWxp7ABhCdsoj8ARIkNjgwM2Y4MDQtMDAwMC0yZDBhLTk4ODUtNzQ3NDQ2M2M5Njc1"
+              ]
+            }
           },
           {
-            "queryExpansionInfo": {},
+            "attributionToken": "qAL0JwEKDAiPm5_ABhCwgbaFAhIkNjgwZjc2MWUtMDAwMC0yNWJkLWI4YTItYjhkYjM4ZjUwMjBhIgdHRU5FUklDKkyb1rcttreMLdiYhjHbmIYxwvCeFaOAlyKOkckw1L_iMLiO6TDPyIgx0siIMY6-nRXUsp0VmNa3LcXL8xeVksUwz7_iMLWO6TCQ97IwMAFKEjB4YTAzNzYxZjUxNDFmMDYyYVKEAXByb2plY3RzLzk4Mjg0NTgzMzU2NS9sb2NhdGlvbnMvZ2xvYmFsL2NvbGxlY3Rpb25zL2RlZmF1bHRfY29sbGVjdGlvbi9lbmdpbmVzL3RtZi1wdWJsaWNfMTY5MjQ0NTQyMjY3Mi9zZXJ2aW5nQ29uZmlncy9kZWZhdWx0X2NvbmZpZw",
             "summary": {},
-            "attributionToken": "qAL0JwEKDAjWxp7ABhDyzMWVAhIkNjgwZDVjZjAtMDAwMC0yMWE1LThmYTAtNWMzMzdiYzU0NzAzIgdHRU5FUklDKkzYmIYxt7eMLcLwnhWOvp0VxsvzF5D3sjDbmIYxjpHJMNS_4jCb1rct1LKdFdLIiDGjgJcimNa3LbiO6TDPyIgxlZLFMM-_4jC1jukwMAFKEjB4NGYyYTgxNWRmODI2NDQzZFKEAXByb2plY3RzLzk4Mjg0NTgzMzU2NS9sb2NhdGlvbnMvZ2xvYmFsL2NvbGxlY3Rpb25zL2RlZmF1bHRfY29sbGVjdGlvbi9lbmdpbmVzL3RtZi1wdWJsaWNfMTY5MjQ0NTQyMjY3Mi9zZXJ2aW5nQ29uZmlncy9kZWZhdWx0X2NvbmZpZw"
+            "queryExpansionInfo": {}
           }
         ]
       ]
     ],
-    "input": "Describe ODF",
-    "output": "The Open Digital Framework (ODF) is a comprehensive architecture framework developed by TM Forum. It provides a common language and understanding for architects, stakeholders, and business associates in the telecommunications industry. \n\nODF consists of several core frameworks:\n\n* **Business Process Framework (eTOM):** Defines standard business processes for communications service providers (CSPs).\n* **Information Framework (SID):** Provides a standardized information model for CSPs, ensuring consistent data representation across systems.\n* **Functional Framework:** Outlines the functional components and their relationships within a CSP's IT landscape.\n\nODF also establishes key principles that guide the application of these concepts, ensuring consistency, alignment, and coherence across architectures. It provides methods and methodologies to help enterprise architects leverage the framework effectively. \n\nThe Master Open Digital Architecture (MODA) serves as a representation and artifact to support the design, documentation, and communication of the architecture. MODA provides a definitive reference for ODA, visualizing the structure, behavior, and relationships of ODA business objects. \n\nAdopting ODF offers several benefits:\n\n* **Alignment with Industry Standards:** ODF aligns with key industry standards and common ontology, supporting an organization's strategic and business goals.\n* **Enhanced Business and Technical Capabilities:** Adoption of ODF can boost both business and technical capabilities by providing a standardized framework for architecture development.\n* **Governance, Rules, and Policies:** The principles outlined in ODF provide a foundation for developing the organization's governance, rules, and policies. \n"
+    "output": "ODF stands for Open Digital Framework. It's a comprehensive architecture framework developed by TM Forum to provide a common language and understanding for architects, stakeholders, and business associates in the telecommunications industry. \n\nHere are some key aspects of ODF:\n\n* **Core Frameworks:** ODF includes frameworks like eTOM (Business Process Framework), SID (Information Framework), and the Functional Framework. These frameworks define standard business processes, information models, and functional components for communication service providers (CSPs).\n* **Principles:** ODF establishes principles that guide the application of these frameworks, ensuring consistency, alignment, and coherence across architectures.\n* **Methods and Methodologies:** ODF provides methods and methodologies to help enterprise architects effectively leverage the framework. These methods offer a structured approach to identify, analyze, design, and communicate the architecture.\n* **Models:** ODF uses models like MODA (Master Open Digital Architecture) to represent and document the architecture. MODA provides a definitive reference for ODA, visualizing the structure, behavior, and relationships of ODA business objects.\n\nThe goal of ODF is to enable CSPs to adopt a standardized approach to architecture development, leading to benefits like:\n\n* **Alignment with Industry Standards:** ODF aligns with key industry standards, supporting an organization's strategic and business goals.\n* **Enhanced Business and Technical Capabilities:** ODF can boost both business and technical capabilities by providing a standardized framework for architecture development.\n* **Governance, Rules, and Policies:** ODF principles provide a foundation for developing an organization's governance, rules, and policies.\n\nODF is closely related to Open Digital Architecture (ODA), which is a cloud-native enterprise architecture blueprint designed to help CSPs modernize their IT and network systems. ODF provides the foundational frameworks and principles that underpin ODA. \n"
   }
 }
