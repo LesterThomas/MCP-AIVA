@@ -1,6 +1,9 @@
 # Service account credentials
 vodafone-key.json
 
+#logging
+logs/aiva-mcp-server.log
+
 # Python-generated files
 __pycache__/
 *.py[oc]

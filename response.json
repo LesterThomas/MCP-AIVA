@@ -1,482 +1,475 @@
 {
   "output": {
+    "output": "| TM Forum API | Description |\n|---|---|\n| TMF620 Product Catalog Management | Enables the creation, management, and publication of product catalogs. |\n| TMF622 Product Ordering Management | Facilitates the ordering of wholesale broadband products, including the specification of product attributes and service parameters. |\n| TMF629 Customer Management | Manages customer information, including contact details, billing information, and service subscriptions. |\n| TMF632 Party Management | Manages information about the parties involved in the wholesale transaction, including buyers, sellers, and other stakeholders. |\n| TMF633 Service Catalog Management | Manages the catalog of available services, including their attributes, pricing, and terms of service. |\n| TMF634 Resource Catalog Management | Manages the catalog of network resources available for wholesale, including fiber connections, bandwidth, and other network elements. |\n| TMF635 Usage Management | Tracks and manages the usage of wholesale broadband products, enabling accurate billing and resource allocation. |\n| TMF637 Product Inventory Management | Manages the inventory of wholesale broadband products, ensuring availability and tracking product lifecycles. |\n| TMF638 Service Inventory Management | Manages the inventory of available services, including their status, capacity, and availability. |\n| TMF639 Resource Inventory Management | Manages the inventory of network resources, including their location, capacity, and availability. |\n| TMF640 Service Activation Management | Facilitates the activation of wholesale broadband services, including provisioning and configuration. |\n| TMF641 Service Ordering and Management | Combines product ordering and service management, enabling a streamlined process for buyers. |\n| TMF642 Alarm Management | Monitors and manages network alarms, ensuring timely notification and resolution of potential issues. | \n",
     "intermediate_steps": [
       [
         {
+          "kwargs": {
+            "tool": "search_web_and_pdf",
+            "log": "\nInvoking: `search_web_and_pdf` with `{'query_str': 'What specific TM Forum API are required to implement the TM Forum Wholesale Broadband standard?'}`\n\n\n",
+            "type": "AgentActionMessageLog",
+            "message_log": [
+              {
+                "lc": 1,
+                "id": [
+                  "langchain",
+                  "schema",
+                  "messages",
+                  "AIMessageChunk"
+                ],
+                "kwargs": {
+                  "type": "AIMessageChunk",
+                  "response_metadata": {
+                    "is_blocked": false,
+                    "usage_metadata": {
+                      "prompt_token_count": 106,
+                      "total_token_count": 132,
+                      "candidates_token_count": 26
+                    },
+                    "safety_ratings": [
+                      {
+                        "probability_label": "NEGLIGIBLE",
+                        "blocked": false,
+                        "category": "HARM_CATEGORY_HATE_SPEECH"
+                      },
+                      {
+                        "probability_label": "NEGLIGIBLE",
+                        "blocked": false,
+                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT"
+                      },
+                      {
+                        "blocked": false,
+                        "category": "HARM_CATEGORY_HARASSMENT",
+                        "probability_label": "NEGLIGIBLE"
+                      },
+                      {
+                        "probability_label": "NEGLIGIBLE",
+                        "blocked": false,
+                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT"
+                      }
+                    ],
+                    "citation_metadata": null
+                  },
+                  "invalid_tool_calls": [],
+                  "id": "run-5f0e995d-58ce-4028-a7bb-2ab6390f8598",
+                  "tool_calls": [
+                    {
+                      "args": {
+                        "query_str": "What specific TM Forum API are required to implement the TM Forum Wholesale Broadband standard?"
+                      },
+                      "id": "dfcb7f17-2d85-46cd-9e24-b50455eb1655",
+                      "name": "search_web_and_pdf"
+                    }
+                  ],
+                  "content": "",
+                  "tool_call_chunks": [
+                    {
+                      "name": "search_web_and_pdf",
+                      "args": "{\"query_str\": \"What specific TM Forum API are required to implement the TM Forum Wholesale Broadband standard?\"}",
+                      "id": "dfcb7f17-2d85-46cd-9e24-b50455eb1655",
+                      "index": null
+                    }
+                  ],
+                  "additional_kwargs": {
+                    "function_call": {
+                      "arguments": "{\"query_str\": \"What specific TM Forum API are required to implement the TM Forum Wholesale Broadband standard?\"}",
+                      "name": "search_web_and_pdf"
+                    }
+                  }
+                },
+                "type": "constructor"
+              }
+            ],
+            "tool_input": {
+              "query_str": "What specific TM Forum API are required to implement the TM Forum Wholesale Broadband standard?"
+            },
+            "tool_call_id": "dfcb7f17-2d85-46cd-9e24-b50455eb1655"
+          },
+          "lc": 1,
           "type": "constructor",
           "id": [
             "langchain",
             "schema",
             "agent",
             "ToolAgentAction"
-          ],
-          "kwargs": {
-            "tool_call_id": "fff6d1d2-a003-4979-91b2-d473c5290b2c",
-            "message_log": [
-              {
-                "kwargs": {
-                  "id": "run-64ba68bb-6251-459a-9428-9f6918590f84",
-                  "additional_kwargs": {
-                    "function_call": {
-                      "name": "search_web_and_pdf",
-                      "arguments": "{\"query_str\": \"Describe ODF\"}"
-                    }
-                  },
-                  "type": "AIMessageChunk",
-                  "invalid_tool_calls": [],
-                  "response_metadata": {
-                    "is_blocked": false,
-                    "usage_metadata": {
-                      "prompt_token_count": 86,
-                      "candidates_token_count": 13,
-                      "total_token_count": 99
-                    },
-                    "safety_ratings": [
-                      {
-                        "category": "HARM_CATEGORY_HATE_SPEECH",
-                        "blocked": false,
-                        "probability_label": "NEGLIGIBLE"
-                      },
-                      {
-                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                        "blocked": false,
-                        "probability_label": "NEGLIGIBLE"
-                      },
-                      {
-                        "category": "HARM_CATEGORY_HARASSMENT",
-                        "blocked": false,
-                        "probability_label": "NEGLIGIBLE"
-                      },
-                      {
-                        "probability_label": "NEGLIGIBLE",
-                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-                        "blocked": false
-                      }
-                    ],
-                    "citation_metadata": null
-                  },
-                  "content": "",
-                  "tool_call_chunks": [
-                    {
-                      "id": "fff6d1d2-a003-4979-91b2-d473c5290b2c",
-                      "index": null,
-                      "args": "{\"query_str\": \"Describe ODF\"}",
-                      "name": "search_web_and_pdf"
-                    }
-                  ],
-                  "tool_calls": [
-                    {
-                      "id": "fff6d1d2-a003-4979-91b2-d473c5290b2c",
-                      "args": {
-                        "query_str": "Describe ODF"
-                      },
-                      "name": "search_web_and_pdf"
-                    }
-                  ]
-                },
-                "lc": 1,
-                "type": "constructor",
-                "id": [
-                  "langchain",
-                  "schema",
-                  "messages",
-                  "AIMessageChunk"
-                ]
-              }
-            ],
-            "tool": "search_web_and_pdf",
-            "tool_input": {
-              "query_str": "Describe ODF"
-            },
-            "type": "AgentActionMessageLog",
-            "log": "\nInvoking: `search_web_and_pdf` with `{'query_str': 'Describe ODF'}`\n\n\n"
-          },
-          "lc": 1
+          ]
         },
         [
           {
             "answer": {
-              "state": "SUCCEEDED",
-              "citations": [
-                {
-                  "startIndex": "34",
-                  "endIndex": "232",
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ]
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ],
-                  "startIndex": "265",
-                  "endIndex": "390"
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ],
-                  "startIndex": "391",
-                  "endIndex": "533"
-                },
-                {
-                  "startIndex": "534",
-                  "endIndex": "720",
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ]
-                },
-                {
-                  "endIndex": "946",
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ],
-                  "startIndex": "804"
-                },
-                {
-                  "startIndex": "1066",
-                  "endIndex": "1171",
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ]
-                },
-                {
-                  "endIndex": "1349",
-                  "startIndex": "1173",
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ]
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ],
-                  "startIndex": "1350",
-                  "endIndex": "1475"
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ],
-                  "endIndex": "1668",
-                  "startIndex": "1509"
-                },
-                {
-                  "startIndex": "1669",
-                  "endIndex": "1855",
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ]
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ],
-                  "endIndex": "2013",
-                  "startIndex": "1856"
-                },
-                {
-                  "endIndex": "2216",
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    }
-                  ],
-                  "startIndex": "2045"
-                },
-                {
-                  "endIndex": "2375",
-                  "startIndex": "2243",
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    }
-                  ]
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    }
-                  ],
-                  "endIndex": "2621",
-                  "startIndex": "2376"
-                },
-                {
-                  "startIndex": "2622",
-                  "endIndex": "2777",
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    }
-                  ]
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    }
-                  ],
-                  "startIndex": "2778",
-                  "endIndex": "2955"
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    }
-                  ],
-                  "startIndex": "2956",
-                  "endIndex": "3094"
-                }
-              ],
               "references": [
                 {
                   "chunkInfo": {
-                    "relevanceScore": 0.5,
-                    "content": "# tmforum\n\n## Introduction\n\nThe key concepts described in this document provide a common language and understanding for the architect, other associates and business stakeholders. The foundational CONTEXTS are used to establish the enterprise's building blocks. These building blocks are fundamental to the Open Digital Framework (ODF) as they define key concepts that are used throughout ODF. The core frameworks that make up the TM Forum ODF, include the Business Process Framework (aka eTOM), the Information Framework (aka as SID), and the Functional Framework (derived from the previous TAM). The key principles provide the rules and guidelines that govern the application of key concepts in the Open Digital Framework. The rules are designed to reflect the values and goals of a digital organization, while providing direction and guidance for decision- making. These principles help to ensure consistency, alignment, and coherence across any architecture that aspires to align with the Open Digital Architecture (ODA). The section on method or methodology establish the processes and techniques that help an enterprise architect leverage the Open Digital Framework. They provide a structured and systematic approach to identify, analyze, design, and communicate the architecture. These methods or methodologies are here to help ensure quality, efficiency, and effectiveness of the target architecture of the organization. Models are the representations and artifacts that help the enterprise architect, design, document and communicate the architecture. In TM Forum, the Master Open Digital Architecture (MODA) is the definitive reference for ODA which provides the context and visualization of the structure, behavior, and relationships of the ODA business objects (architectural elements). Models help to ensure clarity, purpose, completeness and consistency of the architecture as they evolve through a maturation process which improves its reliability for TM Forum members. The adoption of the TM Forum core frameworks has the benefit of providing alignment with key industry standards and common ontology, in support of the enterprise's strategic and business goals. This can help boost both business and technical capabilities. All principles described in this document provide a foundational ground for the development of the enterprise's governance, rules and policies. TM Forum 2024. All Rights Reserved. Page 8 of 45 tmforum.org\n\n# GB991 TM Forum Core Frameworks Concepts and Principles v24.5\n\n## 1. Concepts and Definitions",
+                    "content": "# tmforum\n\n_START_OF_TABLE_\nTABLE_IN_MARKDOWN:\n|-|-|-|\n| TMF OPEN API | Description | Usecase from program |\n|  | maintenance information, and prediction information. |  |\n| TMF675 Geographic Location | Provides the information of a geographic region of the entity (customer, equipment, address). | Used to Search for a specific address |\n| TMF645 Service | Qualify a Service during feasibility checks and |\n| Qualification Management | Service Qualification API is one of the Pre- Ordering Management APIs. Service Qualification API goal is to provide service availability at Customer location. | compatibility rules execution during servuce order creation |\n| TMF674 Geographic Site Management | This API defines a Site as a convenience class that allows to easily refer to places important to other entities, where a geographic place is the entity that can answer the question where? | Capture site additional details (e.g., hazard,site access, etc) |\n\n_END_OF_TABLE_\nTM Forum 2024. All Rights Reserved.Page 36 of 38tmforum.org\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0\n\n# tmforum\n\n## 9. References\n\n_START_OF_TABLE_\nTABLE_IN_MARKDOWN:\n|-|-|-|-|\n| Reference | Description | Source | Brief Use Summary |\n| Project Charter | Project Name: Standardizing Wholesale Broadband | Standardising Wholesale Broadband \u2013 Fiber Access (BFA) home | This is the Project Confluence Page where the collaboration work is |\n|  |  |  | going on. You can find Technical reports, current status, MoM and weekly call calendar. |\n| TM Forum Website | TMForum Website | www.tmforum.org | TMForum Website |\n| TM Forum Open API Table | API program is a global initiative to enable seamless connectivity, interoperability and portability across complex ecosystem services | TM Forum's Open | https://www.tmforum.org/oda/open- apis/table | List of all TMF Open API table and a detailed description. |\n| ODA Components | ODA Components https://www.tmforum.org/oda/direct Directory Map ory/components-map | List of all ODA Compontets and a detailed description of them. |\n| Ecosystem | Eccosystem | \u2022 Online B2B2X Partnering | Describes the need |\n| Patterns | patterns as part of | Step by Step Guide R18.0.1 | for agreements |\n|  | the intent solution | (TR211) IG1317 ODA DSE Platform \u2022 | (processes and rules) on Product definitions, and |\n|  |  | Extensions & Patterns for B2B, B2B2X & Partner Ecosystems v3.0.0 | Business Contractual, Financial and Operational moedels. |\n|  |  |  | Interaciton patterns |\n\n_END_OF_TABLE_\nTM Forum 2024. All Rights Reserved.Page 37 of 38tmforum.org\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0",
+                    "relevanceScore": 0.6,
                     "documentMetadata": {
-                      "title": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1481908",
+                      "uri": "gs://tmf-documents/IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1385622",
+                      "pageIdentifier": "36",
                       "structData": {
-                        "Status": "Team Approved",
-                        "Categories": "Standard > Reference > Guidebook",
-                        "Short_description": "",
-                        "DocId": "1481908",
-                        "Maturity_level": "General availability (GA)",
-                        "Date_Modified": "29-Aug-2024",
-                        "File_format": "PDF",
-                        "Project": "Information Systems Architecture",
-                        "Document_Series": "GB991",
-                        "Permalink": "https://www.tmforum.org/resources/guidebook/gb991-tm-forums-core-frameworks-concepts-and-principles-v24-5-0/",
-                        "Document_type": "Guidebook",
-                        "Description": "<p>TM Forum's Core Frameworks is a suite of best practices and standards that provides the blueprint for effective, efficient business operations and enable a service-oriented, highly automated and efficient approach to business operations and application integration.</p>\n<p>This Concepts and Principles document strives to enable the reader to get a complete point of view of the compilation and creation of the core Frameworks; (business process, Information and functional frameworks), explaining the reasoning to its construction.</p>\n",
-                        "IPR_mode": "RAND",
-                        "Published": "1",
+                        "Maturity_level": "Alpha",
+                        "Date_Modified": "08-Apr-2024",
+                        "Document_type": "Introductory Guide",
+                        "Asset_file_name": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
+                        "Standard": [],
                         "Security": "Member",
-                        "Release_Status": "status-pre-production",
-                        "Release": "24.5",
-                        "Document_Version": "24.5.0",
-                        "Asset_file_name": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
-                        "Standard": [
-                          "Application Framework (TAM)"
-                        ]
-                      },
-                      "uri": "gs://tmf-documents/GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
-                      "pageIdentifier": "8"
-                    }
-                  }
-                },
-                {
-                  "chunkInfo": {
-                    "content": "# tmforum\n\n## 2.2. Architectural approach and design principles\n\nThe ODA Framework defines an approach to decoupling and separation of concerns which is essential to facilitate rapid independent evolution of solutions, whilst retaining Architectural cohesion, minimizing the complexity and cost of integration, and achieving implementation interoperability for e2e services. The ODA Architecture is captured in eight main artefact groupings which are inspired by TOGAF Enterprise Architecture best practice. Together these groupings provide a comprehensive Architecture for complete service lifecycle automation within an enterprise - such as a Communications Service Provider.TM Forum 2018. All Rights Reserved.Page 14 of 51\n\n# ODA Architecture Vision R18.0.0\n\ntmforum 8 Artefact Groupings that define ODA Framework (A) ODA Concepts & Principles (including GB998 Open Digital Architecture (ODA) Concepts & Principles, etc.) (B) ODA Architecture Vision (including IG1166 Open Digital Architecture Vision R18.0.0, etc.) tmforum (D) ODA Business Architecture Including TMF071 ODA Terminology, etc) (E) ODA Information Systems Architecture ODA-ISA Including IG1167 ODA Functional Architecture (F) ODA Technical Architecture ODA-TA Including IG1171 ODA Component Definition (G) ODA Solutions Implementation Including ODA Component Library tbd (H) ODA Deployment & Runtime Including Virtualization, cloud, PaaS, laaS, tbd (C) ODA Agile & Model Driven Management (Requirements, Life-cycle Model & Tools including Curate Fx) Figure 3: TM Forum Open Digital Architecture Artefact Groupings 017 TM Forum | 1 Each of the core ODA Framework artefact groupings provide capabilities to support the responsibilities of different ODA Architecture users/stakeholders. These capabilities cover key aspects of the TOGAF Architecture Development Methodology (ADM) described in Appendix B. Together the ODA Framework artefact groupings deliver agility in managing the zero-touch automation of a service lifecycle - which is a key ODA requirement. The architectural approach to realizing the ODA is achieved through ODA requirements management creating the following ODA Architecture artefact groupings: \u2022 (A) ODA Concepts and Principles - documents the architecture principles, concepts and the requirements that each Architecture Framework grouping must fulfill. \u2022 (B) ODA Architecture Vision Document \u2013 this document - defines the 8 ODA Architecture Framework groupings, provides a definition of the artefacts required in each, such as: specifications, capabilities, best practices including architecture methods/methodologies and metrics, code and tooling. The ODA capabilities to achieve service lifecycle agility are captured in the following artefact groupings: \u2022 \u2022 \u2022 (C) Agile and model driven Management defines the requirements, modelling and tooling approach for ODA lifecycle which is the key to accomplishing business agility. The methods/methodologies, metrics and tooling described here will be used to manage requirements across all these artefacts to address different stakeholders' needs. (D) ODA Business Architecture, that will describe product and/or service strategy, the organizational, functional, process, information, and geographic aspects of the business environment, based on the business principles, business goals, and strategic drivers (Including common vocabulary, ODA Terminology etc. - Including TMF071 ODA Terminology R18.0.0, etc.) (E) ODA Information Systems Architecture (ISA), which must provide the Functional Architecture (IG1167 ODA Functional Architecture R18.0.0) and concepts of Data and Applications Architecture.",
-                    "relevanceScore": 0.3,
-                    "documentMetadata": {
-                      "uri": "gs://tmf-documents/IG1166_ODA_Architecture_Vision_R18.0.0.pdf",
-                      "title": "IG1166_ODA_Architecture_Vision_R18.0.0",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/462342",
-                      "pageIdentifier": "14",
-                      "structData": {
-                        "Release": "18.0",
-                        "Short_description": "",
-                        "Permalink": "https://www.tmforum.org/resources/exploratory-report/ig1166-oda-architecture-vision-r18-0-0/",
-                        "Document_Series": "IG1166",
+                        "Project": "Wholesale Broadband Project",
+                        "Document_Version": "1.0.0",
                         "Status": "Member Evaluated",
-                        "Release_Status": "status-production",
-                        "Standard": [
-                          "Best Practices"
-                        ],
+                        "Description": "<p>This whitepaper explores the multifaceted challenges faced by the wholesale broadband industry due to the business and technical complexities facing service providers and their partners. The paper aims to underscore how the TM Forum Open Digital Architecture (ODA) can be adopted in order to overcome these challenges through standardization.</p>\n",
+                        "DocId": "1385622",
+                        "Categories": "How To Guide > Standard > Exploratory Report > Best Practice > Reference > Model > Introductory Guide",
+                        "Release_Status": "status-pre-production",
+                        "Short_description": "",
+                        "Document_Series": "IG1351",
                         "File_format": "PDF",
-                        "Description": "<p>The Open Digital Architecture (ODA) offers an industry-agreed blueprint, language and set of key design principles to follow. It will provide pragmatic pathways for the journey from maintaining monolithic, legacy software solutions, towards managing nimble, cloud-based capabilities that can be orchestrated using AI. It is a reference architecture that maps TM Forum's Open APIs and assets against technical and business platform functions.</p>\n<p>The ODA Architecture Vision defines, using an analysis of the ODA business drivers:</p>\n<ul>\n<li>The background to why a transformation is needed to the way OSS and BSS are imagined, to address significant and concurrent business, industry, and technology changes.</li>\n<li>Eight key Architecture Framework artefact groupings that are needed to achieve business agility and zero touch automated operations which is based on TOGAF(TM) concepts.</li>\n<li>Concepts and Principles and Vision that capture requirements, principles and an evolution path for the ODA Architecture.</li>\n<li>Methods for Agile Model Driven Management to achieve agile service lifecycle management.</li>\n<li>ODA Architecture Framework artefacts:\n<ul>\n<li>Standards specifications, capabilities based on standards, best practices, methodologies and tooling that provide the management support needed for a model driven agile service lifecycle; covering\u00a0Business, Information Systems Architecture, Technical Architecture, Implementation and Deployment Architectures.</li>\n<li>How to leverage and integrate, existing TM Forum artefacts to provide ODA artefacts and capabilities for each of the eight ODA Architecture Frameworks.</li>\n</ul>\n</li>\n</ul>\n",
-                        "Document_type": "Exploratory Report",
-                        "Document_Version": "1.0.1",
-                        "IPR_mode": "RAND",
-                        "Date_Modified": "18-Jul-18",
-                        "Security": "non-member",
                         "Published": "1",
-                        "Project": "Open Digitial Architecture (ODA)",
-                        "DocId": "462342",
-                        "Categories": "Standard > Exploratory Report",
-                        "Maturity_level": "Level 3 - Team Approved",
-                        "Asset_file_name": "IG1166_ODA_Architecture_Vision_R18.0.0.pdf"
-                      }
+                        "Release": "24.0",
+                        "IPR_mode": "RAND",
+                        "Permalink": "https://www.tmforum.org/resources/introductory-guide/utilizing-tm-forum-oda-as-a-tool-for-standardizing-wholesale-broadband-whitepaper-v1-0-0-ig1351/"
+                      },
+                      "title": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0"
                     }
                   }
                 },
                 {
                   "chunkInfo": {
-                    "relevanceScore": 0.3,
+                    "content": "# tmforum\n\nCurrently requirements that need to be taken into consideration when installing products as part of an appointment and often passed in notes or other ad-hoc methods. lack of awareness in advance often leads to repeated vists and additional cost. The project will \u2022 Enhance the geographic address APIs to link an address to a site \u2022 Enhance the site API to include the ability to register features which an engineer will need to be aware of for a successful visit \u039f \u039f Site risks such as phyiscal, environment and health factors Access requirements such as security and opening hours TM Forum 2024. All Rights Reserved.Page 17 of 38tmforum.org\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0\n\n## 5. Technical Architecture: TMF Components & APIs\n\ntmforum\n\n### TM Forum OpenAPI Strategy Overview\n\nIn our TM Forum OpenAPI strategy, we embark on a comprehensive approach to enhance the broadband ecosystem. We aim to define context-specialized TMF Open APIs, tailoring them for addressing, appointing, order management, and service assurance, ensuring a nuanced and efficient operation. Simultaneously, we envision a common product model for broadband access, striking a balance between standardisation and provider customization to meet diverse requirements. Emphasizing cohesion, we outline a shared state model, orchestration processes, workflow dynamics, and error handling standards, fostering consistency, and streamlined communication. Crucially, our strategy entails a clear delineation of ownership responsibilities for actions between access and service providers, accompanied by a roadmap of expected next steps, promoting transparent collaboration and operational efficacy.\n\n### Extend TM Forum OpenAPI's to create domain context specific (DCS) broadband content\n\nTo cater to the diverse requirements of each program contributor, we recognized the necessity for a customized approach to API usage. Some contributors required additional features to meet the specific demands of their organizations. Consequently, extending the TMF OPEN APIs emerged as a strategic approach, allowing us to create context-specific broadband content tailored to the expertise of each contributor.The approach we adopted for the extensions involved each contributor sharing their payload on the existing API they utilized. Through collaborative discussions, we refined and finalized the payload required for each API. In cases where additional fields were deemed necessary, we proceeded with extending the current APIs to accommodate these specific needs Among extending the standards within the current scope, our approach for each API involves the following steps: \u2022 Proposing improvements and revisions to the API \u2022 Providing current samples of payloads used by members \u2022 Developing a revised Open API Specification \u2022 Presenting proposed new data model examples to enhance the overall functionality of the API TMF622 Any payload Wholesale broadband payload DOMAIN CONTEXT SPECIALIZATION TMF622 CORE OPEN API CONTEXT-SPECIFIC OPEN API DCS concept example TM Forum 2024. All Rights Reserved. tmforum.orgPage 18 of 38\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0",
+                    "relevanceScore": 0.6,
                     "documentMetadata": {
-                      "pageIdentifier": "5",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1252275",
-                      "uri": "gs://tmf-documents/IG1171_ODA_Component_Definition_v5.0.0.pdf",
-                      "title": "IG1171_ODA_Component_Definition_v5.0.0",
+                      "pageIdentifier": "17",
                       "structData": {
-                        "DocId": "1252275",
-                        "Standard": [
-                          "Best Practices"
-                        ],
-                        "Document_Version": "5.0.0",
-                        "Document_Series": "IG1171",
-                        "Status": "TM Forum Approved",
-                        "Categories": "Standard > Exploratory Report > Best Practice",
-                        "Published": "1",
-                        "IPR_mode": "RAND",
-                        "Document_type": "Best Practice",
-                        "Date_Modified": "04-Aug-2023",
-                        "Maturity_level": "General availability (GA)",
+                        "Release_Status": "status-pre-production",
+                        "Document_Version": "1.0.0",
+                        "Date_Modified": "08-Apr-2024",
+                        "Permalink": "https://www.tmforum.org/resources/introductory-guide/utilizing-tm-forum-oda-as-a-tool-for-standardizing-wholesale-broadband-whitepaper-v1-0-0-ig1351/",
                         "File_format": "PDF",
-                        "Project": "Technical Architecture &amp; Components Project",
-                        "Permalink": "https://www.tmforum.org/resources/best-practice/ig1171-oda-component-definition-v5-0-0/",
-                        "Asset_file_name": "IG1171_ODA_Component_Definition_v5.0.0.pdf",
-                        "Release": "23.0",
-                        "Description": "<p>This document defines the ODA Component with its anatomy.\u00a0 \u00a0</p>\n<p>Please refer to it to understand the concept of ODA Component, what the Core Function and Support Functions area and how to define an ODA Component to be relevant to the ODA Functional Architecture.</p>\n",
-                        "Security": "non-member",
-                        "Release_Status": "status-production",
-                        "Short_description": ""
-                      }
+                        "Standard": [],
+                        "Document_type": "Introductory Guide",
+                        "IPR_mode": "RAND",
+                        "DocId": "1385622",
+                        "Status": "Member Evaluated",
+                        "Document_Series": "IG1351",
+                        "Asset_file_name": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
+                        "Security": "Member",
+                        "Categories": "How To Guide > Standard > Exploratory Report > Best Practice > Reference > Model > Introductory Guide",
+                        "Description": "<p>This whitepaper explores the multifaceted challenges faced by the wholesale broadband industry due to the business and technical complexities facing service providers and their partners. The paper aims to underscore how the TM Forum Open Digital Architecture (ODA) can be adopted in order to overcome these challenges through standardization.</p>\n",
+                        "Short_description": "",
+                        "Project": "Wholesale Broadband Project",
+                        "Maturity_level": "Alpha",
+                        "Published": "1",
+                        "Release": "24.0"
+                      },
+                      "title": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1385622",
+                      "uri": "gs://tmf-documents/IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.5,
+                    "documentMetadata": {
+                      "structData": {
+                        "Short_description": "",
+                        "DocId": "1385622",
+                        "Document_type": "Introductory Guide",
+                        "Categories": "How To Guide > Standard > Exploratory Report > Best Practice > Reference > Model > Introductory Guide",
+                        "Status": "Member Evaluated",
+                        "Permalink": "https://www.tmforum.org/resources/introductory-guide/utilizing-tm-forum-oda-as-a-tool-for-standardizing-wholesale-broadband-whitepaper-v1-0-0-ig1351/",
+                        "Release": "24.0",
+                        "Description": "<p>This whitepaper explores the multifaceted challenges faced by the wholesale broadband industry due to the business and technical complexities facing service providers and their partners. The paper aims to underscore how the TM Forum Open Digital Architecture (ODA) can be adopted in order to overcome these challenges through standardization.</p>\n",
+                        "Project": "Wholesale Broadband Project",
+                        "IPR_mode": "RAND",
+                        "Document_Series": "IG1351",
+                        "Security": "Member",
+                        "Maturity_level": "Alpha",
+                        "Published": "1",
+                        "Standard": [],
+                        "Date_Modified": "08-Apr-2024",
+                        "File_format": "PDF",
+                        "Asset_file_name": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
+                        "Document_Version": "1.0.0",
+                        "Release_Status": "status-pre-production"
+                      },
+                      "pageIdentifier": "34",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1385622",
+                      "uri": "gs://tmf-documents/IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
+                      "title": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0"
                     },
-                    "content": "# tmforum\n\n## ODA Component Definition\n\n### tmforum\n\nExecutive SummaryThis document describes reasons for defining an ODA Component (detailed in Open Digital Architecture Whitepaper), stemming from the need for an agile approach that encompasses business needs, network structure, and operational challenges. The document then describes the structure of a component, its sub-parts and their functionalities, as well as suggesting ways of exposing the functionalities. The document also addresses the lifecycle of the component and its composability aspects. Another section is devoted to the relation of ODA Components to the existing Frameworx assets, including to the Open APIs. Subsequent releases are expected to materially enhance the connection to digital business, the use of a component on existing industry platforms, composition scenarios, and examples. TM Forum 2023. All Rights Reserved. Page 5 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0\n\n# tmforum\n\n## Introduction\n\nBuilding on TM Forum's rich history in leading IT and operational transformation, and on the success of a widely-used suite of standardized REST based Open APIs, this guide explains how we define ODA Components as software units that can be composed into systems or solutions. The Open Digital Architecture Whitepaper established the need for an \"industry-agreed\" digital architecture prescribing a set of industry agreed actions that enable, simplify and automate software systems based on standards. One of the key standards is the ODA Component. This document and the supplementary artifacts define the ODA Component and use. To fully realize the business requirement of multivendor solutions, ODA Components must support interoperability in much the same way that reusable components are offered in cloud marketplaces such as Microsoft Azure, IBM Cloud and Amazon Web Services etc. The definition of ODA Components follows the ODA Component principles to draw on best practices and modern concepts to effectively encapsulate the concept of componentization into ODA. TM Forum 2023. All Rights Reserved. Page 6 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0"
+                    "content": "# tmforum\n\n_START_OF_TABLE_\nTABLE_IN_MARKDOWN:\n|-|-|\n| TMF OPEN API | Usecase from program Description |\n| TMF679 Product Offering Qualification | area, and finally listing all the street segments (numbers) in a street. Product Offering Qualification API is one of Pre-Ordering Management API Family. Product Offering Qualification API goal is to provide Product Offering commercial eligibility. Find products that eligible for the CSP Customer |\n| TMF622 Product Order Management | Provides a standardized mechanism for placing a product order with all the necessary order parameters. The API consists of a simple set of operations that interact with CRM/Order negotiation systems in a consistent manner. A product order is created based on a product offering that is defined in a catalog. The product offering identifies the product or set of products that are available to a customer and includes characteristics such as pricing, product options and market. Place product order |\n| TMF646 Appointment | Search for appointment slots and reserve appointments The appointment API provides a standardized mechanism to book an appointment with all the necessary appointment characteristics. The API allows searching of free slots based on parameters, as for example a party, then creating the appointment. The appointment has characteristics such as nature of appointment, place of appointment. |\n| TMF620 | Provides a standardized |\n| Product Catalog Management TMF641 Service Order Management | solution for rapidly List product specification and characteristics of the product adding partners' products to an existing Catalog. It brings the capability for Service Providers to directly feed partners systems with the technical description of the products they propose to them. Provision Service Order The REST API for Service Order Management provides a standardized mechanism for placing a service order with |\n|  | all the necessary order parameters. It allows users to create, update & retrieve Service Orders and manages related notifications. |\n| TMF652 Resource | Provision Resource Order The REST API for Resource Order Management. It includes the model |\n| Order | definition as well as all available |\n| Management | operations. Possible actions are creating, updating and retrieving Resource Orders (including filtering). A Resource Order API provides a standard mechanism for placing |\n\n_END_OF_TABLE_\nTM Forum 2024. All Rights Reserved. tmforum.orgPage 34 of 38\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0"
                   }
                 }
               ],
+              "citations": [
+                {
+                  "startIndex": "172",
+                  "endIndex": "320",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ]
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "endIndex": "386",
+                  "startIndex": "321"
+                },
+                {
+                  "endIndex": "545",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "startIndex": "387"
+                },
+                {
+                  "endIndex": "629",
+                  "startIndex": "546",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ]
+                },
+                {
+                  "startIndex": "630",
+                  "endIndex": "768",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ]
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ],
+                  "endIndex": "827",
+                  "startIndex": "769"
+                },
+                {
+                  "startIndex": "855",
+                  "endIndex": "964",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ]
+                },
+                {
+                  "endIndex": "1078",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ],
+                  "startIndex": "965"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ],
+                  "startIndex": "1079",
+                  "endIndex": "1297"
+                },
+                {
+                  "endIndex": "1405",
+                  "startIndex": "1298",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ]
+                },
+                {
+                  "startIndex": "1406",
+                  "endIndex": "1506",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ]
+                },
+                {
+                  "endIndex": "1639",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ],
+                  "startIndex": "1537"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ],
+                  "endIndex": "1733",
+                  "startIndex": "1640"
+                },
+                {
+                  "startIndex": "1767",
+                  "endIndex": "1903",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ]
+                },
+                {
+                  "startIndex": "1904",
+                  "endIndex": "2006",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ]
+                },
+                {
+                  "startIndex": "2007",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "endIndex": "2148"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    },
+                    {
+                      "referenceId": "1"
+                    }
+                  ],
+                  "endIndex": "2279",
+                  "startIndex": "2149"
+                }
+              ],
+              "state": "SUCCEEDED",
+              "answerText": "## TM Forum APIs for Wholesale Broadband Standardization:\n\nTo implement the TM Forum Wholesale Broadband standard, several APIs are crucial:\n\n**Pre-Ordering Management:**\n\n* **TMF675 Geographic Location:** This API provides information about the geographic region of an entity, such as a customer, equipment, or address. This is particularly useful for searching for specific addresses.\n* **TMF645 Service Qualification:** This API helps qualify a service during feasibility checks and compatibility rule execution during service order creation. It plays a key role in determining service availability at the customer's location.\n* **TMF679 Product Offering Qualification:** This API determines the commercial eligibility of a product offering for a specific customer. It helps find products that are eligible for the customer.\n\n**Ordering Management:**\n\n* **TMF622 Product Order Management:** This API provides a standardized mechanism for placing product orders. It interacts with CRM/Order negotiation systems to create orders based on product offerings defined in a catalog.\n* **TMF641 Service Order Management:** This API allows for placing service orders with all necessary parameters. It enables users to create, update, and retrieve service orders, as well as manage related notifications.\n* **TMF652 Resource Order Management:** This API provides a standard mechanism for placing resource orders. It includes model definitions and operations for creating, updating, and retrieving resource orders.\n\n**Appointment Management:**\n\n* **TMF646 Appointment:** This API facilitates appointment booking with all necessary characteristics. It allows searching for free appointment slots based on parameters and creating appointments.\n\n**Additional Considerations:**\n\n* **TMF620 Product Catalog Management:** This API provides a standardized solution for adding partners' products to an existing catalog. This enables service providers to directly feed partners' systems with technical product descriptions.\n* **TMF674 Geographic Site Management:** This API defines a \"Site\" as a convenience class for referencing places important to other entities. It helps capture additional site details like hazards, site access, and other information relevant for successful engineer visits. \n",
               "steps": [
                 {
                   "actions": [
                     {
-                      "searchAction": {
-                        "query": "Describe ODF"
-                      },
                       "observation": {
                         "searchResults": [
                           {
+                            "uri": "gs://tmf-documents/IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
                             "structData": {
-                              "Short_description": "",
-                              "Security": "Member",
-                              "Document_type": "Guidebook",
-                              "Document_Version": "24.5.0",
-                              "Release_Status": "status-pre-production",
-                              "Asset_file_name": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
-                              "Permalink": "https://www.tmforum.org/resources/guidebook/gb991-tm-forums-core-frameworks-concepts-and-principles-v24-5-0/",
-                              "Date_Modified": "29-Aug-2024",
-                              "Maturity_level": "General availability (GA)",
-                              "Release": "24.5",
-                              "Project": "Information Systems Architecture",
                               "File_format": "PDF",
-                              "Status": "Team Approved",
-                              "DocId": "1481908",
-                              "Document_Series": "GB991",
-                              "Description": "<p>TM Forum's Core Frameworks is a suite of best practices and standards that provides the blueprint for effective, efficient business operations and enable a service-oriented, highly automated and efficient approach to business operations and application integration.</p>\n<p>This Concepts and Principles document strives to enable the reader to get a complete point of view of the compilation and creation of the core Frameworks; (business process, Information and functional frameworks), explaining the reasoning to its construction.</p>\n",
-                              "IPR_mode": "RAND",
                               "Published": "1",
-                              "Standard": [
-                                "Application Framework (TAM)"
-                              ],
-                              "Categories": "Standard > Reference > Guidebook"
+                              "Release": "24.0",
+                              "Document_type": "Introductory Guide",
+                              "Asset_file_name": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
+                              "Date_Modified": "08-Apr-2024",
+                              "Description": "<p>This whitepaper explores the multifaceted challenges faced by the wholesale broadband industry due to the business and technical complexities facing service providers and their partners. The paper aims to underscore how the TM Forum Open Digital Architecture (ODA) can be adopted in order to overcome these challenges through standardization.</p>\n",
+                              "Project": "Wholesale Broadband Project",
+                              "Security": "Member",
+                              "Status": "Member Evaluated",
+                              "DocId": "1385622",
+                              "IPR_mode": "RAND",
+                              "Categories": "How To Guide > Standard > Exploratory Report > Best Practice > Reference > Model > Introductory Guide",
+                              "Permalink": "https://www.tmforum.org/resources/introductory-guide/utilizing-tm-forum-oda-as-a-tool-for-standardizing-wholesale-broadband-whitepaper-v1-0-0-ig1351/",
+                              "Document_Series": "IG1351",
+                              "Document_Version": "1.0.0",
+                              "Standard": [],
+                              "Maturity_level": "Alpha",
+                              "Short_description": "",
+                              "Release_Status": "status-pre-production"
                             },
+                            "title": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1385622",
                             "chunkInfo": [
                               {
-                                "content": "# tmforum\n\n## Introduction\n\nThe key concepts described in this document provide a common language and understanding for the architect, other associates and business stakeholders. The foundational CONTEXTS are used to establish the enterprise's building blocks. These building blocks are fundamental to the Open Digital Framework (ODF) as they define key concepts that are used throughout ODF. The core frameworks that make up the TM Forum ODF, include the Business Process Framework (aka eTOM), the Information Framework (aka as SID), and the Functional Framework (derived from the previous TAM). The key principles provide the rules and guidelines that govern the application of key concepts in the Open Digital Framework. The rules are designed to reflect the values and goals of a digital organization, while providing direction and guidance for decision- making. These principles help to ensure consistency, alignment, and coherence across any architecture that aspires to align with the Open Digital Architecture (ODA). The section on method or methodology establish the processes and techniques that help an enterprise architect leverage the Open Digital Framework. They provide a structured and systematic approach to identify, analyze, design, and communicate the architecture. These methods or methodologies are here to help ensure quality, efficiency, and effectiveness of the target architecture of the organization. Models are the representations and artifacts that help the enterprise architect, design, document and communicate the architecture. In TM Forum, the Master Open Digital Architecture (MODA) is the definitive reference for ODA which provides the context and visualization of the structure, behavior, and relationships of the ODA business objects (architectural elements). Models help to ensure clarity, purpose, completeness and consistency of the architecture as they evolve through a maturation process which improves its reliability for TM Forum members. The adoption of the TM Forum core frameworks has the benefit of providing alignment with key industry standards and common ontology, in support of the enterprise's strategic and business goals. This can help boost both business and technical capabilities. All principles described in this document provide a foundational ground for the development of the enterprise's governance, rules and policies. TM Forum 2024. All Rights Reserved. Page 8 of 45 tmforum.org\n\n# GB991 TM Forum Core Frameworks Concepts and Principles v24.5\n\n## 1. Concepts and Definitions",
-                                "relevanceScore": 0.5
+                                "content": "# tmforum\n\n_START_OF_TABLE_\nTABLE_IN_MARKDOWN:\n|-|-|-|\n| TMF OPEN API | Description | Usecase from program |\n|  | maintenance information, and prediction information. |  |\n| TMF675 Geographic Location | Provides the information of a geographic region of the entity (customer, equipment, address). | Used to Search for a specific address |\n| TMF645 Service | Qualify a Service during feasibility checks and |\n| Qualification Management | Service Qualification API is one of the Pre- Ordering Management APIs. Service Qualification API goal is to provide service availability at Customer location. | compatibility rules execution during servuce order creation |\n| TMF674 Geographic Site Management | This API defines a Site as a convenience class that allows to easily refer to places important to other entities, where a geographic place is the entity that can answer the question where? | Capture site additional details (e.g., hazard,site access, etc) |\n\n_END_OF_TABLE_\nTM Forum 2024. All Rights Reserved.Page 36 of 38tmforum.org\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0\n\n# tmforum\n\n## 9. References\n\n_START_OF_TABLE_\nTABLE_IN_MARKDOWN:\n|-|-|-|-|\n| Reference | Description | Source | Brief Use Summary |\n| Project Charter | Project Name: Standardizing Wholesale Broadband | Standardising Wholesale Broadband \u2013 Fiber Access (BFA) home | This is the Project Confluence Page where the collaboration work is |\n|  |  |  | going on. You can find Technical reports, current status, MoM and weekly call calendar. |\n| TM Forum Website | TMForum Website | www.tmforum.org | TMForum Website |\n| TM Forum Open API Table | API program is a global initiative to enable seamless connectivity, interoperability and portability across complex ecosystem services | TM Forum's Open | https://www.tmforum.org/oda/open- apis/table | List of all TMF Open API table and a detailed description. |\n| ODA Components | ODA Components https://www.tmforum.org/oda/direct Directory Map ory/components-map | List of all ODA Compontets and a detailed description of them. |\n| Ecosystem | Eccosystem | \u2022 Online B2B2X Partnering | Describes the need |\n| Patterns | patterns as part of | Step by Step Guide R18.0.1 | for agreements |\n|  | the intent solution | (TR211) IG1317 ODA DSE Platform \u2022 | (processes and rules) on Product definitions, and |\n|  |  | Extensions & Patterns for B2B, B2B2X & Partner Ecosystems v3.0.0 | Business Contractual, Financial and Operational moedels. |\n|  |  |  | Interaciton patterns |\n\n_END_OF_TABLE_\nTM Forum 2024. All Rights Reserved.Page 37 of 38tmforum.org\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0",
+                                "relevanceScore": 0.6
                               }
-                            ],
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1481908",
-                            "uri": "gs://tmf-documents/GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
-                            "title": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5"
+                            ]
                           },
                           {
+                            "uri": "gs://tmf-documents/IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
                             "structData": {
-                              "Release": "18.0",
-                              "Categories": "Standard > Exploratory Report",
-                              "Standard": [
-                                "Best Practices"
-                              ],
+                              "Description": "<p>This whitepaper explores the multifaceted challenges faced by the wholesale broadband industry due to the business and technical complexities facing service providers and their partners. The paper aims to underscore how the TM Forum Open Digital Architecture (ODA) can be adopted in order to overcome these challenges through standardization.</p>\n",
                               "Published": "1",
                               "Status": "Member Evaluated",
+                              "Document_Series": "IG1351",
+                              "Document_type": "Introductory Guide",
+                              "Categories": "How To Guide > Standard > Exploratory Report > Best Practice > Reference > Model > Introductory Guide",
+                              "Project": "Wholesale Broadband Project",
                               "Short_description": "",
-                              "Release_Status": "status-production",
-                              "Document_type": "Exploratory Report",
-                              "Security": "non-member",
-                              "Maturity_level": "Level 3 - Team Approved",
-                              "Date_Modified": "18-Jul-18",
-                              "Project": "Open Digitial Architecture (ODA)",
-                              "IPR_mode": "RAND",
-                              "Document_Series": "IG1166",
-                              "Permalink": "https://www.tmforum.org/resources/exploratory-report/ig1166-oda-architecture-vision-r18-0-0/",
-                              "Document_Version": "1.0.1",
-                              "Description": "<p>The Open Digital Architecture (ODA) offers an industry-agreed blueprint, language and set of key design principles to follow. It will provide pragmatic pathways for the journey from maintaining monolithic, legacy software solutions, towards managing nimble, cloud-based capabilities that can be orchestrated using AI. It is a reference architecture that maps TM Forum's Open APIs and assets against technical and business platform functions.</p>\n<p>The ODA Architecture Vision defines, using an analysis of the ODA business drivers:</p>\n<ul>\n<li>The background to why a transformation is needed to the way OSS and BSS are imagined, to address significant and concurrent business, industry, and technology changes.</li>\n<li>Eight key Architecture Framework artefact groupings that are needed to achieve business agility and zero touch automated operations which is based on TOGAF(TM) concepts.</li>\n<li>Concepts and Principles and Vision that capture requirements, principles and an evolution path for the ODA Architecture.</li>\n<li>Methods for Agile Model Driven Management to achieve agile service lifecycle management.</li>\n<li>ODA Architecture Framework artefacts:\n<ul>\n<li>Standards specifications, capabilities based on standards, best practices, methodologies and tooling that provide the management support needed for a model driven agile service lifecycle; covering\u00a0Business, Information Systems Architecture, Technical Architecture, Implementation and Deployment Architectures.</li>\n<li>How to leverage and integrate, existing TM Forum artefacts to provide ODA artefacts and capabilities for each of the eight ODA Architecture Frameworks.</li>\n</ul>\n</li>\n</ul>\n",
+                              "Document_Version": "1.0.0",
+                              "Standard": [],
+                              "Maturity_level": "Alpha",
+                              "Date_Modified": "08-Apr-2024",
+                              "Permalink": "https://www.tmforum.org/resources/introductory-guide/utilizing-tm-forum-oda-as-a-tool-for-standardizing-wholesale-broadband-whitepaper-v1-0-0-ig1351/",
+                              "DocId": "1385622",
+                              "Release_Status": "status-pre-production",
+                              "Release": "24.0",
+                              "Security": "Member",
+                              "Asset_file_name": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
                               "File_format": "PDF",
-                              "DocId": "462342",
-                              "Asset_file_name": "IG1166_ODA_Architecture_Vision_R18.0.0.pdf"
+                              "IPR_mode": "RAND"
                             },
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/462342",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1385622",
                             "chunkInfo": [
                               {
-                                "relevanceScore": 0.3,
-                                "content": "# tmforum\n\n## 2.2. Architectural approach and design principles\n\nThe ODA Framework defines an approach to decoupling and separation of concerns which is essential to facilitate rapid independent evolution of solutions, whilst retaining Architectural cohesion, minimizing the complexity and cost of integration, and achieving implementation interoperability for e2e services. The ODA Architecture is captured in eight main artefact groupings which are inspired by TOGAF Enterprise Architecture best practice. Together these groupings provide a comprehensive Architecture for complete service lifecycle automation within an enterprise - such as a Communications Service Provider.TM Forum 2018. All Rights Reserved.Page 14 of 51\n\n# ODA Architecture Vision R18.0.0\n\ntmforum 8 Artefact Groupings that define ODA Framework (A) ODA Concepts & Principles (including GB998 Open Digital Architecture (ODA) Concepts & Principles, etc.) (B) ODA Architecture Vision (including IG1166 Open Digital Architecture Vision R18.0.0, etc.) tmforum (D) ODA Business Architecture Including TMF071 ODA Terminology, etc) (E) ODA Information Systems Architecture ODA-ISA Including IG1167 ODA Functional Architecture (F) ODA Technical Architecture ODA-TA Including IG1171 ODA Component Definition (G) ODA Solutions Implementation Including ODA Component Library tbd (H) ODA Deployment & Runtime Including Virtualization, cloud, PaaS, laaS, tbd (C) ODA Agile & Model Driven Management (Requirements, Life-cycle Model & Tools including Curate Fx) Figure 3: TM Forum Open Digital Architecture Artefact Groupings 017 TM Forum | 1 Each of the core ODA Framework artefact groupings provide capabilities to support the responsibilities of different ODA Architecture users/stakeholders. These capabilities cover key aspects of the TOGAF Architecture Development Methodology (ADM) described in Appendix B. Together the ODA Framework artefact groupings deliver agility in managing the zero-touch automation of a service lifecycle - which is a key ODA requirement. The architectural approach to realizing the ODA is achieved through ODA requirements management creating the following ODA Architecture artefact groupings: \u2022 (A) ODA Concepts and Principles - documents the architecture principles, concepts and the requirements that each Architecture Framework grouping must fulfill. \u2022 (B) ODA Architecture Vision Document \u2013 this document - defines the 8 ODA Architecture Framework groupings, provides a definition of the artefacts required in each, such as: specifications, capabilities, best practices including architecture methods/methodologies and metrics, code and tooling. The ODA capabilities to achieve service lifecycle agility are captured in the following artefact groupings: \u2022 \u2022 \u2022 (C) Agile and model driven Management defines the requirements, modelling and tooling approach for ODA lifecycle which is the key to accomplishing business agility. The methods/methodologies, metrics and tooling described here will be used to manage requirements across all these artefacts to address different stakeholders' needs. (D) ODA Business Architecture, that will describe product and/or service strategy, the organizational, functional, process, information, and geographic aspects of the business environment, based on the business principles, business goals, and strategic drivers (Including common vocabulary, ODA Terminology etc. - Including TMF071 ODA Terminology R18.0.0, etc.) (E) ODA Information Systems Architecture (ISA), which must provide the Functional Architecture (IG1167 ODA Functional Architecture R18.0.0) and concepts of Data and Applications Architecture."
+                                "relevanceScore": 0.6,
+                                "content": "# tmforum\n\nCurrently requirements that need to be taken into consideration when installing products as part of an appointment and often passed in notes or other ad-hoc methods. lack of awareness in advance often leads to repeated vists and additional cost. The project will \u2022 Enhance the geographic address APIs to link an address to a site \u2022 Enhance the site API to include the ability to register features which an engineer will need to be aware of for a successful visit \u039f \u039f Site risks such as phyiscal, environment and health factors Access requirements such as security and opening hours TM Forum 2024. All Rights Reserved.Page 17 of 38tmforum.org\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0\n\n## 5. Technical Architecture: TMF Components & APIs\n\ntmforum\n\n### TM Forum OpenAPI Strategy Overview\n\nIn our TM Forum OpenAPI strategy, we embark on a comprehensive approach to enhance the broadband ecosystem. We aim to define context-specialized TMF Open APIs, tailoring them for addressing, appointing, order management, and service assurance, ensuring a nuanced and efficient operation. Simultaneously, we envision a common product model for broadband access, striking a balance between standardisation and provider customization to meet diverse requirements. Emphasizing cohesion, we outline a shared state model, orchestration processes, workflow dynamics, and error handling standards, fostering consistency, and streamlined communication. Crucially, our strategy entails a clear delineation of ownership responsibilities for actions between access and service providers, accompanied by a roadmap of expected next steps, promoting transparent collaboration and operational efficacy.\n\n### Extend TM Forum OpenAPI's to create domain context specific (DCS) broadband content\n\nTo cater to the diverse requirements of each program contributor, we recognized the necessity for a customized approach to API usage. Some contributors required additional features to meet the specific demands of their organizations. Consequently, extending the TMF OPEN APIs emerged as a strategic approach, allowing us to create context-specific broadband content tailored to the expertise of each contributor.The approach we adopted for the extensions involved each contributor sharing their payload on the existing API they utilized. Through collaborative discussions, we refined and finalized the payload required for each API. In cases where additional fields were deemed necessary, we proceeded with extending the current APIs to accommodate these specific needs Among extending the standards within the current scope, our approach for each API involves the following steps: \u2022 Proposing improvements and revisions to the API \u2022 Providing current samples of payloads used by members \u2022 Developing a revised Open API Specification \u2022 Presenting proposed new data model examples to enhance the overall functionality of the API TMF622 Any payload Wholesale broadband payload DOMAIN CONTEXT SPECIALIZATION TMF622 CORE OPEN API CONTEXT-SPECIFIC OPEN API DCS concept example TM Forum 2024. All Rights Reserved. tmforum.orgPage 18 of 38\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0"
                               }
                             ],
-                            "uri": "gs://tmf-documents/IG1166_ODA_Architecture_Vision_R18.0.0.pdf",
-                            "title": "IG1166_ODA_Architecture_Vision_R18.0.0"
+                            "title": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0"
                           },
                           {
-                            "title": "IG1171_ODA_Component_Definition_v5.0.0",
-                            "uri": "gs://tmf-documents/IG1171_ODA_Component_Definition_v5.0.0.pdf",
                             "chunkInfo": [
                               {
-                                "relevanceScore": 0.3,
-                                "content": "# tmforum\n\n## ODA Component Definition\n\n### tmforum\n\nExecutive SummaryThis document describes reasons for defining an ODA Component (detailed in Open Digital Architecture Whitepaper), stemming from the need for an agile approach that encompasses business needs, network structure, and operational challenges. The document then describes the structure of a component, its sub-parts and their functionalities, as well as suggesting ways of exposing the functionalities. The document also addresses the lifecycle of the component and its composability aspects. Another section is devoted to the relation of ODA Components to the existing Frameworx assets, including to the Open APIs. Subsequent releases are expected to materially enhance the connection to digital business, the use of a component on existing industry platforms, composition scenarios, and examples. TM Forum 2023. All Rights Reserved. Page 5 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0\n\n# tmforum\n\n## Introduction\n\nBuilding on TM Forum's rich history in leading IT and operational transformation, and on the success of a widely-used suite of standardized REST based Open APIs, this guide explains how we define ODA Components as software units that can be composed into systems or solutions. The Open Digital Architecture Whitepaper established the need for an \"industry-agreed\" digital architecture prescribing a set of industry agreed actions that enable, simplify and automate software systems based on standards. One of the key standards is the ODA Component. This document and the supplementary artifacts define the ODA Component and use. To fully realize the business requirement of multivendor solutions, ODA Components must support interoperability in much the same way that reusable components are offered in cloud marketplaces such as Microsoft Azure, IBM Cloud and Amazon Web Services etc. The definition of ODA Components follows the ODA Component principles to draw on best practices and modern concepts to effectively encapsulate the concept of componentization into ODA. TM Forum 2023. All Rights Reserved. Page 6 of 17 tmforum.org\n\n# IG1171 ODA Component Definition v5.0.0"
+                                "relevanceScore": 0.5,
+                                "content": "# tmforum\n\n_START_OF_TABLE_\nTABLE_IN_MARKDOWN:\n|-|-|\n| TMF OPEN API | Usecase from program Description |\n| TMF679 Product Offering Qualification | area, and finally listing all the street segments (numbers) in a street. Product Offering Qualification API is one of Pre-Ordering Management API Family. Product Offering Qualification API goal is to provide Product Offering commercial eligibility. Find products that eligible for the CSP Customer |\n| TMF622 Product Order Management | Provides a standardized mechanism for placing a product order with all the necessary order parameters. The API consists of a simple set of operations that interact with CRM/Order negotiation systems in a consistent manner. A product order is created based on a product offering that is defined in a catalog. The product offering identifies the product or set of products that are available to a customer and includes characteristics such as pricing, product options and market. Place product order |\n| TMF646 Appointment | Search for appointment slots and reserve appointments The appointment API provides a standardized mechanism to book an appointment with all the necessary appointment characteristics. The API allows searching of free slots based on parameters, as for example a party, then creating the appointment. The appointment has characteristics such as nature of appointment, place of appointment. |\n| TMF620 | Provides a standardized |\n| Product Catalog Management TMF641 Service Order Management | solution for rapidly List product specification and characteristics of the product adding partners' products to an existing Catalog. It brings the capability for Service Providers to directly feed partners systems with the technical description of the products they propose to them. Provision Service Order The REST API for Service Order Management provides a standardized mechanism for placing a service order with |\n|  | all the necessary order parameters. It allows users to create, update & retrieve Service Orders and manages related notifications. |\n| TMF652 Resource | Provision Resource Order The REST API for Resource Order Management. It includes the model |\n| Order | definition as well as all available |\n| Management | operations. Possible actions are creating, updating and retrieving Resource Orders (including filtering). A Resource Order API provides a standard mechanism for placing |\n\n_END_OF_TABLE_\nTM Forum 2024. All Rights Reserved. tmforum.orgPage 34 of 38\n\n# IG1351 Utilizing TM Forum ODA as a Tool for Standardizing Wholesale Broadband v1.0.0"
                               }
                             ],
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1252275",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1385622",
+                            "uri": "gs://tmf-documents/IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
+                            "title": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0",
                             "structData": {
-                              "Release": "23.0",
-                              "Categories": "Standard > Exploratory Report > Best Practice",
-                              "Maturity_level": "General availability (GA)",
-                              "Security": "non-member",
-                              "Standard": [
-                                "Best Practices"
-                              ],
+                              "DocId": "1385622",
+                              "Categories": "How To Guide > Standard > Exploratory Report > Best Practice > Reference > Model > Introductory Guide",
+                              "Status": "Member Evaluated",
                               "Short_description": "",
-                              "Document_Version": "5.0.0",
+                              "Security": "Member",
+                              "Date_Modified": "08-Apr-2024",
+                              "Permalink": "https://www.tmforum.org/resources/introductory-guide/utilizing-tm-forum-oda-as-a-tool-for-standardizing-wholesale-broadband-whitepaper-v1-0-0-ig1351/",
+                              "Release": "24.0",
+                              "Maturity_level": "Alpha",
+                              "Project": "Wholesale Broadband Project",
+                              "Release_Status": "status-pre-production",
+                              "Description": "<p>This whitepaper explores the multifaceted challenges faced by the wholesale broadband industry due to the business and technical complexities facing service providers and their partners. The paper aims to underscore how the TM Forum Open Digital Architecture (ODA) can be adopted in order to overcome these challenges through standardization.</p>\n",
+                              "Document_Version": "1.0.0",
+                              "Standard": [],
                               "File_format": "PDF",
-                              "Document_type": "Best Practice",
-                              "Release_Status": "status-production",
-                              "Asset_file_name": "IG1171_ODA_Component_Definition_v5.0.0.pdf",
-                              "Date_Modified": "04-Aug-2023",
                               "Published": "1",
-                              "Project": "Technical Architecture &amp; Components Project",
-                              "IPR_mode": "RAND",
-                              "Permalink": "https://www.tmforum.org/resources/best-practice/ig1171-oda-component-definition-v5-0-0/",
-                              "Status": "TM Forum Approved",
-                              "DocId": "1252275",
-                              "Document_Series": "IG1171",
-                              "Description": "<p>This document defines the ODA Component with its anatomy.\u00a0 \u00a0</p>\n<p>Please refer to it to understand the concept of ODA Component, what the Core Function and Support Functions area and how to define an ODA Component to be relevant to the ODA Functional Architecture.</p>\n"
+                              "Asset_file_name": "IG1351_Utilizing_TMForum_ODA_as_a_Tool_for_Standardizing_Wholesale_Broadband_v1.0.0.pdf",
+                              "Document_Series": "IG1351",
+                              "Document_type": "Introductory Guide",
+                              "IPR_mode": "RAND"
                             }
                           }
                         ]
+                      },
+                      "searchAction": {
+                        "query": "What specific TM Forum API are required to implement the TM Forum Wholesale Broadband standard?"
                       }
                     }
                   ],
@@ -485,181 +478,172 @@
                 }
               ],
               "relatedQuestions": [
-                "What core frameworks comprise TM Forum ODF?",
-                "How does ODA facilitate rapid solution evolution?",
-                "What TM Forum frameworks underpin ODF?",
-                "What are the key ODA artifact groupings?"
-              ],
-              "answerText": "## ODF: A Comprehensive Overview\n\nThe Open Digital Framework (ODF) is a comprehensive architecture framework developed by TM Forum to provide a common language and understanding for architects, stakeholders, and business associates. ODF's core frameworks include:\n\n* **Business Process Framework (eTOM):** Defines the standard business processes for communications service providers (CSPs).\n* **Information Framework (SID):** Provides a standardized information model for CSPs, ensuring consistent data representation across systems.\n* **Functional Framework:** Derived from the previous TAM (Telecommunications Application Map), it outlines the functional components and their relationships within a CSP's IT landscape.\n\nODF also establishes key principles that guide the application of these concepts. These principles ensure consistency, alignment, and coherence across architectures that aim to align with the Open Digital Architecture (ODA). Additionally, ODF provides methods and methodologies to help enterprise architects leverage the framework effectively. These methods offer a structured approach to identify, analyze, design, and communicate the architecture.\n\nModels, such as the Master Open Digital Architecture (MODA), serve as representations and artifacts to support the design, documentation, and communication of the architecture. MODA provides a definitive reference for ODA, visualizing the structure, behavior, and relationships of ODA business objects. \n\n**Benefits of Adopting ODF:**\n\n* **Alignment with Industry Standards:** ODF aligns with key industry standards and common ontology, supporting an organization's strategic and business goals.\n* **Enhanced Business and Technical Capabilities:** Adoption of ODF can boost both business and technical capabilities by providing a standardized framework for architecture development.\n* **Governance, Rules, and Policies:** The principles outlined in ODF provide a foundation for developing the organization's governance, rules, and policies.\n\n**ODA Architecture Vision:**\n\nThe ODA Architecture Vision defines eight main artefact groupings that provide a comprehensive architecture for complete service lifecycle automation within an enterprise. These groupings include:\n\n* **ODA Concepts & Principles:** Documents the architectural principles, concepts, and requirements for each ODA Framework grouping.\n* **ODA Architecture Vision:** Defines the eight ODA Architecture Framework groupings and provides a definition of the required artefacts, including specifications, capabilities, best practices, methods/methodologies, metrics, code, and tooling.\n* **Agile and Model Driven Management:** Defines the requirements, modelling, and tooling approach for ODA lifecycle management, enabling business agility.\n* **ODA Business Architecture:** Describes product and/or service strategy, organizational, functional, process, information, and geographic aspects of the business environment.\n* **ODA Information Systems Architecture (ISA):** Provides the Functional Architecture and concepts of Data and Applications Architecture. \n"
+                "What does TM Forum's ODA components map show?",
+                "What is the TMF622 API used for?",
+                "What information does TMF675 provide?",
+                "How do TM Forum Open APIs enhance broadband ecosystems?",
+                "How can TM Forum Open APIs be extended?"
+              ]
             },
-            "answerQueryToken": "M8gKCwjykZ3ABhCig_BAEiQ2ODAzY2U1MC0wMDAwLTJkMGEtOTg4NS03NDc0NDYzYzk2NzU"
+            "answerQueryToken": "NMwKDAi_v53ABhDEuLGeAhIkNjgwNDZhYjQtMDAwMC0yYjZkLWEwMDctYjhkYjM4ZjQ0ZjRh"
           },
           {
-            "answerQueryToken": "M8gKCwj6kZ3ABhDVjqZ3EiQ2ODA0NjEzNC0wMDAwLTJiNmQtYTAwNy1iOGRiMzhmNDRmNGE",
             "answer": {
               "references": [
                 {
                   "chunkInfo": {
-                    "content": "The business drivers and conceptual model for ODA Components is described in IG1171 ODA Component Definition. The ODA Component concept builds on top of open standards like Docker and Kubernetes, and adds Telco-domain knowledge and meta-data. The starting point for building an ODA component is containerized, micro-service software described in a kubernetes manifest YAML file. To turn this into an ODA Component we will: Add meta-data to the Kubernetes manifest describing the Core Function, Notification/Reporting, Security Function and Management Function of the software component. Add labels to all the standard Kubernetes resources to label them as belonging to the component. Test the deployment of the Component in an operating platform that has the ODA Canvas installed (for example the TM FOrum Open-Digital Lab). See the Getting Started section to see how to install the ODA Canvas onto a kubernetes cluster environmnet. Step 1: ODA-Component Metadata\uf0c1 This guide has been updated to conform to the v1beta2 component specification. The ODA-Component metadata contains all the Telco-domain knowledge that makes the component a self-describing deployable software module. From IG1171 ODA Component Definition, this meta-data describes the Open-APIs, event data schemas as well as security and management & operations for the component. The meta-data is defined using a Kubernetes CustomResourceDefinition. ",
+                    "relevanceScore": 0.5,
+                    "documentMetadata": {
+                      "title": "IG1380 Wholesale Broadband Standardized Product Model & APIs for B2B v1.0.0 \u2013 TM Forum",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/93fec7e59661650addc4de523ea63cba",
+                      "uri": "https://www.tmforum.org/resources/standard/ig1380-wholesale-broadband-standardized-product-model-apis-for-b2b-v1-0-0/"
+                    },
+                    "content": "Buyers and Sellers can interact more efficiently by integrating via specialized TM Forum ODA Open APIs and applying the common product model. These terms will be used in this document where Seller refers to the Party selling the wholesale offer, typically a network owner or an aggregator, and Buyer refers to the Party buying the wholesale offer, typically an operator or Communications Service Provider (CSP) who in turn uses the products bought to provide services to their own end customers. For Forum Members Download Log In Register Not a Member? Learn More! Please Log In General Information Document series: IG1380 Document version: 1.0.0 Status: Member Evaluated Document type: Introductory Guide Team approved: 10-Jan-2025 IPR mode: RAND Published on: 13-Jan-2025 Date modified: 17-Feb-2025 Related Assets [GB922] Standards Addenda for Information Framework Suite v24.5 Suite | 24.5 [GB921] Business Process Framework (eTOM) Suite v24.5 Suite | 24.5 [GB921] Business Process Framework (eTOM) Models Suite v24.5 Model, Suite | 24.5 [GB922] Getting Started with Information Framework Suite v24.5 Suite | 24.5 [GB922] Information Framework Models Suite v24.5 Suite | 24.5 [GB929] Application Framework (TAM) Suite v24.5 Suite | 24.5 For Forum Members Download Log In Register Not a Member? Learn More! "
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "Project Overview The ongoing work is divided into two workstreams which work closely together: The Business Analysis team is looking at the business scenarios supported, identifying common commercial requirements, regulatory constraints, SLAs, etc. The Technical Engineering team is looking to map the business supported scenarios with TM Forum Open APIs, review the APIs in scope and introduce context-specific APIs, record the DCS tooling, and how we go from generic to fiber payload APIs. Project FAQs Who should join? Skills and experience in the wholesale market area are needed and also Technical Engineers and Product Management from telco and network management companies. Get involved in a collaborative project where best practices are developed to define the industry standard solutions to accelerate business growth. What commitment is required in terms of time and effort? Provide commitment to join Wednesdays at 12:00-13:00 CET and to contribute to assets. What will I get out of this? As a member of the Wholesale Broadband Project, you and your organization are able to contribute to and build the thought leadership, guide books, and best practices to standardize and harmonize the way the industry trades Broadband. How can I join? Join the project here Collaboration Collaborative R&D Overview Current Projects Toolkits Overview Outstanding Contributors Awards Collaboration Governance Frequently Asked Questions Catalyst Program Catalyst Program Homepage What is a Catalyst? ",
                     "relevanceScore": 0.4,
                     "documentMetadata": {
-                      "uri": "https://tmforum-oda.github.io/oda-ca-docs/docs/ODAComponentDesignGuidelines.html",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/677f94dd17da4a0b70571cba0152abba",
-                      "title": "Design Guidelines to create a new ODA Component"
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/437bacd5b47e64921833367762018ecc",
+                      "uri": "https://www.tmforum.org/wholesale-broadband-project/",
+                      "title": "Wholesale Broadband Project \u2013 TM Forum"
                     }
                   }
                 },
                 {
                   "chunkInfo": {
+                    "content": "TM Forum Skill Paths Certification Leaderboard Conformance Overview Certifications Awarded Business Process Framework Conformance Information Framework Conformance Open API Conformance Services Events Upcoming events + webinars Sponsorship opportunities Membership About Membership Benefits Current members Become a member 2024 Annual Meeting of Members Open Sessions Log in Register Search: Search Back to top Wholesale Broadband Project Wholesale Broadband Project \u2013 TM Forum Collaboration Collaborative R&D Overview Current Projects Toolkits Overview Outstanding Contributors Awards Collaboration Governance Frequently Asked Questions Catalyst Program Catalyst Program Homepage What is a Catalyst? ARCHIVED Join a Catalyst Catalyst Pricing Catalyst Projects Catalyst Awards Catalyst FAQ Previous Catalysts UPCOMING EVENTS: see the schedule of events for 2025 Patent Disclosure Forms Join the project Go to the Community Building thought leadership, standardization and harmonization for wholesale broadband TM Forum's Wholesale Broadband project is working on how to standardize the process of selling, buying, and managing wholesale products, initially in the context of fiber specific use cases. We're looking at the business processes and technical engineering (APIs related to the journeys for each business use case). The goal is to standardize and harmonize the solution for a country-agnostic approach by introducing common business scenarios and APIs with a fiber related product payload in a NetCo platform. The same patterns can be leveraged for other network products as well as traded in a wholesale market through B2B2X scenarios. ",
                     "relevanceScore": 0.4,
                     "documentMetadata": {
-                      "title": "Open Digital Architecture (ODA)",
-                      "uri": "https://www.tmforum.org/oda/",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f"
-                    },
-                    "content": "picture ODA heroes: ODA adoption is critical TM Forum members explain why they support the Open Digital Architecture (ODA), the innovation it enables and their vision of how the industry can collaborate for the benefit of operators, vendors and customers. picture Telefonica on ODA and the importance of collaboration Telefonica explains why they support ODA, and the importance of collaboration in building momentum and delighting customers. \u201cOpen APIs are a key aspect of our strategy.\u201d Patricia Ventura, Head of Customer Engagement Architecture, Telefonica picture TM Forum's CTO introduction to ODA George Glass TM Forum's CTO introduces ODA and the reasons why it is critical for the industry going forwards picture Vodafone ODA case study linked their DTS Lester Thomas, Head of New Technologies and Innovation, explains Vodafone's role as a founder of TM Forum's Open Digital Architecture (ODA). 1 2 3 4 5 Improve your skills through Training and Accreditation Further your knowledge-base or certify your current Open API implementations. TM Forum is here to support our members to become more efficient and productive. Open API / ODA training ODF / ODA training TM Forum provides a full set of interactive learning, skill certifications, and support services to build essential team expertise for maximum impact for your business and employees. "
-                  }
-                },
-                {
-                  "chunkInfo": {
-                    "content": "Image Click to expand Open Digital Architecture (ODA) provides the blueprint that CSPs and suppliers/SIs need to change their IT and network systems to create new and differentiated services that improves productivity, reduces maintenance and integration costs whilst enhancing customer experience. It replaces traditional operations and business support systems (OSS/BSS) with a new approach that will simplify your design, modernize your build and automate your operation. How to Apply ODA Download the ODA brochure Image Business Architecture Image Information Systems Image Deployment & Runtime Image Implementation Image Governance Interactive ODA Map Using this ODA interactive map you can discover the vast amount of industry created assets ranging from the business process framework, through the framework and design principles of the architecture, to the specifications for standardized plug and play software of components, canvas and Open APIs. Click on the interactive map to explore ODA assets or see how to 'Get started with ODA' through our playbooks and toolkits. Governance ODA Governance describes the activities applied throughout the project lifecycle that ensure under-construction solutions adhere to ODA principles. Governance Overview Concepts & Principles Transformation Guides Design Guides\u200b Security AI Governance Data Governance API Governance Metrics Maturity Models Business Architecture Business Architecture represents the suite of building blocks that provide context for how the organization delivers value to its stakeholders. Business Architecture Capability Framework Process Framework. ",
-                    "documentMetadata": {
-                      "uri": "https://www.tmforum.org/oda/",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
-                      "title": "Open Digital Architecture (ODA)"
-                    },
-                    "relevanceScore": 0.3
-                  }
-                },
-                {
-                  "chunkInfo": {
-                    "documentMetadata": {
-                      "title": "Open Digital Architecture (ODA)",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
-                      "uri": "https://www.tmforum.org/oda/"
-                    },
-                    "relevanceScore": 0.3,
-                    "content": "across multiple domains Jul 24 Ryan Andrew Digital Transformation Tracker 8: cloud adoption accelerates Research Report Digital transformation Cloud Migration + 2 More Digital Transformation Tracker 8: cloud adoption accelerates Jul 24 Dawn Bushaus 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 TMF427 Open Digital Architecture (ODA) Marketecture Diagrams v3.0.4 product Open Digital Architecture (ODA) Open Digital Framework (ODF) + 3 More TMF427 Open Digital Architecture (ODA) Marketecture Diagrams v3.0.4 Sep 24 Adrienne Walcott 1 TM Forum Explore TMForum About the Forum Careers with TM Forum News & Insights Privacy Policy Website T&Cs and Cookies Help & FAQ Contact Contact us General Inquiries: info@tmforum.org Member Services: memberservices@tmforum.org Interested in Joining? newmembers@tmforum.org Press Inquiries: tmforum@ccgrouppr.com Stay Connected \u00a92024 TM Forum ODA map Image Business Architecture Image Information Systems Image Deployment & Runtime Image Implementation Image Governance Interactive ODA Map Click on the interactive map to explore ODA. Governance ODA Governance describes the activities applied throughout the project lifecycle that ensure under-construction solutions adhere to ODA principles. "
-                  }
-                },
-                {
-                  "chunkInfo": {
-                    "relevanceScore": 0.3,
-                    "documentMetadata": {
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
-                      "uri": "https://www.tmforum.org/oda/",
-                      "title": "Open Digital Architecture (ODA)"
-                    },
-                    "content": "TM Forum Skill Paths Certification Leaderboard Conformance Overview Certifications Awarded Business Process Framework Conformance Information Framework Conformance Open API Conformance Services Events Upcoming events + webinars Sponsorship opportunities Membership About Membership Benefits Current members Become a member 2024 Annual Meeting of Members Open Sessions Log in Register Search: Search Back to top Open Digital Architecture Open Digital Architecture Quick links Open APIs eTOM SID ODA Manifesto Open API Manifesto ODA Training Open API conformance certification How to apply ODA Resources How to use ODA ODA white paper Open API table Resource library eTOM poster SID poster ODA components poster ODA Component Directory (prototype) Projects ODA projects Open API project ODA Component Accelerator Communities Global Architecture Forum Open API support community ODA community Home> Open Digital Architecture Open Digital Architecture (ODA) ODA transforms business agility, customer experience and operational efficiency by creating simpler IT solutions that are easier and cheaper to deploy, integrate & upgrade. ODA: Telecom industry's single source of truth The CEO playbook explains why communication service providers (CSPs) need to transition from a traditional telco to being a platform-ready 'digital' telco providing network and/or connectivity as a service. But as these CSPs evolve and their services, IT and networks become ever more complex they need a migration path to introduce intelligent operations across all areas of their business so they can become an AI-driven telco. "
-                  }
-                },
-                {
-                  "chunkInfo": {
-                    "documentMetadata": {
-                      "uri": "https://www.tmforum.org/oda/",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
-                      "title": "Open Digital Architecture (ODA)"
-                    },
-                    "content": "Governance Overview Concepts & Principles Transformation Guides Design Guides\u200b Security AI Governance Data Governance API Governance Metrics Maturity Models Business Architecture Business Architecture represents the suite of building blocks that provide context for how the organization delivers value to its stakeholders. Business Architecture Capability Framework Process Framework. (eTOM) Value Stream Framework People and Culture Information Systems Information Systems Architecture provides the systems and data view within ODA. It contains the Functional Architecture, the Functional Framework and the Information Framework. Information Systems Overview Functional Framework Functional Architecture Information Framework (SID) Data Architecture Implementation Here we define the Open APIs and reusable Components needed to evolve BSS and OSS systems into agile, cloud native solutions. Implementation Overview Technical Architecture & Components Open APIs Data Models Deployment & Runtime The Deployment & Runtime area of ODA provides guidance on how to turn a well-documented enterprise architecture into a real-world solution. Deployment & Runtime Overview Operations Frameworks Reference Implementation ODA Canvas Notifications Cookiebot session tracker icon loaded ",
-                    "relevanceScore": 0.3
-                  }
-                },
-                {
-                  "chunkInfo": {
-                    "relevanceScore": 0.3,
-                    "content": "It describes the list of APIs and/or events that the component exposes as well as the APIs and/or events that it is dependant on. The definitions within the publishedEvents and subscribedEvents are experimental at this point, and we will modify and enhance them as we build-out the ODA Canvas and assemble a representative set of ODA Components. The current definition has: an implementation which links to the Kubernetes service that implements the API or event, including the port where the http service is exposed. The path shows the API resource end-point, and can be used, for example, to automatically configure any API Gateway that is included as part of the Canvas. Note that the path points to the root of the API (and you need to append the relevant path from the swagger document to get to an implemented API resource). The specification points to the swagger documentation for the API. The Component CTK (Compliance Test Kit) will look inside this swagger for the basePath determine which Open-API CTK to execute for that API. The basePath is of format \"/tmf-api/productCatalogManagement/v4/\" which shows it is a tmf-api for productCatalogManagement with major version 4 . ",
-                    "documentMetadata": {
-                      "uri": "https://tmforum-oda.github.io/oda-ca-docs/docs/ODAComponentDesignGuidelines.html",
-                      "title": "Design Guidelines to create a new ODA Component",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/677f94dd17da4a0b70571cba0152abba"
+                      "uri": "https://www.tmforum.org/wholesale-broadband-project/",
+                      "title": "Wholesale Broadband Project \u2013 TM Forum",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/437bacd5b47e64921833367762018ecc"
                     }
                   }
                 },
                 {
                   "chunkInfo": {
-                    "content": "BDD allows you to specify the desired behavior of software through examples in plain language that both business stakeholders and technical teams can understand. These examples are written in a format known as Gherkin, which uses Given-When-Then syntax to describe test scenarios. Given: This part of the syntax sets the scene for the scenario. It describes the initial context or the pre-conditions of the system before the key action is performed. Example: \u201cGiven the user is logged into their account\u201d When: This section describes the event or the action that triggers the scenario. It is the key action that the user performs or the event that occurs within the system. Example: \u201cWhen the user clicks on the delete account button\u201d Then: This final part specifies the expected outcome or the post-conditions following the action described in the When section. It clearly defines what success (or sometimes failure) looks like. Example: \u201cThen the user's account is deactivated and the user is redirected to the homepage\u201d By defining the desired behavior of the software through examples, you can then implement automated tests to verify that the software behaves as expected. This approach helps to ensure that the software meets the requirements of the business and that it continues to do so as it evolves over time. ",
-                    "documentMetadata": {
-                      "title": "ODA Canvas Features and Test Kit",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/8b780e7e57a9447dbdcf43c2f27677b6",
-                      "uri": "https://tmforum-oda.github.io/oda-ca-docs/canvas/feature-definition-and-test-kit/README.html"
-                    },
-                    "relevanceScore": 0.3
-                  }
-                },
-                {
-                  "chunkInfo": {
+                    "content": "APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen API Comviva Comviva Comviva Certification: TMF620 - Product Catalog Management TMF620 - Product Catalog Management TMF621 - Trouble Ticket TMF621 - Trouble Ticket TMF621 - Trouble Ticket Management TMF621 - Trouble Ticket Management TMF622 - Product Ordering TMF622 - Product Ordering TMF622 - Product Ordering TMF622 Product Ordering Management TMF629 - Customer Management TMF629 \u2013 Customer Management TMF632 - Party Management TMF632 - Party Management TMF633- Service Catalog Management TMF634 - Resource Catalog Management TMF635 - Usage Management TMF637 - Product Inventory Management TMF637 - Product Inventory Management TMF637 - Product Inventory Management TMF637 - Product Inventory Management TMF637 \u2013 Product Inventory Management TMF638 - Service Inventory Management TMF638 - Service Inventory Management TMF639 - Resource Inventory Management TMF639 - Resource Inventory Management TMF640 - Service Activation Management TMF640 - Service Activation and Configuration TMF641 - Service Ordering and Management TMF641 - Service Ordering Management TMF642 \u2013 Alarm Management TMF642 \u2013 Alarm Management TMF646 \u2013 Appointment Management TMF648 - Quote Management TMF652 - Resource Order Management TMF663 - Shopping Cart TMF664 - Resource Function Activation Management TMF666 - Account Management TMF666 \u2013 Account Management TMF669 - Party Role Management TMF670 \u2013 Payment Method TMF670 \u2013 Payment Method Management TMF674 - Geographic Site Management TMF676 - Payment Management TMF676 \u2013 Payment Management TMF678 - Customer Bill Management TMF681 - Communication TMF681 - Communication Management TMF683 - Party Interaction Management TMF683 - Party Interaction Management TMF699 - Sales Management TMF704 \u2013 Test Case Management TMF705 \u2013Test Environment Management TMF706 \u2013 Test Data ",
                     "relevanceScore": 0.3,
-                    "content": "Architecture (ODA) is a standardized cloud-native enterprise architecture blueprint for all elements of the industry from Communication Service Providers (CSPs), through suppliers to system integrators. It accelerates the delivery of next-gen connectivity and beyond - unlocking agility, removing barriers to partnering, and accelerating concept-to-cash. RoODA logo Real-world ODA implementation within CSPs Discover more about how CSPs are using ODA as a faster way to drive growth, improve efficiency, transform customer experience and, above all, innovate. They can achieve this by evolving their organizations to be Running on ODA certified. Running on ODA: Who and why CSPs use ODA Image Suppliers and System Integrators assessement for ODA compatibility ODA, with its Open APIs and the new ODA components, plays a crucial role in the deployment of future service ecosystems. Those suppliers certified as Ready for ODA will signal to current and new partners they are ready to support their strategic direction Ready for ODA: Who and why suppliers use ODA Discover how ODA is used in the real-world Don't just take our word for the benefits of ODA. Discover how our members describe some of their real-world use cases, or learn more by reading our blogs and Inform articles. ",
                     "documentMetadata": {
-                      "title": "Open Digital Architecture (ODA)",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
-                      "uri": "https://www.tmforum.org/oda/"
+                      "uri": "https://www.tmforum.org/oda/open-apis/",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c628b207786cfa6daab755e60bc95512",
+                      "title": "Introduction to Open API Program | TM Forum"
                     }
                   }
                 },
                 {
                   "chunkInfo": {
-                    "content": "ODA Canvas Features and Test Kit \u2014 ODA-Component Accelerator v1beta3 documentation ODA-Component Accelerator About the project: Introduction to the ODA Component Accelerator Project (ODA-CA) Getting started checklist for new members of ODA-CA Tutorials: Tutorial to deploy and observe a running component Tutorial to build ODA-Component from Open-API Reference Implementation Component: Design Guidelines to create a new ODA Component ODA Component - CTK Canvas: Open Digital Architecture Canvas ODA Canvas installation Canvas Design: ODA Canvas Design Design Epics ODA Canvas - use-case library Usecase List Use case naming conventions ODA Canvas source code Open Digital Architecture - Controllers/Operators Webuooks and Utilities Feature Tests: ODA Canvas Features and Test Kit Linkage to use-cases Work breakdown List of BDD Features Executing the BDD tests Installing and executing the BDD tests Contributions and Troubleshooting: Contribution guidance Troubleshooting Guide Developer How-Tos: Work with Dockerimages Summary How-To add a new Dockerimage How-To define unit tests ODA Canvas Development Environment Installing KOPF (tested in GKE) Documentation Process ODA-Component Accelerator ODA Canvas Features and Test Kit View page source ODA Canvas Features and Test Kit\uf0c1 The ODA Canvas takes a Behaviour Driven Design (BDD) approch to define the features of the canvas. ",
+                    "relevanceScore": 0.3,
+                    "content": "APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIReal World Open APIOpen API TM Technology Services Sdn Bhd TM Technology Services Sdn Bhd TM Technology Services Sdn Bhd Certification: TMF620 \u2013 Product Catalog Management TMF620 \u2013 Product Catalog Management TMF620 \u2013 Product Catalog Management TMF620 \u2013 Product Catalog Management TMF621 \u2013 Trouble Ticket Management TMF621 \u2013 Trouble Ticket Management TMF621 \u2013 Trouble Ticket Management TMF622 \u2013 Product Ordering Management TMF622 \u2013 Product Ordering Management TMF622 \u2013 Product Ordering Management TMF622 \u2013 Product Ordering Management TMF629 \u2013 Customer Management TMF629 \u2013 Customer Management TMF629 \u2013 Customer Management TMF629 \u2013 Customer Management TMF632 \u2013 Party Management TMF632 \u2013 Party Management TMF632 \u2013 Party Management TMF632 \u2013 Party Management TMF633 \u2013 Service Catalog Management TMF633 \u2013 Service Catalog Management TMF634 \u2013 Resource Catalog Management TMF634 \u2013 Resource Catalog Management TMF634 \u2013 Resource Catalog Management TMF635 \u2013 Usage Management TMF635 \u2013 Usage Management TMF637 \u2013 Product Inventory Management TMF637 \u2013 Product Inventory Management TMF637 \u2013 Product Inventory Management TMF637 \u2013 Product Inventory Management TMF638 \u2013 Service Inventory Management TMF638 \u2013 Service Inventory Management TMF638 \u2013 Service Inventory Management TMF639 \u2013 Resource Inventory Management TMF639 \u2013 Resource Inventory Management TMF640 \u2013 Service Activation Management TMF640 \u2013 Service Activation Management TMF641 \u2013 Service Ordering Management TMF641 \u2013 Service Ordering Management TMF642 \u2013 Alarm Management TMF642 \u2013 Alarm Management TMF642 \u2013 Alarm Management TMF642 \u2013 Alarm Management TMF644 \u2013 Privacy Management TMF644 \u2013 Privacy Management TMF644 \u2013 Privacy Management TMF645 \u2013 Service Qualification TMF645 \u2013 Service Qualification TMF646 \u2013 Appointment Management TMF646 ",
                     "documentMetadata": {
-                      "uri": "https://tmforum-oda.github.io/oda-ca-docs/canvas/feature-definition-and-test-kit/README.html",
-                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/8b780e7e57a9447dbdcf43c2f27677b6",
-                      "title": "ODA Canvas Features and Test Kit"
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c628b207786cfa6daab755e60bc95512",
+                      "title": "Introduction to Open API Program | TM Forum",
+                      "uri": "https://www.tmforum.org/oda/open-apis/"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "title": "IG1380 Wholesale Broadband Standardized Product Model & APIs for B2B v1.0.0 \u2013 TM Forum",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/93fec7e59661650addc4de523ea63cba",
+                      "uri": "https://www.tmforum.org/resources/standard/ig1380-wholesale-broadband-standardized-product-model-apis-for-b2b-v1-0-0/"
                     },
-                    "relevanceScore": 0.3
+                    "relevanceScore": 0.3,
+                    "content": "TM Forum Skill Paths Certification Leaderboard Conformance Overview Certifications Awarded Business Process Framework Conformance Information Framework Conformance Open API Conformance Services Events Upcoming events + webinars Sponsorship opportunities Membership About Membership Benefits Current members Become a member 2024 Annual Meeting of Members Open Sessions Log in Register Search: Search Back to top Home > Resources > Standard > Exploratory Report > IG1380 Wholesale Broadband Standardized Product Model & APIs for B2B v1.0.0 Go to resources page An early version of an asset which is released with Team Approved or TM Forum Approved status in advance of the next Production Release. This does not replace the Production version of the asset until the next Production Release. Warning! Pre-production version This is a Pre-production version of this asset. IG1380 Wholesale Broadband Standardized Product Model & APIs for B2B v1.0.0 Maturity level: Alpha Created By: Standardizing Wholesale Broadband Fiber Access This document describes the standardized Wholesale Broadband product model, where the first iteration focuses on layer 2 bitstream access. A standardized broadband product model ensures interoperability across ecosystems, reduces costs, and accelerates time-to-market by enabling seamless integration and consistent service delivery. It enhances customer experience, supports innovation, and simplifies regulatory compliance while enabling CSPs to future-proof their networks. Also covered in the document are the high level API changes made to support standardizing wholesale broadband. "
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c628b207786cfa6daab755e60bc95512",
+                      "title": "Introduction to Open API Program | TM Forum",
+                      "uri": "https://www.tmforum.org/oda/open-apis/"
+                    },
+                    "relevanceScore": 0.3,
+                    "content": "Shopping Cart TMF664 \u2013 Resource Function Activation Management TMF666 - Account Management TMF667 - Document Management TMF668 \u2013 Partnership Type Management TMF669 \u2013 Party Role Management TMF670 \u2013 Payment Method Management TMF671 \u2013 Promotion Management TMF672 \u2013 User Role Permission Management TMF673 \u2013 Geographic Address Management TMF674 \u2013 Geographic Site Management TMF676 - Payment Management TMF677 \u2013 Usage Consumption Management TMF678 - Customer Bill Management TMF679 \u2013 Product Offering Qualification Management TMF680 - Recommendation Management TMF681 - Communication TMF683 \u2013 Party Interaction Management TMF687 - Stock Management TMF687 \u2013 Stock Management TMF696 \u2013 Risk Management TMF699 - Sales Management TMF702 \u2013 Resource Activation Management TMF704 - Test Case Management TMF707 - Test Result Management TMF708 - Test Execution Management TMF716 \u2013 Resource Reservation TMF720 \u2013 Digital Identity Management TMF724 - Incident Management TMF735 \u2013 CDR Transaction Management TMF736 \u2013 Revenue Sharing Algorithm Management TMF737 \u2013 Revenue Sharing Report Management TMF738 - Revenue Sharing Model Management TMF760 \u2013 Product Configuration Management TMF760 \u2013 Product Configuration Management TMF915 \u2013 AI Management TMF915 \u2013 AI Management TMF921 - Intent Management TMF931 \u2013 Open Gateway Onboarding and Ordering Component Suite See certified APIs (66) September 2024 Diamond badge Diamond badge Open APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen "
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "A new generation of APIs are now required to drive future growth, speeding up the 'time to deliver value' and accelerating the deployment of new services and products by enabling plug-and-play software integration that will revolutionize the software lifecycle for telecoms. NEW TM Forum's Gen5 Open APIs for a future proof ecosystem TM Forum has launched its Gen5 Open APIs to address these needs. These \u201c5th generation APIs\u201d will support the latest event-driven architectures, provide a simpler experience for developers, and enable the intent-based automation which is essential to the efficient operation and management of telecoms IT and networks. These Gen5 Open APIs create a pathway to simplified APIs for use in industry specific applications such as WLAN, 5G slicing etc. TM Forum is partnering with other standards development organizations such as GSMA Open Gateway / CAMARA to ensure standardization and interoperability across the industry. Discover the TM Forum Open API directory Learn more API stats Open API dashboard Banner promoting dtw ignite event in Copenhagen Built by the members, for the members TM Forum Open APIs have been widely adopted by the industry as a standard interoperability method, with more than 900,000 downloads by 50,000 software developers from 2,800 organizations. Over 70+ REST-based, Event driven and Domain Specific Open APIs have been collaboratively developed by TM Forum members working within the Open API project. ",
+                    "relevanceScore": 0.3,
+                    "documentMetadata": {
+                      "title": "Introduction to Open API Program | TM Forum",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c628b207786cfa6daab755e60bc95512",
+                      "uri": "https://www.tmforum.org/oda/open-apis/"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.3,
+                    "documentMetadata": {
+                      "title": "Introduction to Open API Program | TM Forum",
+                      "uri": "https://www.tmforum.org/oda/open-apis/",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c628b207786cfa6daab755e60bc95512"
+                    },
+                    "content": "APIs (157) April 2025 Diamond badge Diamond badge Open APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIOpen APIOpen APIOpen APIOpen APIReal World Open APIOpen APIOpen APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIOpen APIOpen APIReal World Open APIOpen APIOpen APIOpen APIReal World Open APIOpen APIOpen APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIOpen APIOpen APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIOpen APIOpen APIOpen APIOpen APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIOpen APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIOpen APIOpen APIReal World Open APIReal World Open APIOpen APIOpen APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIOpen APIOpen APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIReal World Open APIOpen APIOpen APIReal World Open APIReal World Open APIReal World Open APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIReal World Open APIOpen APIOpen APIReal World Open APIOpen APIOpen APIOpen "
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.3,
+                    "content": "Management TMF679 \u2013 Product Offering Qualification Management TMF679 \u2013 Product Offering Qualification Management TMF679 \u2013 Product Offering Qualification Management TMF680 \u2013 Recommendation Management TMF680 \u2013 Recommendation Management TMF681 Communication Management TMF681 \u2013 Communication Management TMF683 \u2013 Party Interaction Management TMF683 \u2013 Party Interaction Management TMF683 \u2013 Party Interaction Management TMF683 \u2013 Party Interaction Management TMF687 \u2013 Stock Management TMF687 \u2013 Stock Management TMF696 \u2013 Risk Management TMF696 \u2013 Risk Management TMF699 \u2013 Sales Management TMF699 \u2013 Sales Management TMF702 \u2013 Resource Activation Management TMF702 \u2013 Resource Activation Management TMF702 \u2013 Resource Activation Management TMF704 \u2013 Test Case Management TMF704 \u2013 Test Case Management TMF705 \u2013 Test Environment Management TMF705 \u2013 Test Environment Management TMF706 - Test Data Management TMF706 - Test Data Management TMF707 - Test Result Management TMF707 - Test Result Management TMF708 - Test Execution Management TMF708 - Test Execution Management TMF709 \u2013 Test Scenario Management TMF709 \u2013 Test Scenario Management TMF710 \u2013 General Test Artefact Management TMF710 \u2013 General Test Artefact Management TMF720 \u2013 Digital Identity Management TMF720 \u2013 Digital Identity Management TMF724 \u2013 Incident Management TMF724 \u2013 Incident Management TMF730 \u2013 Software And Compute Management TMF735 \u2013 CDR Transaction Management TMF735 \u2013 CDR Transaction Management TMF736 \u2013 Revenue Sharing Algorithm Management TMF736 \u2013 Revenue Sharing Algorithm Management TMF736 \u2013 Revenue Sharing Algorithm Management TMF737 \u2013 Revenue Sharing Report Management TMF737 \u2013 Revenue Sharing Report Management TMF738 \u2013 Revenue Sharing Model Management TMF738 \u2013 Revenue Sharing Model Management TMF915 \u2013 AI Management TMF915 \u2013 AI Management TMF921 \u2013 Intent Management See certified APIs ",
+                    "documentMetadata": {
+                      "title": "Introduction to Open API Program | TM Forum",
+                      "uri": "https://www.tmforum.org/oda/open-apis/",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c628b207786cfa6daab755e60bc95512"
+                    }
                   }
                 }
               ],
-              "state": "SUCCEEDED",
-              "relatedQuestions": [
-                "How does ODA benefit telco operators?",
-                "Who created the ODA?",
-                "Who benefits from ODA adoption?",
-                "What are the benefits of ODA?"
-              ],
-              "answerText": "## ODA: A Blueprint for Modernizing Telecom IT and Networks\n\nOpen Digital Architecture (ODA) is a standardized cloud-native enterprise architecture blueprint designed to help Communication Service Providers (CSPs), suppliers, and system integrators (SIs) modernize their IT and network systems. By adopting ODA, CSPs can create new and differentiated services that improve productivity, reduce maintenance and integration costs, and enhance customer experience. \n\nODA replaces traditional Operations and Business Support Systems (OSS/BSS) with a new approach that simplifies design, modernizes build, and automates operation. This approach enables CSPs to become more agile, efficient, and customer-centric. \n\n**Key Components of ODA:**\n\n* **Open APIs:** ODA provides a set of standardized Open APIs that enable interoperability and collaboration between CSPs, suppliers, and SIs. These APIs define how different components interact and exchange data, facilitating the creation of new services and solutions. \n* **ODA Components:** ODA Components are reusable software modules that encapsulate specific functionalities. These components are containerized and micro-service based, making them easy to deploy and manage. To ensure self-description and deployability, ODA Components include metadata that describes their core functions, notification/reporting capabilities, security features, and management functions. \n* **ODA Canvas:** The ODA Canvas is a platform that provides a testing environment for ODA Components. It allows developers to deploy and observe running components, ensuring they meet the desired behavior and functionality. The ODA Canvas uses a Behavior Driven Design (BDD) approach, which defines features through plain language examples that both business stakeholders and technical teams can understand. \n\n**Benefits of ODA:**\n\n* **Agility and Innovation:** ODA enables CSPs to become more agile and innovative by simplifying and automating their IT and network operations. This allows them to quickly introduce new services and respond to changing market demands.\n* **Reduced Costs:** ODA's standardized approach reduces maintenance and integration costs, making it more efficient for CSPs to operate their networks. \n* **Improved Customer Experience:** By enabling the creation of new and differentiated services, ODA helps CSPs improve customer experience and satisfaction. \n* **Collaboration and Interoperability:** ODA's open standards and APIs promote collaboration and interoperability between CSPs, suppliers, and SIs. This fosters a more open and competitive ecosystem, leading to faster innovation and better solutions for customers. \n\n**Getting Started with ODA:**\n\nTM Forum provides a comprehensive set of resources to help organizations adopt ODA. These resources include:\n\n* **Training and Accreditation:** TM Forum offers training and certification programs to build essential team expertise in ODA. \n* **Interactive ODA Map:** The ODA Map provides an overview of the vast amount of industry-created assets, including the business process framework, design principles, and specifications for standardized components. \n* **Playbooks and Toolkits:** TM Forum offers playbooks and toolkits to guide organizations through the ODA implementation process. \n* **Governance:** ODA Governance describes the activities throughout the project lifecycle to ensure solutions adhere to ODA principles. \n",
               "steps": [
                 {
                   "actions": [
                     {
-                      "searchAction": {
-                        "query": "Describe ODF"
-                      },
                       "observation": {
                         "searchResults": [
                           {
-                            "title": "ODA Canvas Features and Test Kit",
-                            "uri": "https://tmforum-oda.github.io/oda-ca-docs/canvas/feature-definition-and-test-kit/README.html",
+                            "uri": "https://www.tmforum.org/oda/open-apis/",
                             "snippetInfo": [
                               {
                                 "snippetStatus": "SUCCESS",
-                                "snippet": "... <b>describe</b> test scenarios. Given: This part <b>of</b> the syntax sets the scene for the scenario. It <b>describes</b> the initial context or the pre-conditions <b>of</b> the&nbsp;..."
+                                "snippet": "Join <b>TM Forum&#39;s</b> Open <b>APIs</b> project, driving industrywide efforts to standardize collaboration between CSPs &amp; vendors for enhanced interoperability."
                               }
                             ],
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/8b780e7e57a9447dbdcf43c2f27677b6"
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c628b207786cfa6daab755e60bc95512",
+                            "title": "Introduction to Open API Program | TM Forum"
                           },
                           {
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/9c3e7c0962b586d6ec36eaf42b4ac02f",
-                            "uri": "https://www.tmforum.org/oda/",
-                            "title": "Open Digital Architecture (ODA)",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/93fec7e59661650addc4de523ea63cba",
                             "snippetInfo": [
                               {
-                                "snippetStatus": "SUCCESS",
-                                "snippet": "Don&#39;t just take our word for the benefits <b>of</b> ODA. Discover how our members <b>describe</b> some <b>of</b> their real-world use cases, or learn more by reading our blogs and&nbsp;..."
-                              }
-                            ]
-                          },
-                          {
-                            "title": "Design Guidelines to create a new ODA Component",
-                            "snippetInfo": [
-                              {
-                                "snippet": "The business drivers and conceptual model for ODA Components is <b>described</b> in IG1171 ODA Component Definition. The ODA Component concept builds on top <b>of</b> open&nbsp;...",
+                                "snippet": "This document describes the <b>standardized Wholesale Broadband</b> ... <b>specific</b> cookies from Settings, and click on ... remote_sid<b>Necessary</b> for the <b>implementation</b> and&nbsp;...",
                                 "snippetStatus": "SUCCESS"
                               }
                             ],
-                            "uri": "https://tmforum-oda.github.io/oda-ca-docs/docs/ODAComponentDesignGuidelines.html",
-                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/677f94dd17da4a0b70571cba0152abba"
+                            "uri": "https://www.tmforum.org/resources/standard/ig1380-wholesale-broadband-standardized-product-model-apis-for-b2b-v1-0-0/",
+                            "title": "IG1380 Wholesale Broadband Standardized Product Model & APIs for B2B v1.0.0 \u2013 TM Forum"
+                          },
+                          {
+                            "uri": "https://www.tmforum.org/wholesale-broadband-project/",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/437bacd5b47e64921833367762018ecc",
+                            "title": "Wholesale Broadband Project \u2013 TM Forum",
+                            "snippetInfo": [
+                              {
+                                "snippetStatus": "SUCCESS",
+                                "snippet": "Building thought leadership, standardization and harmonization for <b>wholesale broadband TM Forum&#39;s Wholesale Broadband</b> project is working on how to."
+                              }
+                            ]
                           }
                         ]
+                      },
+                      "searchAction": {
+                        "query": "What specific TM Forum API are required to implement the TM Forum Wholesale Broadband standard?"
                       }
                     }
                   ],
@@ -669,221 +653,79 @@
               ],
               "citations": [
                 {
-                  "endIndex": "294",
-                  "startIndex": "61",
-                  "sources": [
-                    {
-                      "referenceId": "2"
-                    },
-                    {
-                      "referenceId": "4"
-                    }
-                  ]
-                },
-                {
                   "sources": [
                     {
                       "referenceId": "2"
                     }
                   ],
-                  "startIndex": "295",
-                  "endIndex": "461"
+                  "endIndex": "190"
                 },
                 {
                   "sources": [
-                    {
-                      "referenceId": "2"
-                    }
-                  ],
-                  "startIndex": "464",
-                  "endIndex": "625"
-                },
-                {
-                  "endIndex": "707",
-                  "sources": [
-                    {
-                      "referenceId": "4"
-                    }
-                  ],
-                  "startIndex": "626"
-                },
-                {
-                  "endIndex": "1008",
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    },
-                    {
-                      "referenceId": "2"
-                    },
-                    {
-                      "referenceId": "4"
-                    },
                     {
                       "referenceId": "5"
                     }
                   ],
-                  "startIndex": "738"
+                  "endIndex": "350",
+                  "startIndex": "191"
                 },
                 {
+                  "startIndex": "920",
                   "sources": [
-                    {
-                      "referenceId": "0"
-                    },
-                    {
-                      "referenceId": "5"
-                    }
-                  ],
-                  "startIndex": "1010",
-                  "endIndex": "1218"
-                },
-                {
-                  "endIndex": "1415",
-                  "startIndex": "1219",
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    }
-                  ]
-                },
-                {
-                  "startIndex": "1417",
-                  "endIndex": "1519",
-                  "sources": [
-                    {
-                      "referenceId": "0"
-                    },
-                    {
-                      "referenceId": "9"
-                    }
-                  ]
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "9"
-                    },
-                    {
-                      "referenceId": "7"
-                    }
-                  ],
-                  "startIndex": "1520",
-                  "endIndex": "1825"
-                },
-                {
-                  "endIndex": "1995",
-                  "sources": [
-                    {
-                      "referenceId": "4"
-                    }
-                  ],
-                  "startIndex": "1850"
-                },
-                {
-                  "startIndex": "1996",
-                  "sources": [
-                    {
-                      "referenceId": "8"
-                    }
-                  ],
-                  "endIndex": "2086"
-                },
-                {
-                  "startIndex": "2087",
-                  "sources": [
-                    {
-                      "referenceId": "2"
-                    }
-                  ],
-                  "endIndex": "2239"
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "2"
-                    }
-                  ],
-                  "startIndex": "2241",
-                  "endIndex": "2398"
-                },
-                {
-                  "endIndex": "2665",
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    },
-                    {
-                      "referenceId": "2"
-                    },
-                    {
-                      "referenceId": "4"
-                    },
-                    {
-                      "referenceId": "8"
-                    }
-                  ],
-                  "startIndex": "2400"
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    }
-                  ],
-                  "startIndex": "2699",
-                  "endIndex": "2807"
-                },
-                {
-                  "endIndex": "2936",
-                  "sources": [
-                    {
-                      "referenceId": "1"
-                    }
-                  ],
-                  "startIndex": "2809"
-                },
-                {
-                  "startIndex": "2938",
-                  "endIndex": "3153",
-                  "sources": [
-                    {
-                      "referenceId": "2"
-                    }
-                  ]
-                },
-                {
-                  "startIndex": "3155",
-                  "endIndex": "3286",
-                  "sources": [
-                    {
-                      "referenceId": "2"
-                    }
-                  ]
-                },
-                {
-                  "sources": [
-                    {
-                      "referenceId": "2"
-                    },
                     {
                       "referenceId": "3"
                     }
                   ],
-                  "startIndex": "3288",
-                  "endIndex": "3424"
+                  "endIndex": "1069"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "3"
+                    }
+                  ],
+                  "startIndex": "1900",
+                  "endIndex": "2050"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "3"
+                    }
+                  ],
+                  "startIndex": "2204",
+                  "endIndex": "2360"
+                },
+                {
+                  "startIndex": "2818",
+                  "endIndex": "2937",
+                  "sources": [
+                    {
+                      "referenceId": "5"
+                    }
+                  ]
                 }
-              ]
-            }
+              ],
+              "state": "SUCCEEDED",
+              "relatedQuestions": [
+                "What business scenarios are supported by the Wholesale Broadband project?",
+                "What are TM Forum's Open APIs for Wholesale Broadband?",
+                "What is the TM Forum Wholesale Broadband standard?",
+                "What TM Forum APIs are used in wholesale broadband?",
+                "What is the name of TM Forum's Wholesale Broadband document?"
+              ],
+              "answerText": "TM Forum's Wholesale Broadband project aims to standardize the process of selling, buying, and managing wholesale broadband products, particularly in the context of fiber-specific use cases. This standardization involves defining common business scenarios and APIs to facilitate seamless integration and consistent service delivery across ecosystems. \n\nTo achieve this, TM Forum's Open API program provides a comprehensive set of APIs that address various aspects of the wholesale broadband process. Some key APIs include:\n\n* **Product Catalog Management (TMF620):** This API enables the creation, management, and publication of product catalogs, ensuring buyers and sellers have access to accurate and up-to-date product information.\n* **Product Ordering Management (TMF622):** This API facilitates the ordering of wholesale broadband products, including the specification of product attributes and service parameters.\n* **Customer Management (TMF629):** This API manages customer information, including contact details, billing information, and service subscriptions.\n* **Party Management (TMF632):** This API manages information about the parties involved in the wholesale transaction, including buyers, sellers, and other stakeholders.\n* **Service Catalog Management (TMF633):** This API manages the catalog of available services, including their attributes, pricing, and terms of service.\n* **Resource Catalog Management (TMF634):** This API manages the catalog of network resources available for wholesale, including fiber connections, bandwidth, and other network elements.\n* **Usage Management (TMF635):** This API tracks and manages the usage of wholesale broadband products, enabling accurate billing and resource allocation.\n* **Product Inventory Management (TMF637):** This API manages the inventory of wholesale broadband products, ensuring availability and tracking product lifecycles.\n* **Service Inventory Management (TMF638):** This API manages the inventory of available services, including their status, capacity, and availability.\n* **Resource Inventory Management (TMF639):** This API manages the inventory of network resources, including their location, capacity, and availability.\n* **Service Activation Management (TMF640):** This API facilitates the activation of wholesale broadband services, including provisioning and configuration.\n* **Service Ordering and Management (TMF641):** This API combines product ordering and service management, enabling a streamlined process for buyers.\n* **Alarm Management (TMF642):** This API monitors and manages network alarms, ensuring timely notification and resolution of potential issues. \n\nTM Forum's Open APIs are designed to be flexible and adaptable, allowing them to be used in various wholesale broadband scenarios, including B2B2X transactions. By adopting these APIs, buyers and sellers can achieve greater efficiency, reduce costs, and accelerate time-to-market. \n"
+            },
+            "answerQueryToken": "NMwKDAjGv53ABhCZ56XZAxIkNjgwNDZhYmEtMDAwMC0yYjZkLWEwMDctYjhkYjM4ZjQ0ZjRh"
           },
           {
-            "attributionToken": "qAL0JwEKDAj6kZ3ABhD15tGNARIkNjgwOTg1OGQtMDAwMC0yZmU1LTkwMmUtMzRjN2U5MDlmNjBiIgdHRU5FUklDKkzbmIYx2JiGMcLwnhWjgJcitbeMLZWSxTDPv-IwkPeyMLWO6TDPyIgxm9a3LcXL8xeOvp0V1LKdFdLIiDGY1rctjpHJMNS_4jC4jukwMAFKEjB4MzM2MmEwOWVjMWI5NTI4OVKEAXByb2plY3RzLzk4Mjg0NTgzMzU2NS9sb2NhdGlvbnMvZ2xvYmFsL2NvbGxlY3Rpb25zL2RlZmF1bHRfY29sbGVjdGlvbi9lbmdpbmVzL3RtZi1wdWJsaWNfMTY5MjQ0NTQyMjY3Mi9zZXJ2aW5nQ29uZmlncy9kZWZhdWx0X2NvbmZpZw",
             "queryExpansionInfo": {},
-            "summary": {}
+            "summary": {},
+            "attributionToken": "pwL0JgEKCwjHv53ABhD54rYREiQ2ODBiODNhNi0wMDAwLTIwNGUtOWI5ZS1iOGRiMzhmYzQ3NTIiB0dFTkVSSUMqTNuYhjHPyIgxwvCeFdiYhjGOvp0V0siIMY6RyTCVksUw1L_iMJD3sjDHy_MXuI7pMNSynRWjgJcit7eMLZzWty3Pv-IwtY7pMJ_Wty0wAUoSMHhkOGU2OTBmM2M2MTVmYzlhUoQBcHJvamVjdHMvOTgyODQ1ODMzNTY1L2xvY2F0aW9ucy9nbG9iYWwvY29sbGVjdGlvbnMvZGVmYXVsdF9jb2xsZWN0aW9uL2VuZ2luZXMvdG1mLXB1YmxpY18xNjkyNDQ1NDIyNjcyL3NlcnZpbmdDb25maWdzL2RlZmF1bHRfY29uZmln"
           }
         ]
       ]
     ],
-    "output": "ODF stands for Open Digital Framework. It's a comprehensive architecture framework developed by TM Forum to provide a common language and understanding for architects, stakeholders, and business associates in the telecommunications industry. \n\nHere's a breakdown of its key aspects:\n\n* **Core Frameworks:** ODF includes three core frameworks:\n    * **eTOM (Enhanced Telecom Operations Map):** Defines standard business processes for communication service providers (CSPs).\n    * **SID (Shared Information Data):** Provides a standardized information model for CSPs, ensuring consistent data representation across systems.\n    * **Functional Framework:** Outlines the functional components and their relationships within a CSP's IT landscape.\n* **Principles:** ODF establishes key principles that guide the application of these frameworks, ensuring consistency, alignment, and coherence across architectures.\n* **Methods and Methodologies:** ODF provides methods and methodologies to help enterprise architects leverage the framework effectively. These methods offer a structured approach to identify, analyze, design, and communicate the architecture.\n* **Models:** Models like the Master Open Digital Architecture (MODA) serve as representations and artifacts to support the design, documentation, and communication of the architecture.\n\nThe goal of ODF is to help organizations align with industry standards, enhance their business and technical capabilities, and establish a foundation for governance, rules, and policies. \n",
-    "input": "Describe ODF"
+    "input": "What specific TM Forum API are required to implement the TM Forum Wholesale Broadband standard? Show the result as a table."
   }
 }
