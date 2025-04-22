@@ -480,7 +480,6 @@ dependencies = [
     { name = "google-auth-oauthlib" },
     { name = "httpx" },
     { name = "mcp", extra = ["cli"] },
-    { name = "requests" },
 ]
 
 [package.metadata]
@@ -489,5 +488,4 @@ requires-dist = [
     { name = "google-auth-oauthlib", specifier = ">=1.2.0" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.6.0" },
-    { name = "requests", specifier = ">=2.31.0" },
 ]

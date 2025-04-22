@@ -1,3 +1,6 @@
+# Standalone script to test the TM Forum AIVA API
+
+
 import json
 import requests
 from google.oauth2 import service_account

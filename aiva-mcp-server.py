@@ -1,7 +1,24 @@
+# MCP Server implementation on top of TM Forum AI Assistant (AIVA).
+# This script sets up a FastMCP server that interacts with the AIVA API to handle queries and responses.
+
+# logging and system imports
 import logging
 import sys
 from pathlib import Path
 
+# AIVA API Calling imports
+import json
+import httpx
+from httpx import Timeout
+from google.oauth2 import service_account
+from google.auth.transport.requests import Request
+
+# MCP Server imports
+from typing import Any
+import httpx
+from mcp.server.fastmcp import FastMCP
+
+# ---------------------------------------------------------------------------------------------
 # Configure logging
 log_dir = Path("logs")
 log_dir.mkdir(exist_ok=True)
@@ -11,23 +28,14 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
         logging.FileHandler(log_dir / "aiva-mcp-server.log"),
-        logging.StreamHandler(sys.stderr),
     ],
 )
 
 logger = logging.getLogger("aiva-mcp")
-
 logger.info("AIVA MCP Server")
 
 # ---------------------------------------------------------------------------------------------
 # AIVA API Calling
-
-
-import json
-import httpx
-from httpx import Timeout, TransportError
-from google.oauth2 import service_account
-from google.auth.transport.requests import Request
 
 # Path to the JSON service-account key file
 SERVICE_ACCOUNT_FILE = "C:\\Dev\\lesterthomas\\MCP-AIVA\\vodafone-key.json"
@@ -45,31 +53,22 @@ def get_access_token():
     return credentials.token
 
 
-def find_key_recursively(data, target_key):
-    """Recursively search for a key in a nested dictionary or list."""
-    if isinstance(data, dict):
-        for key, value in data.items():
-            if key == target_key:
-                yield value
-            else:
-                yield from find_key_recursively(value, target_key)
-    elif isinstance(data, list):
-        for item in data:
-            yield from find_key_recursively(item, target_key)
-
-
-async def call_reasoning_agent(query: str):
-    """Make an async request to the reasoning agent.
+async def query_aiva_api(query: str) -> dict[str, Any] | None:
+    """Make an async request to TM Forum AIVA AI Assistant.
 
     Args:
-        query: The query string to send to the reasoning agent
+        query: The query string to send to AIVA
 
     Returns:
-        JSON response from the agent if successful, None otherwise
+        Dict containing the response data or error information
 
     Raises:
         Various httpx exceptions are caught and logged
     """
+
+    logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    logger.info(f"Querying AIVA with: {query}")
+
     try:
         token = get_access_token()
     except Exception as e:
@@ -95,6 +94,10 @@ async def call_reasoning_agent(query: str):
         ) as client:
             try:
                 response = await client.post(API_URL, headers=headers, json=payload)
+                logger.info(f"response: {response}")
+                logger.info(
+                    "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+                )
                 response.raise_for_status()
 
                 if response.status_code == 200:
@@ -102,14 +105,6 @@ async def call_reasoning_agent(query: str):
                         response_json = response.json()
                         logger.info("✅ Response received successfully")
 
-                        # Save response to file with error handling
-                        try:
-                            with open("response.json", "w") as f:
-                                json.dump(response_json, f, indent=2)
-                        except IOError as e:
-                            logger.error(f"Failed to save response to file: {e}")
-
-                        logger.info("=================================================")
                         logger.info("Output")
                         output = response_json.get("output", {}).get("output")
                         if output:
@@ -148,61 +143,129 @@ async def call_reasoning_agent(query: str):
 # ---------------------------------------------------------------------------------------------
 # MCP server code
 
-
-from typing import Any
-import httpx
-from mcp.server.fastmcp import FastMCP
-
 # Initialize FastMCP server
 mcp = FastMCP("aiva")
 
-# Constants
+
+# Resources
+@mcp.resource("apis://categories")
+async def get_api_categories() -> str:
+    """Get the main categories of TM Forum Open APIs."""
+    return """TM Forum Open APIs are organized into these main categories:
+
+1. Customer Management APIs
+   - Customer management, engagement, and experience
+   - Party management and privacy
+
+2. Product Management APIs
+   - Product catalog and inventory
+   - Product ordering and qualification
+   - Product specifications and offering management
+   - Product Quote management
+   - Product Configuration management
+
+3. Service Management APIs
+   - Service catalog and inventory
+   - Service ordering and activation
+   - Service quality management
+   - Service problem management
+   - Service test management
+   - Service performance management
+   - Service Level Agreement management
+   - Service Level Assurance management
+
+4. Resource Management APIs
+   - Resource catalog and inventory
+   - Resource ordering and activation
+   - Resource function management
+   - Resource performance management
+   - Resource trouble management
+
+5. Common APIs
+   - Event management
+   - Notification management
+   - Alarm management
+   - Usage management
+   - Audit Management
+   - Authorization Management
+   - Identity Management
+   """
 
 
-async def query_aiva_api(query: str) -> dict[str, Any] | None:
-    """Make a request to TM Forum AIVA AI Assistant.
+@mcp.resource("knowledge://frameworks")
+async def get_frameworks() -> str:
+    """Get information about key TM Forum frameworks."""
+    return """Key TM Forum frameworks include:
 
-    Args:
-        query: The query string to send to AIVA
+1. Open Digital Architecture (ODA)
+   - Component-based architecture
+   - Open APIs and standard interfaces
+   - Cloud-native design principles
 
-    Returns:
-        Dict containing the response data or error information
-    """
-    logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    logger.info(f"Querying AIVA with: {query}")
-    result = await call_reasoning_agent(query)
-    logger.info(f"Result: {result}")
-    logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    return result
+2. Business Process Framework (eTOM)
+   - End-to-end business processes
+   - Operations and strategy mapping
+   - Process decomposition
+
+3. Information Framework (SID)
+   - Common information model
+   - Business entity definitions
+   - Data model standards
+
+4. Application Framework (TAM)
+   - Application component mapping
+   - System integration patterns
+   - Application capabilities"""
 
 
-def format_alert(feature: dict) -> str:
-    """Format an alert feature into a readable string."""
-    props = feature["properties"]
-    return f"""
-Event: {props.get('event', 'Unknown')}
-Area: {props.get('areaDesc', 'Unknown')}
-Severity: {props.get('severity', 'Unknown')}
-Description: {props.get('description', 'No description available')}
-Instructions: {props.get('instruction', 'No specific instructions provided')}
-"""
+# Example prompts
+@mcp.prompt()
+def api_list_prompt() -> str:
+    """Get a list of all TM Forum Open APIs."""
+    return "List all the TM Forum Open APIs and their main purposes."
+
+
+@mcp.prompt()
+def api_list_prompt_subsection() -> str:
+    """Query APIs for a specific area."""
+    return "What specific TM Forum API are required to implement the TM Forum Wholesale Broadband standard?"
+
+
+@mcp.prompt()
+def api_details_prompt() -> str:
+    """Get detailed information about a specific TM Forum API."""
+    return "What are the key features and capabilities of TMF620 Product Catalog Management API?"
+
+
+@mcp.prompt()
+def standards_prompt() -> str:
+    """Get information about TM Forum standards for a specific domain."""
+    return "What specific TM Forum APIs are required to implement the TM Forum Wholesale Broadband standard?"
+
+
+@mcp.prompt()
+def best_practices_prompt() -> str:
+    """Get TM Forum best practices for implementation."""
+    return "What are the best practices for implementing TMF620 Product Catalog Management API?"
 
 
 @mcp.tool()
-async def query_aiva(query: str) -> str:
-    """Query the TM Forum AIVA AI Assistant.
+async def query_tmforum_ai_assistant(query: str) -> str:
+    """Get information from the TM Forum knowledge base using AIVA AI Assistant.
+
+    Queries the TM Forum AIVA AI Assistant to retrieve expert knowledge about TM Forum standards,
+    APIs, frameworks, and best practices.
 
     Args:
-        query: The query string to send to AIVA
+        query: A natural language question about TM Forum topics (e.g., standards, APIs, frameworks)
 
     Returns:
-        The response from AIVA or an error message
+        str: AIVA's response containing relevant TM Forum information or an error message if the query fails
     """
     response = await query_aiva_api(query)
     if not response:
         return "Unable to fetch data from AIVA."
 
-    # Assuming response is a dict with 'data' key containing the answer
     return response.get("output", {}).get("output", "No response from AIVA.")
 
 

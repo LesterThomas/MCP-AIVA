@@ -3,6 +3,7 @@ vodafone-key.json
 
 #logging
 logs/aiva-mcp-server.log
+response.json
 
 # Python-generated files
 __pycache__/
@@ -14,3 +15,4 @@ wheels/
 
 # Virtual environments
 .venv
+
