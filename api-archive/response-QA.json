@@ -1,0 +1,793 @@
+{
+  "output": {
+    "intermediate_steps": [
+      [
+        {
+          "lc": 1,
+          "kwargs": {
+            "tool_call_id": "db23dca1-bbf8-4cc8-829a-6cc3ba8d677c",
+            "message_log": [
+              {
+                "id": [
+                  "langchain",
+                  "schema",
+                  "messages",
+                  "AIMessageChunk"
+                ],
+                "kwargs": {
+                  "content": "",
+                  "response_metadata": {
+                    "is_blocked": false,
+                    "usage_metadata": {
+                      "prompt_token_count": 86,
+                      "total_token_count": 99,
+                      "candidates_token_count": 13
+                    },
+                    "safety_ratings": [
+                      {
+                        "category": "HARM_CATEGORY_HATE_SPEECH",
+                        "probability_label": "NEGLIGIBLE",
+                        "blocked": false
+                      },
+                      {
+                        "blocked": false,
+                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                        "probability_label": "NEGLIGIBLE"
+                      },
+                      {
+                        "category": "HARM_CATEGORY_HARASSMENT",
+                        "probability_label": "NEGLIGIBLE",
+                        "blocked": false
+                      },
+                      {
+                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                        "blocked": false,
+                        "probability_label": "NEGLIGIBLE"
+                      }
+                    ],
+                    "citation_metadata": null
+                  },
+                  "additional_kwargs": {
+                    "function_call": {
+                      "arguments": "{\"query_str\": \"Describe ODF\"}",
+                      "name": "search_web_and_pdf"
+                    }
+                  },
+                  "tool_calls": [
+                    {
+                      "id": "db23dca1-bbf8-4cc8-829a-6cc3ba8d677c",
+                      "name": "search_web_and_pdf",
+                      "args": {
+                        "query_str": "Describe ODF"
+                      }
+                    }
+                  ],
+                  "invalid_tool_calls": [],
+                  "id": "run-3e9c6970-3aa5-4a86-91fd-16607b1ede94",
+                  "type": "AIMessageChunk",
+                  "tool_call_chunks": [
+                    {
+                      "args": "{\"query_str\": \"Describe ODF\"}",
+                      "index": null,
+                      "name": "search_web_and_pdf",
+                      "id": "db23dca1-bbf8-4cc8-829a-6cc3ba8d677c"
+                    }
+                  ]
+                },
+                "lc": 1,
+                "type": "constructor"
+              }
+            ],
+            "tool": "search_web_and_pdf",
+            "tool_input": {
+              "query_str": "Describe ODF"
+            },
+            "type": "AgentActionMessageLog",
+            "log": "\nInvoking: `search_web_and_pdf` with `{'query_str': 'Describe ODF'}`\n\n\n"
+          },
+          "id": [
+            "langchain",
+            "schema",
+            "agent",
+            "ToolAgentAction"
+          ],
+          "type": "constructor"
+        },
+        [
+          {
+            "answerQueryToken": "NMwKDAiiqr-_BhD40qmCAhIkNjdlOTYxN2EtMDAwMC0yNTQwLThjNDYtZjRmNWU4MGNmMDU0",
+            "answer": {
+              "citations": [
+                {
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "endIndex": "248",
+                  "startIndex": "34"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "endIndex": "374",
+                  "startIndex": "249"
+                },
+                {
+                  "endIndex": "443",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "startIndex": "375"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "endIndex": "1074",
+                  "startIndex": "903"
+                },
+                {
+                  "startIndex": "1075",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "endIndex": "1247"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "endIndex": "1459",
+                  "startIndex": "1262"
+                },
+                {
+                  "startIndex": "1460",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "endIndex": "1542"
+                },
+                {
+                  "endIndex": "1939",
+                  "startIndex": "1795",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ]
+                },
+                {
+                  "endIndex": "2075",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "startIndex": "1940"
+                },
+                {
+                  "startIndex": "2109",
+                  "sources": [
+                    {
+                      "referenceId": "1"
+                    }
+                  ],
+                  "endIndex": "2306"
+                },
+                {
+                  "startIndex": "2308",
+                  "endIndex": "2534",
+                  "sources": [
+                    {
+                      "referenceId": "1"
+                    }
+                  ]
+                }
+              ],
+              "state": "SUCCEEDED",
+              "steps": [
+                {
+                  "state": "SUCCEEDED",
+                  "description": "Rephrase the query and search.",
+                  "actions": [
+                    {
+                      "observation": {
+                        "searchResults": [
+                          {
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1481908",
+                            "title": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5",
+                            "chunkInfo": [
+                              {
+                                "content": "# tmforum\n\n## Introduction\n\nThe key concepts described in this document provide a common language and understanding for the architect, other associates and business stakeholders. The foundational CONTEXTS are used to establish the enterprise's building blocks. These building blocks are fundamental to the Open Digital Framework (ODF) as they define key concepts that are used throughout ODF. The core frameworks that make up the TM Forum ODF, include the Business Process Framework (aka eTOM), the Information Framework (aka as SID), and the Functional Framework (derived from the previous TAM). The key principles provide the rules and guidelines that govern the application of key concepts in the Open Digital Framework. The rules are designed to reflect the values and goals of a digital organization, while providing direction and guidance for decision- making. These principles help to ensure consistency, alignment, and coherence across any architecture that aspires to align with the Open Digital Architecture (ODA). The section on method or methodology establish the processes and techniques that help an enterprise architect leverage the Open Digital Framework. They provide a structured and systematic approach to identify, analyze, design, and communicate the architecture. These methods or methodologies are here to help ensure quality, efficiency, and effectiveness of the target architecture of the organization. Models are the representations and artifacts that help the enterprise architect, design, document and communicate the architecture. In TM Forum, the Master Open Digital Architecture (MODA) is the definitive reference for ODA which provides the context and visualization of the structure, behavior, and relationships of the ODA business objects (architectural elements). Models help to ensure clarity, purpose, completeness and consistency of the architecture as they evolve through a maturation process which improves its reliability for TM Forum members. The adoption of the TM Forum core frameworks has the benefit of providing alignment with key industry standards and common ontology, in support of the enterprise's strategic and business goals. This can help boost both business and technical capabilities. All principles described in this document provide a foundational ground for the development of the enterprise's governance, rules and policies. TM Forum 2024. All Rights Reserved. Page 8 of 45 tmforum.org\n\n# GB991 TM Forum Core Frameworks Concepts and Principles v24.5\n\n## 1. Concepts and Definitions",
+                                "relevanceScore": 0.5
+                              }
+                            ],
+                            "uri": "gs://tmf-documents/GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
+                            "structData": {
+                              "Document_Version": "24.5.0",
+                              "Description": "<p>TM Forum's Core Frameworks is a suite of best practices and standards that provides the blueprint for effective, efficient business operations and enable a service-oriented, highly automated and efficient approach to business operations and application integration.</p>\n<p>This Concepts and Principles document strives to enable the reader to get a complete point of view of the compilation and creation of the core Frameworks; (business process, Information and functional frameworks), explaining the reasoning to its construction.</p>\n",
+                              "Date_Modified": "29-Aug-2024",
+                              "DocId": "1481908",
+                              "Maturity_level": "General availability (GA)",
+                              "Permalink": "https://www.tmforum.org/resources/guidebook/gb991-tm-forums-core-frameworks-concepts-and-principles-v24-5-0/",
+                              "IPR_mode": "RAND",
+                              "Release": "24.5",
+                              "Security": "Member",
+                              "File_format": "PDF",
+                              "Published": "1",
+                              "Status": "Team Approved",
+                              "Asset_file_name": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
+                              "Short_description": "",
+                              "Standard": [
+                                "Application Framework (TAM)"
+                              ],
+                              "Document_Series": "GB991",
+                              "Project": "Information Systems Architecture",
+                              "Release_Status": "status-pre-production",
+                              "Document_type": "Guidebook",
+                              "Categories": "Standard > Reference > Guidebook"
+                            }
+                          },
+                          {
+                            "title": "GB922_Primer_v21.5",
+                            "structData": {
+                              "Status": "TM Forum Approved",
+                              "Standard": [
+                                "Information Framework (SID)"
+                              ],
+                              "Description": "<p>This document is an introduction to the TM Forum Information Framework. To keep it brief, the concepts and examples have been simplified.</p>\n<p>This document should not be used for implementation work; refer to the detailed Information Framework addenda for that. In standards terms, this document is informative, not normative.</p>\n",
+                              "Document_type": "Reference",
+                              "Date_Modified": "24-Jan-2022",
+                              "Published": "1",
+                              "Security": "non-member",
+                              "Permalink": "https://www.tmforum.org/resources/reference/gb922-primer-v21-5-0/",
+                              "DocId": "982212",
+                              "Short_description": "",
+                              "Project": "Information Systems Architecture",
+                              "Release": "21.5",
+                              "Categories": "Standard > Reference",
+                              "File_format": "PDF",
+                              "Asset_file_name": "GB922_Primer_v21.5.pdf",
+                              "Release_Status": "status-production",
+                              "IPR_mode": "RAND",
+                              "Document_Series": "GB922-31",
+                              "Document_Version": "21.5.0",
+                              "Maturity_level": "General availability (GA)"
+                            },
+                            "uri": "gs://tmf-documents/GB922_Primer_v21.5.pdf",
+                            "chunkInfo": [
+                              {
+                                "content": "# tmforum\n\nThe analysis model will, however, provide business definitions that should be a major input to the definition of the above items.\n\n## The Information Framework\n\nThe Information Framework analysis model is not: \u2022 a definition of ODF software classes \u2022 enough to do an implementation on its own \u2022 a definition of platforms, protocols, software languages or software products to be used for developing ODF components\n\n## 2.10 Impacts/Implications\n\nThe Information Framework is not a \"magic bullet\u201d but should be seen as a key component of an integrated information architecture (model framework + methodology) within an overall enterprise architecture (i.e., ODF). Other parts of an Information Architecture are typically: \u2022 Information Policy \u2013 directs information management within a business \u2022 Communication Policy \u2013 information maintenance and publishing standards (model downloads, data glossary/dictionary definitions, interface definitions, data translations etc) \u2022 Governance Processes managing separate component models within the overarching framework principles including interface design; managing data definitions within process design; managing data definition within applications design. To achieve maximum business benefits, businesses need to consider how to integrate use of the Information Framework into their existing processes and procedures, especially those relating to IT definition & development. TM Forum 2022. All Rights Reserved. tmforum.orgPage 15 of 44\n\n# GB922 Primer v21.5.0",
+                                "relevanceScore": 0.3
+                              }
+                            ],
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/982212"
+                          },
+                          {
+                            "structData": {
+                              "Release_Status": "status-production",
+                              "Document_Version": "15.0.0",
+                              "Date_Modified": "05-Dec-2022",
+                              "IPR_mode": "RAND",
+                              "Asset_file_name": "TMF071_Open_Digital_Framework_Terminology_v15.0.0.pdf",
+                              "Document_Series": "TMF071",
+                              "Description": "<p>The glossary contains terms from EBA, DPRA, ODA and ODF documentation published in Releases 15.0 up to 21.5, as well as some Release 22.0 documents. Terms from the remaining Release 22.5 documents will be mined in the next version of the glossary.</p>\n",
+                              "Status": "TM Forum Approved",
+                              "DocId": "1128222",
+                              "Maturity_level": "General availability (GA)",
+                              "Standard": [
+                                "Best Practices"
+                              ],
+                              "Document_type": "Reference",
+                              "File_format": "PDF",
+                              "Published": "1",
+                              "Short_description": "",
+                              "Categories": "Standard > Reference",
+                              "Release": "22.5",
+                              "Permalink": "https://www.tmforum.org/resources/reference/tmf071-open-digital-framework-terminology-v15-0-0/",
+                              "Project": "End to End ODA Project",
+                              "Security": "Member"
+                            },
+                            "chunkInfo": [
+                              {
+                                "relevanceScore": 0.3,
+                                "content": "# tmforum\n\n## tmforum\n\nTM Forum 2022. All Rights Reserved.Page 4 of 19tmforum.org\n\n_START_OF_TABLE_\nTABLE_IN_MARKDOWN:\n|-|-|\n| Notice | .2 |\n| Table of Contents | 4 |\n| Overview | 5 |\n| 1.References | 7 |\n| 2.Future work | 10 |\n| 3. Abbreviations.. | 11 |\n| 4.Administrative Appendix | 16 |\n| Document History 4.1. | 16 |\n| 4.1.1. Version History. | 16 |\n| 4.1.2. Release History. | 17 |\n| Acknowledgments. 4.2. | 18 |\n| 5.Addendum A: ODF Terminology spreadsheet. | 19 |\n| Terminology. 5.1. | 19 |\n\n_END_OF_TABLE_\n\n# TMF071 Open Digital Framework Terminology v15.0.0\n\ntmforum\n\n### Overview\n\nThe addendum to this document provides a glossary of terminology relevant for the TM Forum Open Digital Framework (ODF), and provides following information: The glossary of terms provides following information: Term: the term Definition: the definition of the term, with eventually some examples. For some terms, multiple definitions are included as in a specific context a term may have a different meaning. Origin: reference to the source(s) of the definition Definitions may be copied straight over, derived or adapted from the mentioned reference source(s). When a term and its definition are included in the ODF glossary, they become as such part of the ODF standard set of documents, without guarantee to align with the evolving source. Specifically, this means: \u2022 For the terms that are ingested from TM Forum documents, the intent is to update the definition in the glossary as the TM Forum document is updated. For the terms that are ingested from non-TM Forum documents, it is not guaranteed that the definition in this glossary will be updated in case the definition in the source is updated. \u2022 \u2022 Terms that are copied, derived or adapted from non-TM Forum sources, will not be updated in case the definition in the source is updated. Context / where used: an indication of the relevance of the term with the TM Forum collaboration program This notion of context will not be maintained in order to follow the lifecycle of the context, e.g., if a document is deprecated and listed within the context field of a term, it is not guaranteed that the glossary will be updated to reflect that status change. The glossary contains terms from EBA, DPRA, ODA and ODF documentation published in Releases 15.0 up to 21.5, as well as some Release 22.0 documents. Terms from the remaining Release 22.0 documents and Release 22.5 will be mined in the next version of the glossary. Some words within the glossary are more significant in the context of ODF. We represent this variation in significance by a word cloud. We hope that this simple representation of the weight we would like to attach to the use of words in this glossary will assist authors creating TM Forum documentation. TM Forum 2022. All Rights Reserved.Page 5 of 19tmforum.org\n\n# TMF071 Open Digital Framework Terminology v15.0.0"
+                              }
+                            ],
+                            "title": "TMF071_Open_Digital_Framework_Terminology_v15.0.0",
+                            "uri": "gs://tmf-documents/TMF071_Open_Digital_Framework_Terminology_v15.0.0.pdf",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1128222"
+                          }
+                        ]
+                      },
+                      "searchAction": {
+                        "query": "Describe ODF"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "relatedQuestions": [
+                "What TM Forum frameworks comprise the ODF?",
+                "What are the main ODF core frameworks?",
+                "What core frameworks make up the ODF?",
+                "How does the ODF support business goals?"
+              ],
+              "answerText": "## ODF: A Comprehensive Overview\n\nThe Open Digital Framework (ODF) is a comprehensive set of frameworks and principles developed by TM Forum to provide a common language and understanding for architects, business stakeholders, and other associates. ODF aims to align with key industry standards and common ontology, supporting an organization's strategic and business goals. This alignment can enhance both business and technical capabilities.\n\n**Key Components of ODF:**\n\n* **Business Process Framework (eTOM):** Defines the core business processes of a communications service provider (CSP).\n* **Information Framework (SID):** Provides a standardized approach to data modeling and information management. \n* **Functional Framework:** Derived from the previous TAM (Telecommunications Application Map), it focuses on the functional components of a CSP's IT systems.\n\n**Principles and Methodologies:**\n\n* **Principles:** Provide rules and guidelines for applying key concepts within ODF. These principles ensure consistency, alignment, and coherence across the architecture.\n* **Methodologies:** Establish processes and techniques for leveraging ODF. They offer a structured approach to identify, analyze, design, and communicate the architecture.\n\n**Models:**\n\n* **Master Open Digital Architecture (MODA):** Serves as the definitive reference for ODA, providing context and visualization of the structure, behavior, and relationships of ODA business objects. Models ensure clarity, purpose, completeness, and consistency of the architecture.\n\n**Benefits of ODF Adoption:**\n\n* **Alignment with Industry Standards:** ODF aligns with key industry standards, promoting interoperability and collaboration.\n* **Common Ontology:** Provides a common language and understanding across the organization.\n* **Enhanced Business and Technical Capabilities:** Supports strategic and business goals by improving both business and technical capabilities.\n* **Governance Foundation:** Principles provide a foundational basis for developing the organization's governance, rules, and policies.\n\n**Additional Considerations:**\n\n* **Information Framework Limitations:** The Information Framework is not a software class definition, a standalone implementation tool, or a platform, protocol, or software language specification. \n* **Integration with Existing Processes:** To maximize benefits, businesses need to integrate the Information Framework into their existing processes and procedures, particularly those related to IT definition and development. \n",
+              "references": [
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1481908",
+                      "uri": "gs://tmf-documents/GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
+                      "structData": {
+                        "Published": "1",
+                        "Document_type": "Guidebook",
+                        "File_format": "PDF",
+                        "Release": "24.5",
+                        "Date_Modified": "29-Aug-2024",
+                        "Maturity_level": "General availability (GA)",
+                        "Standard": [
+                          "Application Framework (TAM)"
+                        ],
+                        "IPR_mode": "RAND",
+                        "Project": "Information Systems Architecture",
+                        "Security": "Member",
+                        "Asset_file_name": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5.pdf",
+                        "Document_Series": "GB991",
+                        "Release_Status": "status-pre-production",
+                        "Status": "Team Approved",
+                        "Description": "<p>TM Forum's Core Frameworks is a suite of best practices and standards that provides the blueprint for effective, efficient business operations and enable a service-oriented, highly automated and efficient approach to business operations and application integration.</p>\n<p>This Concepts and Principles document strives to enable the reader to get a complete point of view of the compilation and creation of the core Frameworks; (business process, Information and functional frameworks), explaining the reasoning to its construction.</p>\n",
+                        "DocId": "1481908",
+                        "Categories": "Standard > Reference > Guidebook",
+                        "Permalink": "https://www.tmforum.org/resources/guidebook/gb991-tm-forums-core-frameworks-concepts-and-principles-v24-5-0/",
+                        "Short_description": "",
+                        "Document_Version": "24.5.0"
+                      },
+                      "title": "GB991_TM_Forum_Core_Frameworks_Concepts_and_Principles_v24.5",
+                      "pageIdentifier": "8"
+                    },
+                    "content": "# tmforum\n\n## Introduction\n\nThe key concepts described in this document provide a common language and understanding for the architect, other associates and business stakeholders. The foundational CONTEXTS are used to establish the enterprise's building blocks. These building blocks are fundamental to the Open Digital Framework (ODF) as they define key concepts that are used throughout ODF. The core frameworks that make up the TM Forum ODF, include the Business Process Framework (aka eTOM), the Information Framework (aka as SID), and the Functional Framework (derived from the previous TAM). The key principles provide the rules and guidelines that govern the application of key concepts in the Open Digital Framework. The rules are designed to reflect the values and goals of a digital organization, while providing direction and guidance for decision- making. These principles help to ensure consistency, alignment, and coherence across any architecture that aspires to align with the Open Digital Architecture (ODA). The section on method or methodology establish the processes and techniques that help an enterprise architect leverage the Open Digital Framework. They provide a structured and systematic approach to identify, analyze, design, and communicate the architecture. These methods or methodologies are here to help ensure quality, efficiency, and effectiveness of the target architecture of the organization. Models are the representations and artifacts that help the enterprise architect, design, document and communicate the architecture. In TM Forum, the Master Open Digital Architecture (MODA) is the definitive reference for ODA which provides the context and visualization of the structure, behavior, and relationships of the ODA business objects (architectural elements). Models help to ensure clarity, purpose, completeness and consistency of the architecture as they evolve through a maturation process which improves its reliability for TM Forum members. The adoption of the TM Forum core frameworks has the benefit of providing alignment with key industry standards and common ontology, in support of the enterprise's strategic and business goals. This can help boost both business and technical capabilities. All principles described in this document provide a foundational ground for the development of the enterprise's governance, rules and policies. TM Forum 2024. All Rights Reserved. Page 8 of 45 tmforum.org\n\n# GB991 TM Forum Core Frameworks Concepts and Principles v24.5\n\n## 1. Concepts and Definitions",
+                    "relevanceScore": 0.5
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "structData": {
+                        "File_format": "PDF",
+                        "Security": "non-member",
+                        "Asset_file_name": "GB922_Primer_v21.5.pdf",
+                        "Document_Version": "21.5.0",
+                        "Project": "Information Systems Architecture",
+                        "Published": "1",
+                        "Short_description": "",
+                        "IPR_mode": "RAND",
+                        "DocId": "982212",
+                        "Document_type": "Reference",
+                        "Document_Series": "GB922-31",
+                        "Standard": [
+                          "Information Framework (SID)"
+                        ],
+                        "Date_Modified": "24-Jan-2022",
+                        "Categories": "Standard > Reference",
+                        "Release_Status": "status-production",
+                        "Release": "21.5",
+                        "Description": "<p>This document is an introduction to the TM Forum Information Framework. To keep it brief, the concepts and examples have been simplified.</p>\n<p>This document should not be used for implementation work; refer to the detailed Information Framework addenda for that. In standards terms, this document is informative, not normative.</p>\n",
+                        "Status": "TM Forum Approved",
+                        "Maturity_level": "General availability (GA)",
+                        "Permalink": "https://www.tmforum.org/resources/reference/gb922-primer-v21-5-0/"
+                      },
+                      "pageIdentifier": "15",
+                      "uri": "gs://tmf-documents/GB922_Primer_v21.5.pdf",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/982212",
+                      "title": "GB922_Primer_v21.5"
+                    },
+                    "relevanceScore": 0.3,
+                    "content": "# tmforum\n\nThe analysis model will, however, provide business definitions that should be a major input to the definition of the above items.\n\n## The Information Framework\n\nThe Information Framework analysis model is not: \u2022 a definition of ODF software classes \u2022 enough to do an implementation on its own \u2022 a definition of platforms, protocols, software languages or software products to be used for developing ODF components\n\n## 2.10 Impacts/Implications\n\nThe Information Framework is not a \"magic bullet\u201d but should be seen as a key component of an integrated information architecture (model framework + methodology) within an overall enterprise architecture (i.e., ODF). Other parts of an Information Architecture are typically: \u2022 Information Policy \u2013 directs information management within a business \u2022 Communication Policy \u2013 information maintenance and publishing standards (model downloads, data glossary/dictionary definitions, interface definitions, data translations etc) \u2022 Governance Processes managing separate component models within the overarching framework principles including interface design; managing data definitions within process design; managing data definition within applications design. To achieve maximum business benefits, businesses need to consider how to integrate use of the Information Framework into their existing processes and procedures, especially those relating to IT definition & development. TM Forum 2022. All Rights Reserved. tmforum.orgPage 15 of 44\n\n# GB922 Primer v21.5.0"
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.3,
+                    "documentMetadata": {
+                      "title": "TMF071_Open_Digital_Framework_Terminology_v15.0.0",
+                      "pageIdentifier": "4",
+                      "structData": {
+                        "Document_Series": "TMF071",
+                        "Status": "TM Forum Approved",
+                        "Maturity_level": "General availability (GA)",
+                        "Security": "Member",
+                        "Date_Modified": "05-Dec-2022",
+                        "IPR_mode": "RAND",
+                        "Permalink": "https://www.tmforum.org/resources/reference/tmf071-open-digital-framework-terminology-v15-0-0/",
+                        "Project": "End to End ODA Project",
+                        "Asset_file_name": "TMF071_Open_Digital_Framework_Terminology_v15.0.0.pdf",
+                        "Standard": [
+                          "Best Practices"
+                        ],
+                        "Description": "<p>The glossary contains terms from EBA, DPRA, ODA and ODF documentation published in Releases 15.0 up to 21.5, as well as some Release 22.0 documents. Terms from the remaining Release 22.5 documents will be mined in the next version of the glossary.</p>\n",
+                        "Release_Status": "status-production",
+                        "DocId": "1128222",
+                        "Published": "1",
+                        "File_format": "PDF",
+                        "Document_type": "Reference",
+                        "Categories": "Standard > Reference",
+                        "Short_description": "",
+                        "Release": "22.5",
+                        "Document_Version": "15.0.0"
+                      },
+                      "uri": "gs://tmf-documents/TMF071_Open_Digital_Framework_Terminology_v15.0.0.pdf",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1128222"
+                    },
+                    "content": "# tmforum\n\n## tmforum\n\nTM Forum 2022. All Rights Reserved.Page 4 of 19tmforum.org\n\n_START_OF_TABLE_\nTABLE_IN_MARKDOWN:\n|-|-|\n| Notice | .2 |\n| Table of Contents | 4 |\n| Overview | 5 |\n| 1.References | 7 |\n| 2.Future work | 10 |\n| 3. Abbreviations.. | 11 |\n| 4.Administrative Appendix | 16 |\n| Document History 4.1. | 16 |\n| 4.1.1. Version History. | 16 |\n| 4.1.2. Release History. | 17 |\n| Acknowledgments. 4.2. | 18 |\n| 5.Addendum A: ODF Terminology spreadsheet. | 19 |\n| Terminology. 5.1. | 19 |\n\n_END_OF_TABLE_\n\n# TMF071 Open Digital Framework Terminology v15.0.0\n\ntmforum\n\n### Overview\n\nThe addendum to this document provides a glossary of terminology relevant for the TM Forum Open Digital Framework (ODF), and provides following information: The glossary of terms provides following information: Term: the term Definition: the definition of the term, with eventually some examples. For some terms, multiple definitions are included as in a specific context a term may have a different meaning. Origin: reference to the source(s) of the definition Definitions may be copied straight over, derived or adapted from the mentioned reference source(s). When a term and its definition are included in the ODF glossary, they become as such part of the ODF standard set of documents, without guarantee to align with the evolving source. Specifically, this means: \u2022 For the terms that are ingested from TM Forum documents, the intent is to update the definition in the glossary as the TM Forum document is updated. For the terms that are ingested from non-TM Forum documents, it is not guaranteed that the definition in this glossary will be updated in case the definition in the source is updated. \u2022 \u2022 Terms that are copied, derived or adapted from non-TM Forum sources, will not be updated in case the definition in the source is updated. Context / where used: an indication of the relevance of the term with the TM Forum collaboration program This notion of context will not be maintained in order to follow the lifecycle of the context, e.g., if a document is deprecated and listed within the context field of a term, it is not guaranteed that the glossary will be updated to reflect that status change. The glossary contains terms from EBA, DPRA, ODA and ODF documentation published in Releases 15.0 up to 21.5, as well as some Release 22.0 documents. Terms from the remaining Release 22.0 documents and Release 22.5 will be mined in the next version of the glossary. Some words within the glossary are more significant in the context of ODF. We represent this variation in significance by a word cloud. We hope that this simple representation of the weight we would like to attach to the use of words in this glossary will assist authors creating TM Forum documentation. TM Forum 2022. All Rights Reserved.Page 5 of 19tmforum.org\n\n# TMF071 Open Digital Framework Terminology v15.0.0"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "answerQueryToken": "NMwKDAioqr-_BhDxhPu6AxIkNjdlZWVkMTctMDAwMC0yNDU2LTg1ZjEtZDQzYTJjY2FiNmRm",
+            "answer": {
+              "state": "SUCCEEDED",
+              "citations": [
+                {
+                  "startIndex": "201",
+                  "endIndex": "388",
+                  "sources": [
+                    {
+                      "referenceId": "1"
+                    }
+                  ]
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "startIndex": "417",
+                  "endIndex": "541"
+                },
+                {
+                  "startIndex": "542",
+                  "endIndex": "635",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ]
+                },
+                {
+                  "endIndex": "741",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "startIndex": "636"
+                },
+                {
+                  "endIndex": "810",
+                  "startIndex": "742",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ]
+                },
+                {
+                  "endIndex": "908",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "startIndex": "811"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "endIndex": "989",
+                  "startIndex": "909"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "3"
+                    }
+                  ],
+                  "endIndex": "1218",
+                  "startIndex": "1015"
+                },
+                {
+                  "startIndex": "1219",
+                  "endIndex": "1328",
+                  "sources": [
+                    {
+                      "referenceId": "3"
+                    }
+                  ]
+                },
+                {
+                  "endIndex": "1454",
+                  "sources": [
+                    {
+                      "referenceId": "6"
+                    }
+                  ],
+                  "startIndex": "1329"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "6"
+                    }
+                  ],
+                  "endIndex": "1670",
+                  "startIndex": "1545"
+                },
+                {
+                  "endIndex": "1786",
+                  "startIndex": "1672",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ]
+                },
+                {
+                  "endIndex": "1935",
+                  "sources": [
+                    {
+                      "referenceId": "0"
+                    }
+                  ],
+                  "startIndex": "1787"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    },
+                    {
+                      "referenceId": "9"
+                    }
+                  ],
+                  "startIndex": "1937",
+                  "endIndex": "2159"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "3"
+                    },
+                    {
+                      "referenceId": "7"
+                    },
+                    {
+                      "referenceId": "8"
+                    }
+                  ],
+                  "startIndex": "2199",
+                  "endIndex": "2298"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "3"
+                    },
+                    {
+                      "referenceId": "8"
+                    },
+                    {
+                      "referenceId": "5"
+                    },
+                    {
+                      "referenceId": "7"
+                    }
+                  ],
+                  "startIndex": "2299",
+                  "endIndex": "2463"
+                }
+              ],
+              "answerText": "## ODF: A Comprehensive Overview\n\nThe Open Digital Framework (ODF) is a comprehensive set of assets designed to support communications service providers (CSPs) in their digital transformation journey. Developed by TM Forum member organizations, ODF provides a roadmap for migrating from legacy IT systems to a modern, flexible operating model based on the Open Digital Architecture (ODA). \n\n**Key Benefits of ODF:**\n\n* **Growth:** ODF promotes standardization through an easy-to-use architecture, enabling scalability across the value chain. This facilitates partnerships and accelerates the deployment of new services, driving growth.\n* **Efficiency:** ODF provides a framework and architecture for optimizing system and network operations. By reducing operating costs, ODF frees up resources within IT teams.\n* **Experience:** ODF empowers businesses to rapidly redesign and launch transformation projects. This includes leveraging AI to personalize and automate the customer experience.\n\n**Components of ODF:**\n\n* **Open Digital Architecture (ODA):** ODA is a modern digital architecture that emphasizes flexibility and configurability. It utilizes loose coupling principles to simplify IT management and operation. ODA is a target business architecture that extends beyond technology, encompassing various areas of interest.\n* **Maturity Models:** ODF includes maturity models for AI, digital transformation, and customer experience management (CEM). These models help organizations assess their progress and identify areas for improvement.\n* **Metrics:** TM Forum Metrics provide a standardized way to measure business performance, CEM, cyber operations, and fraud. \n* **Data Depositories:** ODF offers data depositories, including AI training data, to support various initiatives.\n* **Transformational Tool Kits:** ODF provides toolkits to assist organizations in implementing key changes and improvements across their functions. \n* **Functional Framework:** This framework categorizes and defines the basic building blocks of telecom automated functionalities. It provides a common reference map and language for navigating the Functional Architecture. \n\n**ODF Training and Certification:**\n\nTM Forum offers a comprehensive training program on ODF, covering various aspects of the framework. The training is available in both online and in-person formats. Additionally, TM Forum provides Skill Paths Certification programs that include ODF-related courses. \n",
+              "relatedQuestions": [
+                "How does ODF support business growth?",
+                "What is the Open Digital Architecture?",
+                "What is ODA's role in ODF?",
+                "How many key benefits does ODF offer?"
+              ],
+              "steps": [
+                {
+                  "actions": [
+                    {
+                      "searchAction": {
+                        "query": "Describe ODF"
+                      },
+                      "observation": {
+                        "searchResults": [
+                          {
+                            "snippetInfo": [
+                              {
+                                "snippet": "The goal of the Open Digital Framework is to help CSPs increase agility and drastically reduce the development cycle for products and services.",
+                                "snippetStatus": "SUCCESS"
+                              }
+                            ],
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/87ba02cac3439696db532a019828bb0f",
+                            "title": "Open Digital Framework (ODF)",
+                            "uri": "https://www.tmforum.org/opendigitalframework/"
+                          },
+                          {
+                            "snippetInfo": [
+                              {
+                                "snippet": "Forum&#39;s Open Digital Framework (<b>ODF</b>) Overview course to understand how to transition legacy architecture and systems to the Open Digital Architecture (ODA)&nbsp;...",
+                                "snippetStatus": "SUCCESS"
+                              }
+                            ],
+                            "uri": "https://www.tmforum.org/training-certification/open-digital-framework-odf-overview/",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c5142981380bbe328ed49dac5890f9f0",
+                            "title": "Open Digital Framework (ODF) Overview \u2013 TM Forum"
+                          },
+                          {
+                            "snippetInfo": [
+                              {
+                                "snippetStatus": "SUCCESS",
+                                "snippet": "\u2022 <b>Describe</b> the functional groupings on the ... \u2022 Open Digital Framework Overview (<b>ODF</b>-1001) ... \u2022 Information Framework Fundamentals <b>ODF</b>-2301. \u2022 Open API&nbsp;..."
+                              }
+                            ],
+                            "uri": "https://www.tmforum.org/wp-content/uploads/2023/05/27-TM_Forum_training_datasheet_Functional-Framework-Fundamentals.pdf",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/afa27a87388114ce2edb3a5e808f0a1a",
+                            "title": "learn? attend?"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "description": "Rephrase the query and search.",
+                  "state": "SUCCEEDED"
+                }
+              ],
+              "references": [
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.5,
+                    "content": "Image Supporting the industry to navigate the 3 key paths to tangible business benefits: Growth: Standardizes an easy-to-use architecture that creates scalability across the value chain, removing barriers to partnering and enabling growth through the fast deployment of new services. Efficiency: Provides a framework and architecture for businesses to transform system and network operations and significantly reduce operating costs, freeing up resources across your IT team. Experience: Change your business by rapidly redesigning and launching transformation projects, including leveraging AI to further automate and personalize your customer experience. ODF: A complete set of assets to deliver on your vision The Open Digital Framework (ODF) comprises the Open Digital Architecture (ODA) PLUS other key TM Forum assets such as the Maturity Models (AI, CEM etc), Metrics, Data depositories including AI training data and complete set of Transformational tool kits that can help any function implement the key changes and improvements within their organization. ",
+                    "documentMetadata": {
+                      "uri": "https://www.tmforum.org/opendigitalframework/",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/87ba02cac3439696db532a019828bb0f",
+                      "title": "Open Digital Framework (ODF)"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "TM Forum Skill Paths Certification Leaderboard Conformance Overview Certifications Awarded Business Process Framework Conformance Information Framework Conformance Open API Conformance Services Events Upcoming events + webinars Sponsorship opportunities Membership About Membership Benefits Current members Become a member 2024 Annual Meeting of Members Open Sessions Log in Register Search: Search Back to top Open Digital Architecture Open Digital Architecture Quick links Open APIs eTOM SID ODA Manifesto Open API Manifesto ODA Training Open API conformance certification How to apply ODA Resources How to use ODA ODA white paper Open API table Resource library eTOM poster SID poster ODA components poster ODA Component Directory (prototype) Projects ODA projects Open API project ODA Component Accelerator Communities Global Architecture Forum Open API support community ODA community Home> Open Digital Framework Open Digital Framework (ODF) ODF helps companies migrate to a modern, flexible operating model as defined by the ODA blueprint. Co-creating the future of the industry Leading communications service providers (CSPs), vendors and system integrators have come together to co-create and design a migration path from legacy IT systems to modular, cloud-native software orchestrated utilizing AI. Be part of this industry leading member project that is driving the future of how we work as an industry. ",
+                    "relevanceScore": 0.5,
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/87ba02cac3439696db532a019828bb0f",
+                      "uri": "https://www.tmforum.org/opendigitalframework/",
+                      "title": "Open Digital Framework (ODF)"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "learn? attend? Page 1 The learner will be able to: Define where the Functional Framework came from Describe the Functional Framework including its scope and structure Define the common domain-based structure used in the framework models Describe the functional groupings on the Functional Framework Identify the levels of aggregation of a function Describe the need for aggregation of a function Define the relationship between functions and ODA components Identify a function that can be realized into a component on the ODA taxonomy view what will you learn? www.tmforum.org/training The Functional Framework (which is an evolution of the now legacy Application Framework) was created by removing the application context and breaking the activities into basic and unique system components. This can help service-oriented enterprises catalog the elemental building blocks that drive their operations. Where the Business Process Framework (eTOM) provides a frame of reference for processes and the Information Framework (SID) provides a common information model, the Functional Framework gives a frame of reference for telecom automated functionalities. The basic building block of the Functional Framework, a function is characterized by the information it handles and the service it performs. It doesn't carry any context and allows your systems to employ the same function to perform many different activities. The course explains how a standardized function map and taxonomy can help to re-plan and streamline a function portfolio. ",
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/afa27a87388114ce2edb3a5e808f0a1a",
+                      "uri": "https://www.tmforum.org/wp-content/uploads/2023/05/27-TM_Forum_training_datasheet_Functional-Framework-Fundamentals.pdf",
+                      "title": "learn? attend?"
+                    },
+                    "relevanceScore": 0.5
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "uri": "https://www.tmforum.org/training-certification/open-digital-framework-odf-overview/",
+                      "title": "Open Digital Framework (ODF) Overview \u2013 TM Forum",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c5142981380bbe328ed49dac5890f9f0"
+                    },
+                    "content": "Watch later Share Copy link Watch on An error occurred. Try watching this video on www.youtube.com, or enable JavaScript if it is disabled in your browser. Take this overview to understand how to transition legacy architecture and systems to the Open Digital Architecture (ODA) standard using the assets from the ODF. ODA is a modern digital architecture that delivers flexible, configurable IT capabilities based on the principles of loose coupling. It simplifies the transformation, management and operation of an IT estate using modern data and rule-driven software engineering techniques. It is a target business architecture that addresses more than just technology and comprises several areas of interest. The training course is delivered by our expert trainers over several modules, covering each part of ODF to give you insights and awareness. Format: Online (self-paced) or expert led (virtual classroom or on-site) Level: Foundation Duration: 2-days Access period: *30 days (default) from date of enrolment. *Note: 1) Does not apply for enterprise deals (they have fixed end-date) 2) Simultaneous multiple course or bundle enrolment will grant 30 days x #courses for all courses simultaneously enrolled (eg 2 courses = 60-day access, 3 courses = 90 days, etc.) Pre-requisites: There are no formal prerequisites. ",
+                    "relevanceScore": 0.4
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.4,
+                    "content": "Image Image Image Image Image Image Beyond Now Logo Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Beyond Now Logo Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Image Solutions to ignite growth Image Discover more about our ODF solutions The traditional telco model is under pressure to evolve. The telecoms industry has three to five years to be Inspired, Design and Build new solutions for a platform-ready ecosystem. TM Forum's Open Digital Framework (ODF) supports the telecoms industry to create agile solutions by inspiring new ways to implement services, that are designed on autonomous AI-driven networks, and by showing how to build composable architectures which are then run within both a CSP and vendor organizations. ",
+                    "documentMetadata": {
+                      "uri": "https://www.tmforum.org/opendigitalframework/",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/87ba02cac3439696db532a019828bb0f",
+                      "title": "Open Digital Framework (ODF)"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "Passing this exam counts toward Skill certification with TM Forum. Find out more about certification tracks here. The Functional Framework is a key building block of ODA and is part of several skill certifications. course certification: Business Process Framework Fundamentals ODF-2201 Information Framework Fundamentals ODF-2301 Open API Fundamentals ODF-2401 ODA Component Fundamentals ODF-2403 Open Digital Architecture (ODA) Components Practitioners ODF-3404 Open Digital Architecture Practitioners - Managing the DT journey ODF-3001 what to take next? This course is on the following certification tracks: ODA Components skill path ODA Systems skill path skill path: MODULE 7 The Functional Framework: Example Function classification MODULE 8 The Functional Framework: Functions to ODA components MODULE 9 Describing a component using TM Forum Frameworks MODULE 10 Brief Example: Describing a component using TM Forum Frameworks ",
+                    "relevanceScore": 0.4,
+                    "documentMetadata": {
+                      "title": "learn? attend?",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/afa27a87388114ce2edb3a5e808f0a1a",
+                      "uri": "https://www.tmforum.org/wp-content/uploads/2023/05/27-TM_Forum_training_datasheet_Functional-Framework-Fundamentals.pdf"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.4,
+                    "content": "The ODF is developed by TM Forum member organizations for our members through our Labs and includes such assets as: Maturity Models (AI, Digital Transofmration, CEM) TM Forum Metrics (Business, CEM, CyberOps, Fraud) How to Guides (Playbooks and Toolkits) ODA overview ODA's Open APIs ODA clickable model Image Click to expand Discover how ODF is used in the real-world Don't just take our word for the benefits of ODA. Discover how our members describe some of their real-world use cases, or learn more by reading our blogs and Inform articles. Deutsche Telecom fulfilling customer needs with ODA Deutsche Telekom's Andreas Bohmann on how ODA helps collaboration with its partners through a scalable, fast changing architecture to deliver for their customers. Oracle on the value of ODA Oracle's Azhar Mirza, Group VP of Product Development sees the value of ODA to the industry Whale Cloud on why ODA is necessary for the industry Whale Cloud's Mr Steven Cho, Chief Marketing officer explains why RfODA helps solve the challenges and benefits both operators and vendors alike. Huawei: Why ODA important for service providers Huawei's Mr Maurice Ma, President, Software Business, explains why ODA is so important to service providers to improve agility and interoperability. ",
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/87ba02cac3439696db532a019828bb0f",
+                      "uri": "https://www.tmforum.org/opendigitalframework/",
+                      "title": "Open Digital Framework (ODF)"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "uri": "https://www.tmforum.org/training-certification/open-digital-framework-odf-overview/",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c5142981380bbe328ed49dac5890f9f0",
+                      "title": "Open Digital Framework (ODF) Overview \u2013 TM Forum"
+                    },
+                    "content": "TM Forum Skill Paths Certification Leaderboard Conformance Overview Certifications Awarded Business Process Framework Conformance Information Framework Conformance Open API Conformance Services Events Upcoming events + webinars Sponsorship opportunities Membership About Membership Benefits Current members Become a member 2024 Annual Meeting of Members Open Sessions Log in Register Search: Search Back to top Education & development Image: Education Open Digital Framework (ODF) Overview \u2013 TM Forum Education & Development About Education & Development Course catalog Recommended courses Course bundles Enterprise Training Success stories Certification What is Certification? TM Forum Skill Paths Certification Leaderboard FAQs Exams Conformance Overview Process Overview Certifications Awarded Business Process Framework Conformance Information Framework Conformance Open API Conformance Success Stories Frequently Asked Questions Marketing support Open Digital Framework (ODF) Overview A high-level overview of the next-generation management architecture for digital service providers. In this course you will learn how TM Forum's Open Digital Framework (ODF) library supports project delivery lifecycles, why TM Forum's Open Digital Architecture (ODA) is needed and understand its principles and building blocks. TM Forum 6.33K subscribers Open Digital Framework (ODF) Overview training course TM Forum Search Info Shopping Tap to unmute If playback doesn't begin shortly, try restarting your device. Your browser can't play this video. Learn more More videos on YouTube Share Include playlist An error occurred while retrieving sharing information. Please try again later. ",
+                    "relevanceScore": 0.3
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/c5142981380bbe328ed49dac5890f9f0",
+                      "uri": "https://www.tmforum.org/training-certification/open-digital-framework-odf-overview/",
+                      "title": "Open Digital Framework (ODF) Overview \u2013 TM Forum"
+                    },
+                    "content": "Students should be technically knowledgeable, starting on a digital transformation journey, with little or no knowledge of the concepts of moving to a digitally enabled future and the Open Digital Architecture. Register to take this course online: Member price Non-member price US$ 1,270 US$ 1,480 Bundle Package Buy this course as part of a bundle and save! Read more Note: Si quiere acceder a este curso con subt\u00edtulos en Espa\u00f1ol, haga click aqu\u00ed. Take this course in-person (onsite or virtual): Talk to us about getting this course for your team Contact us Download the datasheet for this course. Download Course objectives The overall objective for this training program is to provide a high-level, introductory overview of how ODF supports transformation projects and to provide insights into the ODA. Each module is aimed at providing awareness of a specific part of ODF and its interactions with the overall architecture. What will you learn? Through the series of sessions, the student will be exposed to the following ideas and aspects of ODA and how ODF assets support the transition to it: Basic principles and concepts of ODA and ODF assets. Building blocks of the ODA vision and the functional architecture. When and how ODA can be used and implemented? Migration strategies from legacy Implementations using ODF assets. Introduction to architecture and design. ",
+                    "relevanceScore": 0.3
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.3,
+                    "content": "This course will help you gain practical experience of the use of the framework that can be applied in day-to- day work. Format: Virtual Classroom | Instructor-lead Level: Foundation Duration: 1 day Prerequisites: Open Digital Framework Overview (ODF-1001) Enterprise and Solution Architects Anyone involved in system selection or application portfolio rationalization Software vendors wishing to understand how service providers would use the Framework Functional Framework Fundamentals (Course code - ODF-2303) who should attend? The Functional Framework provides a common reference map and language to navigate the Functional Architecture. Page 2 To provide a detailed description of the Functional Framework, and how service providers and suppliers may use it in practice. You will understand the Framework's structure and content and review real-life use cases of how the framework has been used and the benefits gained. course objectives: www.tmforum.org/training course syllabus MODULE 1 MODULE 2 MODULE 3 MODULE 4 MODULE 6 MODULE 5 Functional Framework: Where did it come from? The Functional Framework: Part of the Open Digital Architecture (ODA) The Functional Framework: What is it? The Functional Framework: Common structure The Functional Framework: Groupings The Functional Framework: Scope and structure A course attendance certificate is issued on satisfactory completion of the course. There is a knowledge certification exam also associated with the course material. ",
+                    "documentMetadata": {
+                      "title": "learn? attend?",
+                      "uri": "https://www.tmforum.org/wp-content/uploads/2023/05/27-TM_Forum_training_datasheet_Functional-Framework-Fundamentals.pdf",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/afa27a87388114ce2edb3a5e808f0a1a"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "queryExpansionInfo": {},
+            "summary": {},
+            "attributionToken": "2AL0VwEKDAioqr-_BhCv88fUAxIkNjdmNDZjNDUtMDAwMC0yNTJiLTk5MmUtMzRjN2U5MTliZjgzIgdHRU5FUklDKnzFy_MXtreMLZ_Wty3bmIYxo4CXIrWO6TDy2e0wlZLFMNSynRWQ97Iw1am3MNS_4jDPv-Iw7MHjMNLIiDGe2NMwnNa3LfTN_TDYmIYx9dntMP6U9zCOkckwuI7pMI6-nRXYqbcwm9jTMIGV9zDvweMw8c39MM_IiDHC8J4VMAFKEjB4NjNjYmQwMDBhODNjNWU1NFKEAXByb2plY3RzLzk4Mjg0NTgzMzU2NS9sb2NhdGlvbnMvZ2xvYmFsL2NvbGxlY3Rpb25zL2RlZmF1bHRfY29sbGVjdGlvbi9lbmdpbmVzL3RtZi1wdWJsaWNfMTY5MjQ0NTQyMjY3Mi9zZXJ2aW5nQ29uZmlncy9kZWZhdWx0X2NvbmZpZw"
+          }
+        ]
+      ]
+    ],
+    "output": "The Open Digital Framework (ODF) is a comprehensive set of assets designed to support communications service providers (CSPs) in their digital transformation journey. Developed by TM Forum member organizations, ODF provides a roadmap for migrating from legacy IT systems to a modern, flexible operating model based on the Open Digital Architecture (ODA). \n\nKey benefits of ODF include:\n\n* **Growth:** ODF promotes standardization through an easy-to-use architecture, enabling scalability across the value chain. This facilitates partnerships and accelerates the deployment of new services, driving growth.\n* **Efficiency:** ODF provides a framework and architecture for optimizing system and network operations. By reducing operating costs, ODF frees up resources within IT teams.\n* **Experience:** ODF empowers businesses to rapidly redesign and launch transformation projects. This includes leveraging AI to personalize and automate the customer experience.\n\nODF includes various components such as:\n\n* **Open Digital Architecture (ODA):** A modern digital architecture that emphasizes flexibility and configurability. It utilizes loose coupling principles to simplify IT management and operation. ODA is a target business architecture that extends beyond technology, encompassing various areas of interest.\n* **Maturity Models:** ODF includes maturity models for AI, digital transformation, and customer experience management (CEM). These models help organizations assess their progress and identify areas for improvement.\n* **Metrics:** TM Forum Metrics provide a standardized way to measure business performance, CEM, cyber operations, and fraud. \n* **Data Depositories:** ODF offers data depositories, including AI training data, to support various initiatives.\n* **Transformational Tool Kits:** ODF provides toolkits to assist organizations in implementing key changes and improvements across their functions. \n* **Functional Framework:** This framework categorizes and defines the basic building blocks of telecom automated functionalities. It provides a common reference map and language for navigating the Functional Architecture. \n\nTM Forum offers a comprehensive training program on ODF, covering various aspects of the framework. The training is available in both online and in-person formats. Additionally, TM Forum provides Skill Paths Certification programs that include ODF-related courses. \n",
+    "input": "Describe ODF"
+  }
+}

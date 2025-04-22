@@ -1,0 +1,104 @@
+{
+  "output": {
+    "intermediate_steps": [
+      [
+        {
+          "id": [
+            "langchain",
+            "schema",
+            "agent",
+            "ToolAgentAction"
+          ],
+          "lc": 1,
+          "type": "constructor",
+          "kwargs": {
+            "type": "AgentActionMessageLog",
+            "log": "\nInvoking: `swagger_gen` with `{'text': 'Can you give me the code for Product catalogue management version 4? use swagger gen tool.'}`\n\n\n",
+            "tool": "swagger_gen",
+            "tool_input": {
+              "text": "Can you give me the code for Product catalogue management version 4? use swagger gen tool."
+            },
+            "message_log": [
+              {
+                "kwargs": {
+                  "tool_calls": [
+                    {
+                      "id": "20e4c1fc-c2bb-43c6-8b96-ce56c121e7a8",
+                      "name": "swagger_gen",
+                      "args": {
+                        "text": "Can you give me the code for Product catalogue management version 4? use swagger gen tool."
+                      }
+                    }
+                  ],
+                  "type": "AIMessageChunk",
+                  "response_metadata": {
+                    "safety_ratings": [
+                      {
+                        "blocked": false,
+                        "probability_label": "NEGLIGIBLE",
+                        "category": "HARM_CATEGORY_HATE_SPEECH"
+                      },
+                      {
+                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                        "probability_label": "NEGLIGIBLE",
+                        "blocked": false
+                      },
+                      {
+                        "category": "HARM_CATEGORY_HARASSMENT",
+                        "probability_label": "NEGLIGIBLE",
+                        "blocked": false
+                      },
+                      {
+                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                        "blocked": false,
+                        "probability_label": "NEGLIGIBLE"
+                      }
+                    ],
+                    "is_blocked": false,
+                    "citation_metadata": null,
+                    "usage_metadata": {
+                      "candidates_token_count": 23,
+                      "prompt_token_count": 102,
+                      "total_token_count": 125
+                    }
+                  },
+                  "id": "run-cf0ecfc8-d215-436d-8914-db330750baeb",
+                  "invalid_tool_calls": [],
+                  "tool_call_chunks": [
+                    {
+                      "name": "swagger_gen",
+                      "index": null,
+                      "id": "20e4c1fc-c2bb-43c6-8b96-ce56c121e7a8",
+                      "args": "{\"text\": \"Can you give me the code for Product catalogue management version 4? use swagger gen tool.\"}"
+                    }
+                  ],
+                  "additional_kwargs": {
+                    "function_call": {
+                      "name": "swagger_gen",
+                      "arguments": "{\"text\": \"Can you give me the code for Product catalogue management version 4? use swagger gen tool.\"}"
+                    }
+                  },
+                  "content": ""
+                },
+                "id": [
+                  "langchain",
+                  "schema",
+                  "messages",
+                  "AIMessageChunk"
+                ],
+                "type": "constructor",
+                "lc": 1
+              }
+            ],
+            "tool_call_id": "20e4c1fc-c2bb-43c6-8b96-ce56c121e7a8"
+          }
+        },
+        {
+          "result": "https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1745076522069.zip"
+        }
+      ]
+    ],
+    "input": "Can you give me the code for Product catalogue management version 4? use swagger gen tool.",
+    "output": "OK. I have generated the code for Product catalogue management version 4 using the swagger gen tool. The code is available at the following URL: https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1745076522069.zip \n"
+  }
+}

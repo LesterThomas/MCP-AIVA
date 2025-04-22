@@ -1,0 +1,763 @@
+{
+  "output": {
+    "input": "Can you give me the server stub code for Product catalogue management version 4? use swagger gen tool and generate in Python.",
+    "output": "The generated code is in the zip file at https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip. You can download and unzip it to access the server stub code. \n",
+    "intermediate_steps": [
+      [
+        {
+          "type": "constructor",
+          "id": [
+            "langchain",
+            "schema",
+            "agent",
+            "ToolAgentAction"
+          ],
+          "kwargs": {
+            "type": "AgentActionMessageLog",
+            "log": "\nInvoking: `swagger_gen` with `{'text': \"\\nswagger: '2.0'\\ninfo:\\n  description: Product catalogue management\\n  version: '4'\\n  title: Product catalogue management\\nhost: localhost:8080\\nbasePath: /\\ntags:\\n- name: products\\n  description: Product operations\\npaths:\\n  /products:\\n    get:\\n      tags:\\n      - products\\n      summary: Get all products\\n      responses:\\n        '200':\\n          description: OK\\n          schema:\\n            type: array\\n            items:\\n              $ref: '#/definitions/Product'\\n    post:\\n      tags:\\n      - products\\n      summary: Create a new product\\n      parameters:\\n      - in: body\\n        name: product\\n        description: Product to create\\n        required: true\\n        schema:\\n          $ref: '#/definitions/Product'\\n      responses:\\n        '201':\\n          description: Created\\n          schema:\\n            $ref: '#/definitions/Product'\\n        '400':\\n          description: Bad Request\\n  /products/{product_id}:\\n    get:\\n      tags:\\n      - products\\n      summary: Get a product by ID\\n      parameters:\\n      - in: path\\n        name: product_id\\n        description: ID of the product to retrieve\\n        required: true\\n        type: integer\\n        format: int64\\n      responses:\\n        '200':\\n          description: OK\\n          schema:\\n            $ref: '#/definitions/Product'\\n        '404':\\n          description: Not Found\\n    put:\\n      tags:\\n      - products\\n      summary: Update a product\\n      parameters:\\n      - in: path\\n        name: product_id\\n        description: ID of the product to update\\n        required: true\\n        type: integer\\n        format: int64\\n      - in: body\\n        name: product\\n        description: Product to update\\n        required: true\\n        schema:\\n          $ref: '#/definitions/Product'\\n      responses:\\n        '200':\\n          description: OK\\n          schema:\\n            $ref: '#/definitions/Product'\\n        '400':\\n          description: Bad Request\\n        '404':\\n          description: Not Found\\n    delete:\\n      tags:\\n      - products\\n      summary: Delete a product\\n      parameters:\\n      - in: path\\n        name: product_id\\n        description: ID of the product to delete\\n        required: true\\n        type: integer\\n        format: int64\\n      responses:\\n        '204':\\n          description: No Content\\n        '404':\\n          description: Not Found\\ndefinitions:\\n  Product:\\n    type: object\\n    properties:\\n      id:\\n        type: integer\\n        format: int64\\n      name:\\n        type: string\\n      description:\\n        type: string\\n      price:\\n        type: number\\n        format: float\\n      imageUrl:\\n        type: string\\n      createdAt:\\n        type: string\\n        format: date-time\\n      updatedAt:\\n        type: string\\n        format: date-time\\n\"}`\n\n\n",
+            "tool": "swagger_gen",
+            "tool_input": {
+              "text": "\nswagger: '2.0'\ninfo:\n  description: Product catalogue management\n  version: '4'\n  title: Product catalogue management\nhost: localhost:8080\nbasePath: /\ntags:\n- name: products\n  description: Product operations\npaths:\n  /products:\n    get:\n      tags:\n      - products\n      summary: Get all products\n      responses:\n        '200':\n          description: OK\n          schema:\n            type: array\n            items:\n              $ref: '#/definitions/Product'\n    post:\n      tags:\n      - products\n      summary: Create a new product\n      parameters:\n      - in: body\n        name: product\n        description: Product to create\n        required: true\n        schema:\n          $ref: '#/definitions/Product'\n      responses:\n        '201':\n          description: Created\n          schema:\n            $ref: '#/definitions/Product'\n        '400':\n          description: Bad Request\n  /products/{product_id}:\n    get:\n      tags:\n      - products\n      summary: Get a product by ID\n      parameters:\n      - in: path\n        name: product_id\n        description: ID of the product to retrieve\n        required: true\n        type: integer\n        format: int64\n      responses:\n        '200':\n          description: OK\n          schema:\n            $ref: '#/definitions/Product'\n        '404':\n          description: Not Found\n    put:\n      tags:\n      - products\n      summary: Update a product\n      parameters:\n      - in: path\n        name: product_id\n        description: ID of the product to update\n        required: true\n        type: integer\n        format: int64\n      - in: body\n        name: product\n        description: Product to update\n        required: true\n        schema:\n          $ref: '#/definitions/Product'\n      responses:\n        '200':\n          description: OK\n          schema:\n            $ref: '#/definitions/Product'\n        '400':\n          description: Bad Request\n        '404':\n          description: Not Found\n    delete:\n      tags:\n      - products\n      summary: Delete a product\n      parameters:\n      - in: path\n        name: product_id\n        description: ID of the product to delete\n        required: true\n        type: integer\n        format: int64\n      responses:\n        '204':\n          description: No Content\n        '404':\n          description: Not Found\ndefinitions:\n  Product:\n    type: object\n    properties:\n      id:\n        type: integer\n        format: int64\n      name:\n        type: string\n      description:\n        type: string\n      price:\n        type: number\n        format: float\n      imageUrl:\n        type: string\n      createdAt:\n        type: string\n        format: date-time\n      updatedAt:\n        type: string\n        format: date-time\n"
+            },
+            "message_log": [
+              {
+                "lc": 1,
+                "id": [
+                  "langchain",
+                  "schema",
+                  "messages",
+                  "AIMessageChunk"
+                ],
+                "kwargs": {
+                  "tool_call_chunks": [
+                    {
+                      "id": "81ffe7fc-95e5-4b69-9bd2-1ee0a8896276",
+                      "args": "{\"text\": \"\\nswagger: '2.0'\\ninfo:\\n  description: Product catalogue management\\n  version: '4'\\n  title: Product catalogue management\\nhost: localhost:8080\\nbasePath: /\\ntags:\\n- name: products\\n  description: Product operations\\npaths:\\n  /products:\\n    get:\\n      tags:\\n      - products\\n      summary: Get all products\\n      responses:\\n        '200':\\n          description: OK\\n          schema:\\n            type: array\\n            items:\\n              $ref: '#/definitions/Product'\\n    post:\\n      tags:\\n      - products\\n      summary: Create a new product\\n      parameters:\\n      - in: body\\n        name: product\\n        description: Product to create\\n        required: true\\n        schema:\\n          $ref: '#/definitions/Product'\\n      responses:\\n        '201':\\n          description: Created\\n          schema:\\n            $ref: '#/definitions/Product'\\n        '400':\\n          description: Bad Request\\n  /products/{product_id}:\\n    get:\\n      tags:\\n      - products\\n      summary: Get a product by ID\\n      parameters:\\n      - in: path\\n        name: product_id\\n        description: ID of the product to retrieve\\n        required: true\\n        type: integer\\n        format: int64\\n      responses:\\n        '200':\\n          description: OK\\n          schema:\\n            $ref: '#/definitions/Product'\\n        '404':\\n          description: Not Found\\n    put:\\n      tags:\\n      - products\\n      summary: Update a product\\n      parameters:\\n      - in: path\\n        name: product_id\\n        description: ID of the product to update\\n        required: true\\n        type: integer\\n        format: int64\\n      - in: body\\n        name: product\\n        description: Product to update\\n        required: true\\n        schema:\\n          $ref: '#/definitions/Product'\\n      responses:\\n        '200':\\n          description: OK\\n          schema:\\n            $ref: '#/definitions/Product'\\n        '400':\\n          description: Bad Request\\n        '404':\\n          description: Not Found\\n    delete:\\n      tags:\\n      - products\\n      summary: Delete a product\\n      parameters:\\n      - in: path\\n        name: product_id\\n        description: ID of the product to delete\\n        required: true\\n        type: integer\\n        format: int64\\n      responses:\\n        '204':\\n          description: No Content\\n        '404':\\n          description: Not Found\\ndefinitions:\\n  Product:\\n    type: object\\n    properties:\\n      id:\\n        type: integer\\n        format: int64\\n      name:\\n        type: string\\n      description:\\n        type: string\\n      price:\\n        type: number\\n        format: float\\n      imageUrl:\\n        type: string\\n      createdAt:\\n        type: string\\n        format: date-time\\n      updatedAt:\\n        type: string\\n        format: date-time\\n\"}",
+                      "name": "swagger_gen",
+                      "index": null
+                    }
+                  ],
+                  "content": "",
+                  "id": "run-37ac6c2c-67ca-4aa0-8c23-d5fc8a73a55c",
+                  "response_metadata": {
+                    "usage_metadata": {
+                      "candidates_token_count": 711,
+                      "total_token_count": 819,
+                      "prompt_token_count": 108
+                    },
+                    "safety_ratings": [
+                      {
+                        "probability_label": "NEGLIGIBLE",
+                        "category": "HARM_CATEGORY_HATE_SPEECH",
+                        "blocked": false
+                      },
+                      {
+                        "blocked": false,
+                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                        "probability_label": "NEGLIGIBLE"
+                      },
+                      {
+                        "category": "HARM_CATEGORY_HARASSMENT",
+                        "blocked": false,
+                        "probability_label": "NEGLIGIBLE"
+                      },
+                      {
+                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                        "probability_label": "NEGLIGIBLE",
+                        "blocked": false
+                      }
+                    ],
+                    "is_blocked": false,
+                    "citation_metadata": {
+                      "citations": [
+                        {
+                          "title": "",
+                          "license_": "",
+                          "start_index": 356,
+                          "uri": "https://github.com/mbnasiha/ProductStore",
+                          "end_index": 583
+                        },
+                        {
+                          "license_": "",
+                          "uri": "https://github.com/gonenduk/basejs",
+                          "end_index": 815,
+                          "title": "",
+                          "start_index": 580
+                        },
+                        {
+                          "uri": "https://github.com/jcvar/swarch-labs",
+                          "license_": "",
+                          "end_index": 1373,
+                          "title": "",
+                          "start_index": 1154
+                        },
+                        {
+                          "uri": "https://github.com/gonenduk/basejs",
+                          "license_": "",
+                          "end_index": 1834,
+                          "start_index": 1633,
+                          "title": ""
+                        },
+                        {
+                          "end_index": 1936,
+                          "start_index": 1711,
+                          "title": "",
+                          "uri": "https://github.com/SeniorDeveloper0915/CremationAPI",
+                          "license_": ""
+                        },
+                        {
+                          "title": "",
+                          "start_index": 2361,
+                          "uri": "https://github.com/ach0o/boilerplate_flask_sqlalchemy",
+                          "end_index": 2588,
+                          "license_": "MIT"
+                        },
+                        {
+                          "uri": "https://github.com/qscgyujm/POS",
+                          "end_index": 2762,
+                          "title": "",
+                          "license_": "",
+                          "start_index": 2478
+                        }
+                      ]
+                    }
+                  },
+                  "tool_calls": [
+                    {
+                      "name": "swagger_gen",
+                      "args": {
+                        "text": "\nswagger: '2.0'\ninfo:\n  description: Product catalogue management\n  version: '4'\n  title: Product catalogue management\nhost: localhost:8080\nbasePath: /\ntags:\n- name: products\n  description: Product operations\npaths:\n  /products:\n    get:\n      tags:\n      - products\n      summary: Get all products\n      responses:\n        '200':\n          description: OK\n          schema:\n            type: array\n            items:\n              $ref: '#/definitions/Product'\n    post:\n      tags:\n      - products\n      summary: Create a new product\n      parameters:\n      - in: body\n        name: product\n        description: Product to create\n        required: true\n        schema:\n          $ref: '#/definitions/Product'\n      responses:\n        '201':\n          description: Created\n          schema:\n            $ref: '#/definitions/Product'\n        '400':\n          description: Bad Request\n  /products/{product_id}:\n    get:\n      tags:\n      - products\n      summary: Get a product by ID\n      parameters:\n      - in: path\n        name: product_id\n        description: ID of the product to retrieve\n        required: true\n        type: integer\n        format: int64\n      responses:\n        '200':\n          description: OK\n          schema:\n            $ref: '#/definitions/Product'\n        '404':\n          description: Not Found\n    put:\n      tags:\n      - products\n      summary: Update a product\n      parameters:\n      - in: path\n        name: product_id\n        description: ID of the product to update\n        required: true\n        type: integer\n        format: int64\n      - in: body\n        name: product\n        description: Product to update\n        required: true\n        schema:\n          $ref: '#/definitions/Product'\n      responses:\n        '200':\n          description: OK\n          schema:\n            $ref: '#/definitions/Product'\n        '400':\n          description: Bad Request\n        '404':\n          description: Not Found\n    delete:\n      tags:\n      - products\n      summary: Delete a product\n      parameters:\n      - in: path\n        name: product_id\n        description: ID of the product to delete\n        required: true\n        type: integer\n        format: int64\n      responses:\n        '204':\n          description: No Content\n        '404':\n          description: Not Found\ndefinitions:\n  Product:\n    type: object\n    properties:\n      id:\n        type: integer\n        format: int64\n      name:\n        type: string\n      description:\n        type: string\n      price:\n        type: number\n        format: float\n      imageUrl:\n        type: string\n      createdAt:\n        type: string\n        format: date-time\n      updatedAt:\n        type: string\n        format: date-time\n"
+                      },
+                      "id": "81ffe7fc-95e5-4b69-9bd2-1ee0a8896276"
+                    }
+                  ],
+                  "type": "AIMessageChunk",
+                  "additional_kwargs": {
+                    "function_call": {
+                      "name": "swagger_gen",
+                      "arguments": "{\"text\": \"\\nswagger: '2.0'\\ninfo:\\n  description: Product catalogue management\\n  version: '4'\\n  title: Product catalogue management\\nhost: localhost:8080\\nbasePath: /\\ntags:\\n- name: products\\n  description: Product operations\\npaths:\\n  /products:\\n    get:\\n      tags:\\n      - products\\n      summary: Get all products\\n      responses:\\n        '200':\\n          description: OK\\n          schema:\\n            type: array\\n            items:\\n              $ref: '#/definitions/Product'\\n    post:\\n      tags:\\n      - products\\n      summary: Create a new product\\n      parameters:\\n      - in: body\\n        name: product\\n        description: Product to create\\n        required: true\\n        schema:\\n          $ref: '#/definitions/Product'\\n      responses:\\n        '201':\\n          description: Created\\n          schema:\\n            $ref: '#/definitions/Product'\\n        '400':\\n          description: Bad Request\\n  /products/{product_id}:\\n    get:\\n      tags:\\n      - products\\n      summary: Get a product by ID\\n      parameters:\\n      - in: path\\n        name: product_id\\n        description: ID of the product to retrieve\\n        required: true\\n        type: integer\\n        format: int64\\n      responses:\\n        '200':\\n          description: OK\\n          schema:\\n            $ref: '#/definitions/Product'\\n        '404':\\n          description: Not Found\\n    put:\\n      tags:\\n      - products\\n      summary: Update a product\\n      parameters:\\n      - in: path\\n        name: product_id\\n        description: ID of the product to update\\n        required: true\\n        type: integer\\n        format: int64\\n      - in: body\\n        name: product\\n        description: Product to update\\n        required: true\\n        schema:\\n          $ref: '#/definitions/Product'\\n      responses:\\n        '200':\\n          description: OK\\n          schema:\\n            $ref: '#/definitions/Product'\\n        '400':\\n          description: Bad Request\\n        '404':\\n          description: Not Found\\n    delete:\\n      tags:\\n      - products\\n      summary: Delete a product\\n      parameters:\\n      - in: path\\n        name: product_id\\n        description: ID of the product to delete\\n        required: true\\n        type: integer\\n        format: int64\\n      responses:\\n        '204':\\n          description: No Content\\n        '404':\\n          description: Not Found\\ndefinitions:\\n  Product:\\n    type: object\\n    properties:\\n      id:\\n        type: integer\\n        format: int64\\n      name:\\n        type: string\\n      description:\\n        type: string\\n      price:\\n        type: number\\n        format: float\\n      imageUrl:\\n        type: string\\n      createdAt:\\n        type: string\\n        format: date-time\\n      updatedAt:\\n        type: string\\n        format: date-time\\n\"}"
+                    }
+                  },
+                  "invalid_tool_calls": []
+                },
+                "type": "constructor"
+              }
+            ],
+            "tool_call_id": "81ffe7fc-95e5-4b69-9bd2-1ee0a8896276"
+          },
+          "lc": 1
+        },
+        {
+          "result": "https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip"
+        }
+      ],
+      [
+        {
+          "lc": 1,
+          "kwargs": {
+            "message_log": [
+              {
+                "lc": 1,
+                "id": [
+                  "langchain",
+                  "schema",
+                  "messages",
+                  "AIMessageChunk"
+                ],
+                "kwargs": {
+                  "invalid_tool_calls": [],
+                  "id": "run-08b491e4-824b-4c8f-9626-6181ce574857",
+                  "response_metadata": {
+                    "citation_metadata": null,
+                    "safety_ratings": [
+                      {
+                        "blocked": false,
+                        "probability_label": "NEGLIGIBLE",
+                        "category": "HARM_CATEGORY_HATE_SPEECH"
+                      },
+                      {
+                        "probability_label": "NEGLIGIBLE",
+                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                        "blocked": false
+                      },
+                      {
+                        "blocked": false,
+                        "category": "HARM_CATEGORY_HARASSMENT",
+                        "probability_label": "NEGLIGIBLE"
+                      },
+                      {
+                        "probability_label": "NEGLIGIBLE",
+                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                        "blocked": false
+                      }
+                    ],
+                    "is_blocked": false,
+                    "usage_metadata": {
+                      "prompt_token_count": 885,
+                      "total_token_count": 970,
+                      "candidates_token_count": 85
+                    }
+                  },
+                  "content": "",
+                  "tool_calls": [
+                    {
+                      "args": {
+                        "query_str": "The generated code is in the zip file at https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip. Can you please download and unzip it?"
+                      },
+                      "name": "search_web_and_pdf",
+                      "id": "aca024e8-5e23-4318-ab7b-8e96d5d94eff"
+                    }
+                  ],
+                  "additional_kwargs": {
+                    "function_call": {
+                      "arguments": "{\"query_str\": \"The generated code is in the zip file at https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip. Can you please download and unzip it?\"}",
+                      "name": "search_web_and_pdf"
+                    }
+                  },
+                  "tool_call_chunks": [
+                    {
+                      "index": null,
+                      "args": "{\"query_str\": \"The generated code is in the zip file at https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip. Can you please download and unzip it?\"}",
+                      "id": "aca024e8-5e23-4318-ab7b-8e96d5d94eff",
+                      "name": "search_web_and_pdf"
+                    }
+                  ],
+                  "type": "AIMessageChunk"
+                },
+                "type": "constructor"
+              }
+            ],
+            "tool_input": {
+              "query_str": "The generated code is in the zip file at https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip. Can you please download and unzip it?"
+            },
+            "type": "AgentActionMessageLog",
+            "tool_call_id": "aca024e8-5e23-4318-ab7b-8e96d5d94eff",
+            "log": "\nInvoking: `search_web_and_pdf` with `{'query_str': 'The generated code is in the zip file at https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip. Can you please download and unzip it?'}`\n\n\n",
+            "tool": "search_web_and_pdf"
+          },
+          "id": [
+            "langchain",
+            "schema",
+            "agent",
+            "ToolAgentAction"
+          ],
+          "type": "constructor"
+        },
+        [
+          {
+            "answer": {
+              "steps": [
+                {
+                  "actions": [
+                    {
+                      "observation": {
+                        "searchResults": [
+                          {
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/462350",
+                            "structData": {
+                              "DocId": "462350",
+                              "Asset_file_name": "IG1141A_Onboarding_Automation_Package_ID_Software_Assets_and_License_Management_Support_R18.0.1.pdf",
+                              "Release_Status": "status-production",
+                              "Published": "1",
+                              "Description": "<p>The key issue this document addresses is how virtualization in Service Providers networks and associated resources and services will impact the licensing models.</p>\n<p>The flexible usage model allowed by virtualization of network resources also implies a need for flexible commercial licensing of software associated with the virtualized network functions designed, tested, certified and made available by Suppliers or Marketplaces as Products.<br />\nService Providers procure and purchase those products, onboard them as Resources in their catalogs, and then compose them into various Network Services and make them available as Product Offerings to their customers within a DevOps, CI/CD process.</p>\n<p>The operationalization of Network Resources as simple software components is creating a major shift in the procurement and licensing process throughout the telecoms industry.</p>\n<p>Service Providers are now facing challenges in license acquisition and deployment processes for multi-vendor and multi-technology cloud ecosystems. To overcome these challenges, there is an urgent need for standardization of information relating to the acquisition of software usage rights (known as Product Usage Rights or PUR) and software deployment in the Service Providers environment. Automation of the license management and license utilization processes depends on standardization of the terms, business objects, and metrics used in Software Asset Management (SAM).</p>\n<p>This document lays the foundations of solutions to this problem, and provides recommendations to guide the industry.</p>\n",
+                              "IPR_mode": "RAND",
+                              "Document_Version": "2.0.2",
+                              "Document_type": "Standard",
+                              "Maturity_level": "General availability (GA)",
+                              "Short_description": "",
+                              "Project": "Operations &amp; Management) Project",
+                              "Categories": "Standard",
+                              "Document_Series": "IG1141A",
+                              "Status": "TM Forum Approved",
+                              "Security": "non-member",
+                              "Date_Modified": "30-Oct-2018",
+                              "Permalink": "https://www.tmforum.org/resources/standard/ig1141a-onboarding-automation-package-id-software-assets-and-license-management-support-r18-0-0/",
+                              "Standard": [
+                                "Best Practices"
+                              ],
+                              "Release": "18.0",
+                              "File_format": "PDF"
+                            },
+                            "uri": "gs://tmf-documents/IG1141A_Onboarding_Automation_Package_ID_Software_Assets_and_License_Management_Support_R18.0.1.pdf",
+                            "title": "IG1141A_Onboarding_Automation_Package_ID_Software_Assets_and_License_Management_Support_R18.0.1",
+                            "chunkInfo": [
+                              {
+                                "content": "# 5. Information Flow\n\ntmforum",
+                                "relevanceScore": 0.3
+                              }
+                            ]
+                          },
+                          {
+                            "chunkInfo": [
+                              {
+                                "relevanceScore": 0.2,
+                                "content": "# POST /productOrder\n\n## Usage Samples\n\nHere's an example of a request for creating a specific ProductOrder. TM Forum 2023. All Rights Reserved. tmforum.org Page 1109 of 1163\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\ntmforum Request { POST /tmf-api/event/v4/productOrder Content-Type: application/json \"category\": \"B2C product order\", \"completion Date\": \"2019-05-02T08:13:59.506Z\", \"description\": \"Product Order illustration sample\", \"expectedCompletionDate\": \"2019-05-02T08:13:59.506Z\", \"externalld\": \"PO-456\", \"orderDate\": \"2019-04-30T08:13:59.506Z\", \"priority\": \"1\", \"requestedCompletionDate\": \"2019-05-02T08:13:59.506Z\", \"requestedStartDate\": \"2019-05-03T08:13:59.506Z\", \"channel\": [ { \"id\": \"1\", \"role\": \"Used channel for order capture\", \"name\": \"Online chanel\" } ], \"note\": [ { \"id\": \"1\", \"author\": \"Jean Pontus\", \"date\": \"2019-04-30T08:13:59.509Z\", \"text\": \"This is a TMF product order illustration\" } ], \"productOrderItem\": [ { \"id\": \"100\", \"quantity\": 1, \"action\": \"add\", \"product\": { \"isBundle\": true, \"@type\": \"Product\" }, \"productOffering\": { }, \"id\": \"14277\", \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14277\", \"name\": \"TMF25\" \"productOrderItemRelationship\": [ { \"id\": \"110\", \"relationship Type\": \"bundles\" }, { \"id\": \"120\", }, \"relationshipType\": \"bundles\" TM Forum 2023. All Rights Reserved. tmforum.org Page 1110 of 1163\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\ntmforum }, { { \"id\": \"130\", \"relationshipType\": \"bundles\" } ], \"state\": \"completed\", \"@type\": \"ProductOrderItem\" \"id\": \"110\", \"quantity\": 1, \"action\": \"add\", \"itemPrice\": [ { \"description\": \"Access Fee\", \"name\": \"Access Fee\", \"priceType\": \"nonRecurring\", \"price\": { \"taxRate\": 0, \"dutyFreeAmount\": { }, \"unit\": \"EUR\", \"value\": 0.99 \"taxIncludedAmount\": { \"unit\": \"EUR\", \"value\": 0.99 } } } ], \"payment\": [ { \"id\": \"2365\", } ], \"href\": \"https://host:port/paymentManagement/v4/cashPayment/2365\", \"name\": \"Cash payment for access fee\", \"@type\": \"CashPayment\", \"@referredType\": \"Payment\" \"product\": { \"isBundle\": false, \"@type\": \"Product\", \"productCharacteristic\": [ { \"name\": \"TEL_MSISDN\", \"valueType\": \"string\", \"value\": \"415 279 7439\" } ], \"productSpecification\": { \"id\": \"14307\", \"href\": \"https://host:port/productCatalogManagement/v4/productSpecification/14307\", \"name\": \"Mobile Telephony\", \"version\": \"1\", TM Forum 2023. All Rights Reserved. Page 1111 of 1163 tmforum.org\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\n}, { \"@type\": \"ProductSpecificationRef\" } }, \"productOffering\": { }, \"id\": \"14305\", \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14305\", \"name\": \"TMF Mobile Telephony\" \"state\": \"completed\", \"@type\": \"ProductOrderItem\" \"id\": \"120\", \"quantity\": 1, \"action\": \"add\", \"billingAccount\": { }, \"id\": \"1513\", \"href\": \"https://host:port/billingAccountManagement/v4/billingAccount/1513\", \"@type\": \"BillingAccount\" \"itemPrice\": [ { \"description\": \"Tariff plan monthly fee\", \"name\": \"MonthlyFee\", \"priceType\": \"recurring\", \"recurringChargePeriod\": \"month\", \"price\": { \"taxRate\": 0, \"dutyFreeAmount\": { }, \"unit\": \"EUR\", \"value\": 20 \"taxIncludedAmount\": { \"unit\": \"EUR\", \"value\": 20 } }, \"priceAlteration\": [ { \"applicationDuration\": 3, } } \"description\": \"20% for first 3 months\", \"name\": \"Welcome Discount\", \"priceType\": \"recurring\", \"priority\": 1, \"recurringChargePeriod\": \"month\", \"price\": { \"percentage\": 20, \"taxRate\": 0, \"@type\": \"price\" ], } ] TM Forum 2023. All Rights Reserved. Page 1112 of 1163 tmforum.org tmforum\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\n\"itemTerm\": [ { \"description\": \"Tariff plan 12 Months commitment\", \"name\": \"12Months\", \"duration\": { \"amount\": 12, \"units\": \"month\" } } ], \"product\": { } }, \"isBundle\": false, \"@type\": \"Product\", \"productSpecification\": { \"id\": \"14395\", \"href\": \"https://host:port/productCatalogManagement/v4/productSpecification/14395\", \"name\": \"TMF Tariff plan\", \"version\": \"1\", \"@type\": \"ProductSpecificationRef\" \"productOffering\": { }, \"id\": \"14344\", \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14344\", \"name\": \"TMF Tariff Plan\" \"productOrderItemRelationship\": [ { \"id\": \"110\", \"relationshipType\": \"reliesOn\" } ], \"state\": \"completed\", \"@type\": \"ProductOrderItem\" }, { \"id\": \"130\", \"quantity\": 1, \"action\": \"add\", \"product\": { \"isBundle\": false, \"@type\": \"Product\", \"productCharacteristic\": [ { \"name\": \"CoverageOptions\", \"valueType\": \"string\", \"value\": \"National\" } ], \"productSpecification\": { \"id\": \"14353\","
+                              }
+                            ],
+                            "uri": "gs://tmf-documents/TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0.pdf",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1161622",
+                            "title": "TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0",
+                            "structData": {
+                              "Description": "<p>This document is the user guide for the REST API for Zero Touch Partnering.\u00a0 It captures all the essential APIs required to manage partnering and includes model definitions and available operations.</p>\n<p>&nbsp;</p>\n",
+                              "Maturity_level": "General availability (GA)",
+                              "DocId": "1161622",
+                              "Document_type": "Specification",
+                              "Release_Status": "status-production",
+                              "Document_Version": "4.2.0",
+                              "IPR_mode": "RAND",
+                              "Release": "22.5",
+                              "Standard": [
+                                "Open APIs"
+                              ],
+                              "Short_description": "",
+                              "Project": "Open API Project",
+                              "Document_Series": "TMF916",
+                              "Published": "1",
+                              "Permalink": "https://www.tmforum.org/resources/guidebook/tmf916-zero-touch-partnering-api-user-guide-v4-2-0/",
+                              "Categories": "Standard > Exploratory Report > Best Practice > Specification > How To Guide > Guidebook",
+                              "Asset_file_name": "TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0.pdf",
+                              "Security": "Member",
+                              "Status": "TM Forum Approved",
+                              "File_format": "PDF",
+                              "Date_Modified": "13-Feb-2023"
+                            }
+                          },
+                          {
+                            "chunkInfo": [
+                              {
+                                "content": "# GET /productOfferingPrice/{id}?fields=...&{filtering}\n\n## Usage Samples\n\nHere's an example of a request for creating a specific ProductOfferingPrice. Request { POST /tmf-api/event/v4/productOfferingPrice Content-Type: application/json \"name\": \"Recurring Charge for Business Firewall\", \"description\": \"This pricing describes the recurring charge for a firewall service that can be deployed in business customer premise.\", \"version\": \"2.1\", \"validFor\": { }, \"startDateTime\": \"2017-08-23T00:00\", \"endDateTime\": \"2018-03-25T00:00\" \"priceType\": \"recurring\", \"recurringChargePeriodType\": \"monthly\", \"recurringChargePeriodLength\": 1, \"lastUpdate\": \"2017-08-27T00:00\", \"isBundle\": false, \"lifecycleStatus\": \"Active\", \"price\": { }, \"unit\": \"EUR\", \"amount\": 50 \"percentage\": 0.0, \"productOfferingTerm\": [ { TM Forum 2023. All Rights Reserved. Page 1045 of 1163 tmforum.org\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\ntmforum \"name\": \"12 Month\", \"description\": \"12 month contract\", \"duration\": { }, \"amount\": 12, \"units\": \"Month\" \"validFor\": { \"startDateTime\": \"2017-04-19T16:42:23.0Z\", \"endDateTime\": \"2017-06-19T00:00:00.0Z\" } } ], \"place\": [ { \"id\": \"9979\", \"href\": \" https://mycsp.com:8080/tmf-api/geographicAddressManagement/v4/geographicAddress/9979\", \"name\": \"San Francisco Bay Area\", \"@referredType\": \"GeographicAddress\" } ], \"constraint\": [ { \"@referredType\": \"PriceConstraint\", } ], \"name\": \"PriceRuleNo1\", \"id\": \"525\", \"href\": \"https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/constraint/525\" \"pricingLogicAlgorithm\": { \"id\": \"533\", \"href\": \" https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/PricingLogicAlgorithm/533\", \"@type\": \"RecurringRatingPLA\", \"@baseType\": \"PricingLogicAlgorithm\", \"@schemaLocation\": \"https://mycsp.com:8080/tmf-api/schema/Product/RecurringRatingPLA.schema.json\", \"name\": \"PLA_rec\", \"description\": \"Algorithm that rates Recurring event\", \"plaSpecId\": \"525\", \"validFor\": { \"startDateTime\": \"2017-04-19T16:42:23.0Z\", \"endDateTime\": \"2018-06-19T00:00:00.0Z\" } }, \"tax\": [ { \"taxAmount\": { }, \"unit\": \"EUR\", \"value\": 10 \"taxCategory\": \"VAT\", \"taxRate\": 20.0 } ], \"@type\": \"ProductOfferingPrice\" } TM Forum 2023. All Rights Reserved. Page 1046 of 1163 tmforum.org\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\ntmforum Response 201 { \"id\": \"7655\", \"href\": \" https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/7655\", \"name\": \"Recurring Charge for Business Firewall\", \"description\": \"This pricing describes the recurring charge for a firewall service that can be deployed in business customer premise.\", \"version\": \"2.1\", \"validFor\": { }, \"startDateTime\": \"2017-08-23T00:00\", \"endDateTime\": \"2018-03-25T00:00\" \"priceType\": \"recurring\", \"recurringChargePeriodType\": \"monthly\", \"recurringChargePeriodLength\": 1, \"lastUpdate\": \"2017-08-27T00:00\", \"isBundle\": false, \"lifecycleStatus\": \"Active\", \"price\": { }, \"unit\": \"EUR\", \"amount\": 50 \"percentage\": 0.0, \"productOfferingTerm\": [ { \"name\": \"12 Month\", \"description\": \"12 month contract\", \"duration\": { }, \"amount\": 12, \"units\": \"Month\" \"validFor\": { \"startDateTime\": \"2017-04-19T16:42:23.0Z\", \"endDateTime\": \"2017-06-19T00:00:00.0Z\" } } ], \"place\": [ { \"id\": \"9979\", \"href\": \"https://mycsp.com:8080/tmf-api/geographicAddressManagement/v4/geographicAddress/9979\", \"name\": \"San Francisco Bay Area\", \"@referredType\": \"GeographicAddress\" } ], \"constraint\": [ { TM Forum 2023. All Rights Reserved. tmforum.org Page 1047 of 1163\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\n} ], } \"@referredType\": \"PriceConstraint\", \"name\": \"PriceRuleNo1\", \"id\": \"525\", \"href\": \"https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/constraint/525\" \"pricingLogicAlgorithm\": { \"id\": \"533\", \"href\": \"https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/PricingLogicAlgorithm/533\", \"@type\": \"RecurringRatingPLA\", \"@baseType\": \"PricingLogicAlgorithm\", \"@schemaLocation\": \"https://mycsp.com:8080/tmf-api/schema/Product/RecurringRatingPLA.schema.json\", \"name\": \"PLA_rec\", \"description\": \"Algorithm that rates Recurring event\", \"plaSpecId\": \"525\", \"validFor\": { \"startDateTime\": \"2017-04-19T16:42:23.0Z\", \"endDateTime\": \"2018-06-19T00:00:00.0Z\" } }, \"tax\": [ { \"taxAmount\": { \"unit\": \"EUR\", \"value\": 10 }, \"taxCategory\": \"VAT\", \"taxRate\": 20.0 } ], \"@type\": \"ProductOfferingPrice\" tmforum",
+                                "relevanceScore": 0.2
+                              }
+                            ],
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1161622",
+                            "structData": {
+                              "Document_Series": "TMF916",
+                              "IPR_mode": "RAND",
+                              "Project": "Open API Project",
+                              "Description": "<p>This document is the user guide for the REST API for Zero Touch Partnering.\u00a0 It captures all the essential APIs required to manage partnering and includes model definitions and available operations.</p>\n<p>&nbsp;</p>\n",
+                              "Document_Version": "4.2.0",
+                              "Document_type": "Specification",
+                              "Maturity_level": "General availability (GA)",
+                              "Standard": [
+                                "Open APIs"
+                              ],
+                              "Release": "22.5",
+                              "Categories": "Standard > Exploratory Report > Best Practice > Specification > How To Guide > Guidebook",
+                              "Security": "Member",
+                              "Date_Modified": "13-Feb-2023",
+                              "DocId": "1161622",
+                              "Status": "TM Forum Approved",
+                              "Asset_file_name": "TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0.pdf",
+                              "Permalink": "https://www.tmforum.org/resources/guidebook/tmf916-zero-touch-partnering-api-user-guide-v4-2-0/",
+                              "Release_Status": "status-production",
+                              "File_format": "PDF",
+                              "Published": "1",
+                              "Short_description": ""
+                            },
+                            "uri": "gs://tmf-documents/TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0.pdf",
+                            "title": "TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0"
+                          }
+                        ]
+                      },
+                      "searchAction": {
+                        "query": "The generated code is in the zip file at https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip. Can you please download and unzip it?"
+                      }
+                    }
+                  ],
+                  "state": "SUCCEEDED",
+                  "description": "Rephrase the query and search."
+                }
+              ],
+              "answerText": "## Product Catalog Management API v4: Understanding the Code\n\nThe code you're interested in is located in the zip file at https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip. This code likely interacts with the Product Catalog Management API v4, which provides functionalities for managing products and product offerings within a TM Forum context.\n\nHere's a breakdown of some key concepts and examples from the sources you provided:\n\n**ProductOrder:**\n\n* This API allows you to create and manage product orders. \n* An example request for creating a product order includes details like category, completion date, description, priority, and channel information.\n* The order can also include product order items, which represent individual products or bundles within the order. \n* Each product order item can have its own price, payment information, and state.\n\n**ProductOfferingPrice:**\n\n* This API allows you to define pricing for product offerings.\n* A request for creating a product offering price includes details like name, description, version, validity period, price type, recurring charge period, and price.\n* You can also specify product offering terms, places where the price applies, and constraints.\n* The pricing logic algorithm and tax information can be included as well. \n",
+              "relatedQuestions": [
+                "What's the TMF25 product's bundle status?",
+                "What is the description of PriceRuleNo1?",
+                "What's TM Forum's copyright status?",
+                "What's the TMF916 API's version?",
+                "What is the TM Forum copyright year?"
+              ],
+              "references": [
+                {
+                  "chunkInfo": {
+                    "content": "# 5. Information Flow\n\ntmforum",
+                    "documentMetadata": {
+                      "structData": {
+                        "Description": "<p>The key issue this document addresses is how virtualization in Service Providers networks and associated resources and services will impact the licensing models.</p>\n<p>The flexible usage model allowed by virtualization of network resources also implies a need for flexible commercial licensing of software associated with the virtualized network functions designed, tested, certified and made available by Suppliers or Marketplaces as Products.<br />\nService Providers procure and purchase those products, onboard them as Resources in their catalogs, and then compose them into various Network Services and make them available as Product Offerings to their customers within a DevOps, CI/CD process.</p>\n<p>The operationalization of Network Resources as simple software components is creating a major shift in the procurement and licensing process throughout the telecoms industry.</p>\n<p>Service Providers are now facing challenges in license acquisition and deployment processes for multi-vendor and multi-technology cloud ecosystems. To overcome these challenges, there is an urgent need for standardization of information relating to the acquisition of software usage rights (known as Product Usage Rights or PUR) and software deployment in the Service Providers environment. Automation of the license management and license utilization processes depends on standardization of the terms, business objects, and metrics used in Software Asset Management (SAM).</p>\n<p>This document lays the foundations of solutions to this problem, and provides recommendations to guide the industry.</p>\n",
+                        "DocId": "462350",
+                        "Short_description": "",
+                        "Document_Version": "2.0.2",
+                        "Published": "1",
+                        "Date_Modified": "30-Oct-2018",
+                        "Asset_file_name": "IG1141A_Onboarding_Automation_Package_ID_Software_Assets_and_License_Management_Support_R18.0.1.pdf",
+                        "File_format": "PDF",
+                        "Status": "TM Forum Approved",
+                        "Release_Status": "status-production",
+                        "Release": "18.0",
+                        "Standard": [
+                          "Best Practices"
+                        ],
+                        "Document_Series": "IG1141A",
+                        "Categories": "Standard",
+                        "IPR_mode": "RAND",
+                        "Security": "non-member",
+                        "Permalink": "https://www.tmforum.org/resources/standard/ig1141a-onboarding-automation-package-id-software-assets-and-license-management-support-r18-0-0/",
+                        "Project": "Operations &amp; Management) Project",
+                        "Document_type": "Standard",
+                        "Maturity_level": "General availability (GA)"
+                      },
+                      "pageIdentifier": "24",
+                      "title": "IG1141A_Onboarding_Automation_Package_ID_Software_Assets_and_License_Management_Support_R18.0.1",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/462350",
+                      "uri": "gs://tmf-documents/IG1141A_Onboarding_Automation_Package_ID_Software_Assets_and_License_Management_Support_R18.0.1.pdf"
+                    },
+                    "relevanceScore": 0.3
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "uri": "gs://tmf-documents/TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0.pdf",
+                      "structData": {
+                        "Categories": "Standard > Exploratory Report > Best Practice > Specification > How To Guide > Guidebook",
+                        "Document_Series": "TMF916",
+                        "Security": "Member",
+                        "IPR_mode": "RAND",
+                        "Release_Status": "status-production",
+                        "Release": "22.5",
+                        "Permalink": "https://www.tmforum.org/resources/guidebook/tmf916-zero-touch-partnering-api-user-guide-v4-2-0/",
+                        "DocId": "1161622",
+                        "Short_description": "",
+                        "Document_type": "Specification",
+                        "Project": "Open API Project",
+                        "Maturity_level": "General availability (GA)",
+                        "Description": "<p>This document is the user guide for the REST API for Zero Touch Partnering.\u00a0 It captures all the essential APIs required to manage partnering and includes model definitions and available operations.</p>\n<p>&nbsp;</p>\n",
+                        "Asset_file_name": "TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0.pdf",
+                        "Status": "TM Forum Approved",
+                        "Document_Version": "4.2.0",
+                        "Published": "1",
+                        "Standard": [
+                          "Open APIs"
+                        ],
+                        "Date_Modified": "13-Feb-2023",
+                        "File_format": "PDF"
+                      },
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1161622",
+                      "pageIdentifier": "1109",
+                      "title": "TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0"
+                    },
+                    "content": "# POST /productOrder\n\n## Usage Samples\n\nHere's an example of a request for creating a specific ProductOrder. TM Forum 2023. All Rights Reserved. tmforum.org Page 1109 of 1163\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\ntmforum Request { POST /tmf-api/event/v4/productOrder Content-Type: application/json \"category\": \"B2C product order\", \"completion Date\": \"2019-05-02T08:13:59.506Z\", \"description\": \"Product Order illustration sample\", \"expectedCompletionDate\": \"2019-05-02T08:13:59.506Z\", \"externalld\": \"PO-456\", \"orderDate\": \"2019-04-30T08:13:59.506Z\", \"priority\": \"1\", \"requestedCompletionDate\": \"2019-05-02T08:13:59.506Z\", \"requestedStartDate\": \"2019-05-03T08:13:59.506Z\", \"channel\": [ { \"id\": \"1\", \"role\": \"Used channel for order capture\", \"name\": \"Online chanel\" } ], \"note\": [ { \"id\": \"1\", \"author\": \"Jean Pontus\", \"date\": \"2019-04-30T08:13:59.509Z\", \"text\": \"This is a TMF product order illustration\" } ], \"productOrderItem\": [ { \"id\": \"100\", \"quantity\": 1, \"action\": \"add\", \"product\": { \"isBundle\": true, \"@type\": \"Product\" }, \"productOffering\": { }, \"id\": \"14277\", \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14277\", \"name\": \"TMF25\" \"productOrderItemRelationship\": [ { \"id\": \"110\", \"relationship Type\": \"bundles\" }, { \"id\": \"120\", }, \"relationshipType\": \"bundles\" TM Forum 2023. All Rights Reserved. tmforum.org Page 1110 of 1163\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\ntmforum }, { { \"id\": \"130\", \"relationshipType\": \"bundles\" } ], \"state\": \"completed\", \"@type\": \"ProductOrderItem\" \"id\": \"110\", \"quantity\": 1, \"action\": \"add\", \"itemPrice\": [ { \"description\": \"Access Fee\", \"name\": \"Access Fee\", \"priceType\": \"nonRecurring\", \"price\": { \"taxRate\": 0, \"dutyFreeAmount\": { }, \"unit\": \"EUR\", \"value\": 0.99 \"taxIncludedAmount\": { \"unit\": \"EUR\", \"value\": 0.99 } } } ], \"payment\": [ { \"id\": \"2365\", } ], \"href\": \"https://host:port/paymentManagement/v4/cashPayment/2365\", \"name\": \"Cash payment for access fee\", \"@type\": \"CashPayment\", \"@referredType\": \"Payment\" \"product\": { \"isBundle\": false, \"@type\": \"Product\", \"productCharacteristic\": [ { \"name\": \"TEL_MSISDN\", \"valueType\": \"string\", \"value\": \"415 279 7439\" } ], \"productSpecification\": { \"id\": \"14307\", \"href\": \"https://host:port/productCatalogManagement/v4/productSpecification/14307\", \"name\": \"Mobile Telephony\", \"version\": \"1\", TM Forum 2023. All Rights Reserved. Page 1111 of 1163 tmforum.org\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\n}, { \"@type\": \"ProductSpecificationRef\" } }, \"productOffering\": { }, \"id\": \"14305\", \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14305\", \"name\": \"TMF Mobile Telephony\" \"state\": \"completed\", \"@type\": \"ProductOrderItem\" \"id\": \"120\", \"quantity\": 1, \"action\": \"add\", \"billingAccount\": { }, \"id\": \"1513\", \"href\": \"https://host:port/billingAccountManagement/v4/billingAccount/1513\", \"@type\": \"BillingAccount\" \"itemPrice\": [ { \"description\": \"Tariff plan monthly fee\", \"name\": \"MonthlyFee\", \"priceType\": \"recurring\", \"recurringChargePeriod\": \"month\", \"price\": { \"taxRate\": 0, \"dutyFreeAmount\": { }, \"unit\": \"EUR\", \"value\": 20 \"taxIncludedAmount\": { \"unit\": \"EUR\", \"value\": 20 } }, \"priceAlteration\": [ { \"applicationDuration\": 3, } } \"description\": \"20% for first 3 months\", \"name\": \"Welcome Discount\", \"priceType\": \"recurring\", \"priority\": 1, \"recurringChargePeriod\": \"month\", \"price\": { \"percentage\": 20, \"taxRate\": 0, \"@type\": \"price\" ], } ] TM Forum 2023. All Rights Reserved. Page 1112 of 1163 tmforum.org tmforum\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\n\"itemTerm\": [ { \"description\": \"Tariff plan 12 Months commitment\", \"name\": \"12Months\", \"duration\": { \"amount\": 12, \"units\": \"month\" } } ], \"product\": { } }, \"isBundle\": false, \"@type\": \"Product\", \"productSpecification\": { \"id\": \"14395\", \"href\": \"https://host:port/productCatalogManagement/v4/productSpecification/14395\", \"name\": \"TMF Tariff plan\", \"version\": \"1\", \"@type\": \"ProductSpecificationRef\" \"productOffering\": { }, \"id\": \"14344\", \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14344\", \"name\": \"TMF Tariff Plan\" \"productOrderItemRelationship\": [ { \"id\": \"110\", \"relationshipType\": \"reliesOn\" } ], \"state\": \"completed\", \"@type\": \"ProductOrderItem\" }, { \"id\": \"130\", \"quantity\": 1, \"action\": \"add\", \"product\": { \"isBundle\": false, \"@type\": \"Product\", \"productCharacteristic\": [ { \"name\": \"CoverageOptions\", \"valueType\": \"string\", \"value\": \"National\" } ], \"productSpecification\": { \"id\": \"14353\",",
+                    "relevanceScore": 0.2
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "title": "TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0",
+                      "uri": "gs://tmf-documents/TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0.pdf",
+                      "structData": {
+                        "IPR_mode": "RAND",
+                        "Document_Version": "4.2.0",
+                        "Status": "TM Forum Approved",
+                        "Asset_file_name": "TMF916_Zero_Touch_Partnering_API_User_Guide_v4.2.0.pdf",
+                        "DocId": "1161622",
+                        "Release_Status": "status-production",
+                        "File_format": "PDF",
+                        "Description": "<p>This document is the user guide for the REST API for Zero Touch Partnering.\u00a0 It captures all the essential APIs required to manage partnering and includes model definitions and available operations.</p>\n<p>&nbsp;</p>\n",
+                        "Project": "Open API Project",
+                        "Maturity_level": "General availability (GA)",
+                        "Short_description": "",
+                        "Date_Modified": "13-Feb-2023",
+                        "Standard": [
+                          "Open APIs"
+                        ],
+                        "Permalink": "https://www.tmforum.org/resources/guidebook/tmf916-zero-touch-partnering-api-user-guide-v4-2-0/",
+                        "Published": "1",
+                        "Release": "22.5",
+                        "Document_Series": "TMF916",
+                        "Document_type": "Specification",
+                        "Categories": "Standard > Exploratory Report > Best Practice > Specification > How To Guide > Guidebook",
+                        "Security": "Member"
+                      },
+                      "pageIdentifier": "1045",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-metadata-layout-p_1715009821486/branches/0/documents/1161622"
+                    },
+                    "relevanceScore": 0.2,
+                    "content": "# GET /productOfferingPrice/{id}?fields=...&{filtering}\n\n## Usage Samples\n\nHere's an example of a request for creating a specific ProductOfferingPrice. Request { POST /tmf-api/event/v4/productOfferingPrice Content-Type: application/json \"name\": \"Recurring Charge for Business Firewall\", \"description\": \"This pricing describes the recurring charge for a firewall service that can be deployed in business customer premise.\", \"version\": \"2.1\", \"validFor\": { }, \"startDateTime\": \"2017-08-23T00:00\", \"endDateTime\": \"2018-03-25T00:00\" \"priceType\": \"recurring\", \"recurringChargePeriodType\": \"monthly\", \"recurringChargePeriodLength\": 1, \"lastUpdate\": \"2017-08-27T00:00\", \"isBundle\": false, \"lifecycleStatus\": \"Active\", \"price\": { }, \"unit\": \"EUR\", \"amount\": 50 \"percentage\": 0.0, \"productOfferingTerm\": [ { TM Forum 2023. All Rights Reserved. Page 1045 of 1163 tmforum.org\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\ntmforum \"name\": \"12 Month\", \"description\": \"12 month contract\", \"duration\": { }, \"amount\": 12, \"units\": \"Month\" \"validFor\": { \"startDateTime\": \"2017-04-19T16:42:23.0Z\", \"endDateTime\": \"2017-06-19T00:00:00.0Z\" } } ], \"place\": [ { \"id\": \"9979\", \"href\": \" https://mycsp.com:8080/tmf-api/geographicAddressManagement/v4/geographicAddress/9979\", \"name\": \"San Francisco Bay Area\", \"@referredType\": \"GeographicAddress\" } ], \"constraint\": [ { \"@referredType\": \"PriceConstraint\", } ], \"name\": \"PriceRuleNo1\", \"id\": \"525\", \"href\": \"https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/constraint/525\" \"pricingLogicAlgorithm\": { \"id\": \"533\", \"href\": \" https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/PricingLogicAlgorithm/533\", \"@type\": \"RecurringRatingPLA\", \"@baseType\": \"PricingLogicAlgorithm\", \"@schemaLocation\": \"https://mycsp.com:8080/tmf-api/schema/Product/RecurringRatingPLA.schema.json\", \"name\": \"PLA_rec\", \"description\": \"Algorithm that rates Recurring event\", \"plaSpecId\": \"525\", \"validFor\": { \"startDateTime\": \"2017-04-19T16:42:23.0Z\", \"endDateTime\": \"2018-06-19T00:00:00.0Z\" } }, \"tax\": [ { \"taxAmount\": { }, \"unit\": \"EUR\", \"value\": 10 \"taxCategory\": \"VAT\", \"taxRate\": 20.0 } ], \"@type\": \"ProductOfferingPrice\" } TM Forum 2023. All Rights Reserved. Page 1046 of 1163 tmforum.org\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\ntmforum Response 201 { \"id\": \"7655\", \"href\": \" https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/7655\", \"name\": \"Recurring Charge for Business Firewall\", \"description\": \"This pricing describes the recurring charge for a firewall service that can be deployed in business customer premise.\", \"version\": \"2.1\", \"validFor\": { }, \"startDateTime\": \"2017-08-23T00:00\", \"endDateTime\": \"2018-03-25T00:00\" \"priceType\": \"recurring\", \"recurringChargePeriodType\": \"monthly\", \"recurringChargePeriodLength\": 1, \"lastUpdate\": \"2017-08-27T00:00\", \"isBundle\": false, \"lifecycleStatus\": \"Active\", \"price\": { }, \"unit\": \"EUR\", \"amount\": 50 \"percentage\": 0.0, \"productOfferingTerm\": [ { \"name\": \"12 Month\", \"description\": \"12 month contract\", \"duration\": { }, \"amount\": 12, \"units\": \"Month\" \"validFor\": { \"startDateTime\": \"2017-04-19T16:42:23.0Z\", \"endDateTime\": \"2017-06-19T00:00:00.0Z\" } } ], \"place\": [ { \"id\": \"9979\", \"href\": \"https://mycsp.com:8080/tmf-api/geographicAddressManagement/v4/geographicAddress/9979\", \"name\": \"San Francisco Bay Area\", \"@referredType\": \"GeographicAddress\" } ], \"constraint\": [ { TM Forum 2023. All Rights Reserved. tmforum.org Page 1047 of 1163\n\n# TMF916 Zero-Tough Partnering API User Guide v4.2.0\n\n} ], } \"@referredType\": \"PriceConstraint\", \"name\": \"PriceRuleNo1\", \"id\": \"525\", \"href\": \"https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/constraint/525\" \"pricingLogicAlgorithm\": { \"id\": \"533\", \"href\": \"https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/PricingLogicAlgorithm/533\", \"@type\": \"RecurringRatingPLA\", \"@baseType\": \"PricingLogicAlgorithm\", \"@schemaLocation\": \"https://mycsp.com:8080/tmf-api/schema/Product/RecurringRatingPLA.schema.json\", \"name\": \"PLA_rec\", \"description\": \"Algorithm that rates Recurring event\", \"plaSpecId\": \"525\", \"validFor\": { \"startDateTime\": \"2017-04-19T16:42:23.0Z\", \"endDateTime\": \"2018-06-19T00:00:00.0Z\" } }, \"tax\": [ { \"taxAmount\": { \"unit\": \"EUR\", \"value\": 10 }, \"taxCategory\": \"VAT\", \"taxRate\": 20.0 } ], \"@type\": \"ProductOfferingPrice\" tmforum"
+                  }
+                }
+              ],
+              "citations": [
+                {
+                  "startIndex": "540",
+                  "sources": [
+                    {
+                      "referenceId": "1"
+                    }
+                  ],
+                  "endIndex": "598"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "1"
+                    }
+                  ],
+                  "startIndex": "600",
+                  "endIndex": "746"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "1"
+                    }
+                  ],
+                  "startIndex": "747",
+                  "endIndex": "861"
+                },
+                {
+                  "endIndex": "944",
+                  "startIndex": "863",
+                  "sources": [
+                    {
+                      "referenceId": "1"
+                    }
+                  ]
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ],
+                  "endIndex": "1035",
+                  "startIndex": "973"
+                },
+                {
+                  "endIndex": "1200",
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ],
+                  "startIndex": "1036"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ],
+                  "startIndex": "1201",
+                  "endIndex": "1296"
+                },
+                {
+                  "sources": [
+                    {
+                      "referenceId": "2"
+                    }
+                  ],
+                  "startIndex": "1297",
+                  "endIndex": "1371"
+                }
+              ],
+              "state": "SUCCEEDED"
+            },
+            "answerQueryToken": "NMwKDAjjyrq_BhDpjozWAxIkNjdlODU1MmEtMDAwMC0yOTRjLThhMTEtMDg5ZTA4MjU3ZWVj"
+          },
+          {
+            "answerQueryToken": "NMwKDAjoyrq_BhC7kPahAhIkNjdlOGNjYjEtMDAwMC0yNTQwLThjNDYtZjRmNWU4MGNmMDU0",
+            "answer": {
+              "steps": [
+                {
+                  "state": "SUCCEEDED",
+                  "description": "Rephrase the query and search.",
+                  "actions": [
+                    {
+                      "observation": {
+                        "searchResults": [
+                          {
+                            "uri": "https://engage.tmforum.org/communities/community-home/digestviewer/viewthread?MessageKey=bc262afa-df97-482a-b1b7-018a212b1d14&CommunityKey=d543b8ba-9d3a-4121-85ce-5b68e6c31ce5",
+                            "title": "TMF908 (early adoption); serialNumber & modelNumber | Open APIs",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/2ebd339b605eee6a03847cba6a367335",
+                            "snippetInfo": [
+                              {
+                                "snippet": "Good day -<b>We</b>&#39;re leveraging TMF908 IoT Device Management for a couple use cases, the latest is to activate TV Set-top Boxes. <b>We</b> gravitated to it as it&nbsp;...",
+                                "snippetStatus": "SUCCESS"
+                              }
+                            ]
+                          },
+                          {
+                            "title": "API management Archives - TM Forum",
+                            "snippetInfo": [
+                              {
+                                "snippetStatus": "SUCCESS",
+                                "snippet": "Tag Archive. Below <b>you</b>&#39;ll find a ... This <b>zip file</b> contains 2 documents: The first is ... <b>can</b> govern <b>Artificial Intelligence</b> systems deployed at scale."
+                              }
+                            ],
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/5f4fd4d4895da49f32f27fafb5e6f9c0",
+                            "uri": "https://www.tmforum.org/resource-tag/api-management?yith_wcan=1&product_tag=api-management&query_type_topic=or&filter_topic=digital-services-reference-architecture-dsra,data-analytics,internet-of-things-iot,specification,b2b2x,charging-and-billing,tip,artificial-intelligence,smart-city&query_type_frameworx-version=or&filter_frameworx-version=20-5,16-5,19-5,13-5,22-0,early&query_type_document-type=or&filter_document-type=specifications,template"
+                          },
+                          {
+                            "uri": "https://engage.tmforum.org/discussion/where-can-i-find-tmf679-productofferingqualification-zip-file",
+                            "snippetInfo": [
+                              {
+                                "snippetStatus": "SUCCESS",
+                                "snippet": "Hi all, I&#39;m trying to run Conformance test for our APIs and am following the instructions provided here: Open API Conformance . <b>Can</b> anyone help me where I&nbsp;..."
+                              }
+                            ],
+                            "title": "Where can I find TMF679-ProductOfferingQualification ZIP file | Open APIs",
+                            "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/6aff025cc7abf32b65a26e37f3780b05"
+                          }
+                        ]
+                      },
+                      "searchAction": {
+                        "query": "The generated code is in the zip file at https://storage.cloud.google.com/tfm-ai-assistant-codegen-dev/generatedCodeFile/TMF620_Product_Catalog_Management_API_v4_1743693150457.zip. Can you please download and unzip it?"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "state": "SUCCEEDED",
+              "answerText": "To download the TMF620_Product_Catalog_Management_API_v4_1743693150457.zip file, follow these steps:\n\n1. **Access the TM Forum Open API Table:** Navigate to the TM Forum Open API Table at https://projects.tmforum.org/wiki/display/API/Open+API+Table.\n2. **Locate the TMF620 API:** Search for the \"TMF620 Product Catalog Management API v4\" entry in the table.\n3. **Download the Conformance Test Kit (CTK):** Under the \"CTK\" column for the TMF620 API, you'll find a link to download the conformance test kit (CTK). The CTK is a ZIP file containing the necessary tools and resources for testing your API's conformance to the TMF620 specification.\n\n**Additional Information:**\n\n* The TM Forum Open APIs provide a standardized way to manage APIs across different service providers and industries. \n* The TMF620 API specifically focuses on product catalog management, enabling efficient creation, management, and retrieval of product information. \n* TM Forum also offers other Open APIs for various use cases, including AI management, IoT device management, and business agreements. \n",
+              "references": [
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.3,
+                    "content": "API management Archives - TM Forum TM Forum \u2014 How to manage Digital Transformation, Agile Business Operations & Connected Digital Ecosystems Log in Register Knowledge Knowledge overview Research & insights Themes Data + AI Autonomous Operations Cloud Native IT + Networks Ecosystems People + Planet Labs Labs overview Co-creating solutions (Catalysts) Member projects Innovation Hub Global Architecture Forum (GAF) Code + frameworks Code + frameworks overview Open Digital Framework (ODF) Solutions to ignite growth Member resources Member toolkits Intent-based Automation CaaS NaaS AI / AN Networks Open APIs Open API Table Open API Conformance Certification Open API Project Open APIs Dashboard Open API Training Open API Stories Open Digital Architecture (ODA) Get started with ODA ODA component directory Running on ODA Ready for ODA Governance Business Architecture Information Systems Implementation Architecture Deployment and Runtime Business Process Framework (eTOM) Information Framework (SID) Training + accreditation Training + accreditation overview Training Training courses Enterprise training Recommended courses Course bundles Success stories Certification What is Certification? ",
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/5f4fd4d4895da49f32f27fafb5e6f9c0",
+                      "title": "API management Archives - TM Forum",
+                      "uri": "https://www.tmforum.org/resource-tag/api-management?yith_wcan=1&product_tag=api-management&query_type_topic=or&filter_topic=digital-services-reference-architecture-dsra,data-analytics,internet-of-things-iot,specification,b2b2x,charging-and-billing,tip,artificial-intelligence,smart-city&query_type_frameworx-version=or&filter_frameworx-version=20-5,16-5,19-5,13-5,22-0,early&query_type_document-type=or&filter_document-type=specifications,template"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "documentMetadata": {
+                      "title": "Where can I find TMF679-ProductOfferingQualification ZIP file | Open APIs",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/6aff025cc7abf32b65a26e37f3780b05",
+                      "uri": "https://engage.tmforum.org/discussion/where-can-i-find-tmf679-productofferingqualification-zip-file"
+                    },
+                    "content": "Toggle navigation Search Options Home Communities All Communities My Communities Directory Browse Discussion Posts Library Entries Communities Community Home Discussion Topic Thread Open APIs View Only Community Home Discussion 9.8K Library 69 Events 0 Members 62.1K Back to discussions Expand all | Collapse all sort by most recent sort by thread Where can I find TMF679-ProductOfferingQualification ZIP file Maziar Ebrahimi Maziar EbrahimiMay 18, 2023 11:25 Hi all, I'm trying to run Conformance test for our APIs and am following the instructions provided ... Jonathan Goldberg Jonathan GoldbergMay 21, 2023 08:21 Hi Maziar The conformance test kit (CTK) for each Open API can be found in the API table https://projects.tmforum.org/wiki/display/API/Open+API+Table ... 1. Where can I find TMF679-ProductOfferingQualification ZIP file 0 Like TM Forum Member Maziar Ebrahimi Posted May 18, 2023 11:25 Reply Reply Privately Options Dropdown Hi all, I'm trying to run Conformance test for our APIs and am following the instructions provided here: Open API Conformance . Can anyone help me where I can find \"TMF679-ProductOfferingQualification ZIP file\" Best regards Maziar ------------------------------ Maziar Ebrahimi Telefonica Germany GmbH & Co. OHG ------------------------------ 2. ",
+                    "relevanceScore": 0.2
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.2,
+                    "content": "TM Forum Skill Paths Certification Leaderboard Conformance Overview Certifications Awarded Business Process Framework Conformance Information Framework Conformance Open API Conformance Services Events Upcoming events + webinars Sponsorship opportunities Membership About Membership Benefits Current members Become a member 2024 Annual Meeting of Members Open Sessions Log in Register Search: Search Back to top Tag Archive Below you'll find a list of all items that have been tagged as \u201cAPI management\u201d Filter for search Tags Agile Business & IT APIs Artificial Intelligence Internet of Things (IoT) TIP Release 18 19 19.5 20 20.5 early Document Type Best Practice Exploratory Report Interfaces Reference Specifications Template Available to: Member Non-Member Reset filters Viewing 1 to 4 ( of 4 results ) listgrid Learn More TMF404 Information Agreement Template v3.8 Document version: 3.8 Release Status: Archived Details: The TMF404 Information Agreement template is packaged within a single zip file titled TMF404_IA_Template.zip. This zip file contains 2 documents: The first is TMF404_IA_Template__Instructions_V#-#, which is the guide or instruction part of the t... Learn More TMF402 Business Agreement Template v6.9 Document version: 6.9 Release Status: Archived Details: The TMF402 Business Agreement (BA) template is packaged within a single zip file titled TMF402_BA_Template.zip. This zip file contains 2 documents: The first is TMF402_BA_Template_Instructions_V#-#, which is the guide or instruction part of ... ",
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/5f4fd4d4895da49f32f27fafb5e6f9c0",
+                      "title": "API management Archives - TM Forum",
+                      "uri": "https://www.tmforum.org/resource-tag/api-management?yith_wcan=1&product_tag=api-management&query_type_topic=or&filter_topic=digital-services-reference-architecture-dsra,data-analytics,internet-of-things-iot,specification,b2b2x,charging-and-billing,tip,artificial-intelligence,smart-city&query_type_frameworx-version=or&filter_frameworx-version=20-5,16-5,19-5,13-5,22-0,early&query_type_document-type=or&filter_document-type=specifications,template"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "Learn More TMF915A AI Management Component Suite Profile v1.0.1 Maturity Level: Level 3 - Team Approved Document version: 1.0.1 Release Status: Pre-production Details: This document concerns the API Component Suite for AI Management and defines the set of operations that should be offered in order that a Service Provider can govern Artificial Intelligence systems deployed at scale. Effective governance and managem... Standard(s): Open APIs Learn More TMF908 IoT Agent and Device Component Suite API Specification v1.0.1 Maturity Level: Level 4 - Forum Approved Document version: 1.0.1 Release Status: Production Details: API Component Suite to manage IoT devices and IoT agents, which are collections or federations of IoT devices. The suite provides a normalized interface to configure and manage the IoT device \u2013 get alarms, configure and monitor IoT devices, and pro... Standard(s): Open APIs listgrid TM Forum Explore TMForum About the Forum Careers with TM Forum News & Insights Privacy Policy Website T&Cs and Cookies Help & FAQ Contact Contact us General Inquiries: info@tmforum.org Member Services: memberservices@tmforum.org Interested in Joining? newmembers@tmforum.org Press Inquiries: tmforum@ccgrouppr.com Stay Connected \u00a92024 TM Forum Notifications ",
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/5f4fd4d4895da49f32f27fafb5e6f9c0",
+                      "title": "API management Archives - TM Forum",
+                      "uri": "https://www.tmforum.org/resource-tag/api-management?yith_wcan=1&product_tag=api-management&query_type_topic=or&filter_topic=digital-services-reference-architecture-dsra,data-analytics,internet-of-things-iot,specification,b2b2x,charging-and-billing,tip,artificial-intelligence,smart-city&query_type_frameworx-version=or&filter_frameworx-version=20-5,16-5,19-5,13-5,22-0,early&query_type_document-type=or&filter_document-type=specifications,template"
+                    },
+                    "relevanceScore": 0.2
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "RE: Where can I find TMF679-ProductOfferingQualification ZIP file 0 Like TM Forum Member Jonathan Goldberg Posted May 21, 2023 08:21 Reply Reply Privately Options Dropdown Hi Maziar The conformance test kit (CTK) for each Open API can be found in the API table https://projects.tmforum.org/wiki/display/API/Open+API+Table under the column entitled CTK. Hope it helps ------------------------------ Jonathan Goldberg Amdocs Management Limited Any opinions and statements made by me on this forum are purely personal, and do not necessarily reflect the position of the TM Forum or my employer. ------------------------------ Original Message Original Message: Sent: May 18, 2023 10:00 From: Maziar Ebrahimi Subject: Where can I find TMF679-ProductOfferingQualification ZIP file Hi all, I'm trying to run Conformance test for our APIs and am following the instructions provided here: Open API Conformance . Can anyone help me where I can find \"TMF679-ProductOfferingQualification ZIP file\" Best regards Maziar ------------------------------ Maziar Ebrahimi Telefonica Germany GmbH & Co. OHG ------------------------------ \u00d7 New Best Answer This thread already has a best answer. ",
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/6aff025cc7abf32b65a26e37f3780b05",
+                      "title": "Where can I find TMF679-ProductOfferingQualification ZIP file | Open APIs",
+                      "uri": "https://engage.tmforum.org/discussion/where-can-i-find-tmf679-productofferingqualification-zip-file"
+                    },
+                    "relevanceScore": 0.2
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "TM Forum Website T&Cs and Cookies | Compliance with Law | Privacy Policy Powered by Higher Logic ",
+                    "relevanceScore": 0.2,
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/2ebd339b605eee6a03847cba6a367335",
+                      "title": "TMF908 (early adoption); serialNumber & modelNumber | Open APIs",
+                      "uri": "https://engage.tmforum.org/communities/community-home/digestviewer/viewthread?MessageKey=bc262afa-df97-482a-b1b7-018a212b1d14&CommunityKey=d543b8ba-9d3a-4121-85ce-5b68e6c31ce5"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.2,
+                    "content": "Original Message: Sent: Aug 05, 2021 17:28 From: Karen Aiken Subject: TMF908 (early adoption); serialNumber & modelNumber Good day - We're leveraging TMF908 IoT Device Management for a couple use cases, the latest is to activate TV Set-top Boxes. We gravitated to it as it provides a fairly comprehensive set of attributes for configurable resources. Is that a reasonable use case for this spec? In using it - we noted that serialNumber is flagged in the PDF spec as being required; it doesn't seem to be so in the swagger file. Just wondering which is correct - for our case, we updated the swagger to make it required. The description for serialNumber mentions a modelNumber property which I don't see listed - that would be a property we'd be interested in. Curious to know if it's planned? Appreciate your insights, Take care, ------------------------------ Karen Aiken Strategy Manager, Integration Architecture TELUS ------------------------------ 7. ",
+                    "documentMetadata": {
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/2ebd339b605eee6a03847cba6a367335",
+                      "uri": "https://engage.tmforum.org/communities/community-home/digestviewer/viewthread?MessageKey=bc262afa-df97-482a-b1b7-018a212b1d14&CommunityKey=d543b8ba-9d3a-4121-85ce-5b68e6c31ce5",
+                      "title": "TMF908 (early adoption); serialNumber & modelNumber | Open APIs"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.2,
+                    "content": "Original Message: Sent: Aug 05, 2021 17:28 From: Karen Aiken Subject: TMF908 (early adoption); serialNumber & modelNumber Good day - We're leveraging TMF908 IoT Device Management for a couple use cases, the latest is to activate TV Set-top Boxes. We gravitated to it as it provides a fairly comprehensive set of attributes for configurable resources. Is that a reasonable use case for this spec? In using it - we noted that serialNumber is flagged in the PDF spec as being required; it doesn't seem to be so in the swagger file. Just wondering which is correct - for our case, we updated the swagger to make it required. The description for serialNumber mentions a modelNumber property which I don't see listed - that would be a property we'd be interested in. Curious to know if it's planned? Appreciate your insights, Take care, ------------------------------ Karen Aiken Strategy Manager, Integration Architecture TELUS ------------------------------ 6. ",
+                    "documentMetadata": {
+                      "uri": "https://engage.tmforum.org/communities/community-home/digestviewer/viewthread?MessageKey=bc262afa-df97-482a-b1b7-018a212b1d14&CommunityKey=d543b8ba-9d3a-4121-85ce-5b68e6c31ce5",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/2ebd339b605eee6a03847cba6a367335",
+                      "title": "TMF908 (early adoption); serialNumber & modelNumber | Open APIs"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "relevanceScore": 0.2,
+                    "content": "TMF908 (early adoption); serialNumber & modelNumber | Open APIs Message Image Skip to main content (Press Enter). Log In Skip auxiliary navigation (Press Enter). tmforum.org Help/FAQs Contact Us Code of Conduct TM Forum Community logo. This will take you to the homepage TM Forum Community logo. This will take you to the homepage Skip main navigation (Press Enter). Toggle navigation Search Options Home Communities All Communities My Communities Directory Browse Discussion Posts Library Entries Communities Community Home Discussion Topic Thread Open APIs View Only Community Home Discussion 9.6K Library 65 Events 0 Members 61.8K Back to discussions Expand all | Collapse all sort by most recent sort by thread TMF908 (early adoption); serialNumber & modelNumber Jump to Best Answer Karen Aiken Karen AikenAug 05, 2021 17:28 Good day - We're leveraging TMF908 IoT Device Management for a couple use cases, the latest is to activate ... Jonathan Goldberg Jonathan GoldbergAug 06, 2021 04:04Best Answer Hi Karen I was wondering - why would you use IoT management for set-top box activation, and not, say, ... Karen Aiken Karen AikenAug 09, 2021 11:08 Hi Jonathan - We leaned towards IoT Management as it exposes software resource properties such as ... ",
+                    "documentMetadata": {
+                      "uri": "https://engage.tmforum.org/communities/community-home/digestviewer/viewthread?MessageKey=bc262afa-df97-482a-b1b7-018a212b1d14&CommunityKey=d543b8ba-9d3a-4121-85ce-5b68e6c31ce5",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/2ebd339b605eee6a03847cba6a367335",
+                      "title": "TMF908 (early adoption); serialNumber & modelNumber | Open APIs"
+                    }
+                  }
+                },
+                {
+                  "chunkInfo": {
+                    "content": "Original Message: Sent: Aug 05, 2021 17:28 From: Karen Aiken Subject: TMF908 (early adoption); serialNumber & modelNumber Good day - We're leveraging TMF908 IoT Device Management for a couple use cases, the latest is to activate TV Set-top Boxes. We gravitated to it as it provides a fairly comprehensive set of attributes for configurable resources. Is that a reasonable use case for this spec? In using it - we noted that serialNumber is flagged in the PDF spec as being required; it doesn't seem to be so in the swagger file. Just wondering which is correct - for our case, we updated the swagger to make it required. The description for serialNumber mentions a modelNumber property which I don't see listed - that would be a property we'd be interested in. Curious to know if it's planned? Appreciate your insights, Take care, ------------------------------ Karen Aiken Strategy Manager, Integration Architecture TELUS ------------------------------ 5. ",
+                    "documentMetadata": {
+                      "uri": "https://engage.tmforum.org/communities/community-home/digestviewer/viewthread?MessageKey=bc262afa-df97-482a-b1b7-018a212b1d14&CommunityKey=d543b8ba-9d3a-4121-85ce-5b68e6c31ce5",
+                      "title": "TMF908 (early adoption); serialNumber & modelNumber | Open APIs",
+                      "document": "projects/982845833565/locations/global/collections/default_collection/dataStores/tmf-public_1692445422672/branches/0/documents/2ebd339b605eee6a03847cba6a367335"
+                    },
+                    "relevanceScore": 0.2
+                  }
+                }
+              ],
+              "citations": [
+                {
+                  "sources": [
+                    {
+                      "referenceId": "1"
+                    }
+                  ],
+                  "startIndex": "102",
+                  "endIndex": "249"
+                }
+              ],
+              "relatedQuestions": [
+                "What is the filename of the TMF404 template?",
+                "What file contains the TMF402 template?",
+                "What is TMF915A's maturity level?",
+                "Where is the TMF679 CTK located?",
+                "What is TMF402_BA_Template.zip's content?"
+              ]
+            }
+          },
+          {
+            "queryExpansionInfo": {},
+            "attributionToken": "2AL0VwEKDAjoyrq_BhDG0-DUAxIkNjdlNjc4YTEtMDAwMC0yNzBhLTk1ZGEtYjhkYjM4ZjRkNTNhIgdHRU5FUklDKnzYmIYxwvCeFZ7Y0zCjgJcikPeyMPLZ7TCBlfcwxcvzF_HN_TDUsp0VuI7pMJjWty3VqbcwtreMLZWSxTCOvp0VjpHJMOzB4zCb2NMw_pT3MNuYhjHPyIgxz7_iMPXZ7TCb1rct9M39MNS_4jDYqbcw78HjMLWO6TDSyIgxMAFKEjB4YjgyMjZkNTU3MjZhMDI4OVKEAXByb2plY3RzLzk4Mjg0NTgzMzU2NS9sb2NhdGlvbnMvZ2xvYmFsL2NvbGxlY3Rpb25zL2RlZmF1bHRfY29sbGVjdGlvbi9lbmdpbmVzL3RtZi1wdWJsaWNfMTY5MjQ0NTQyMjY3Mi9zZXJ2aW5nQ29uZmlncy9kZWZhdWx0X2NvbmZpZw",
+            "summary": {}
+          }
+        ]
+      ]
+    ]
+  }
+}
