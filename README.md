@@ -49,6 +49,9 @@ What specific TM Forum APIs are required to implement the TM Forum Wholesale Bro
 What are the best practices for implementing TMF620 Product Catalog Management API?
 ```
 
+
+## Debugging
+
 For debugging, you can execute using the MCP Inspector with:
 
 ```

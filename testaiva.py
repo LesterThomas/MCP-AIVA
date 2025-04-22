@@ -19,7 +19,7 @@ API_URL = "https://us-central1-aiplatform.googleapis.com/v1beta1/projects/982845
 # Define the user query
 user_query = "Describe ODF"
 # user_query = "List all the TMF Open-APIs"
-user_query = "Can you give me the code for Product catalogue management version 4? use swagger gen tool."
+user_query = "Can you give me the code for Product catalogue management version 4? use swagger gen tool and generate for python-flask"
 
 
 def get_access_token():
